@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSMapViewController">
             <connections>
+                <outlet property="mapView" destination="UJo-WC-8eW" id="VpA-Jw-9nh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,13 +16,31 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-NM-ML8" userLabel="mainContainer">
-                    <rect key="frame" x="42" y="250" width="240" height="128"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-NM-ML8" userLabel="mainContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UJo-WC-8eW">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="525"/>
+                        </mapView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.182831991" blue="0.1547517092" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="UJo-WC-8eW" firstAttribute="top" secondItem="Ko7-NM-ML8" secondAttribute="top" id="6fQ-r5-nD6"/>
+                        <constraint firstItem="UJo-WC-8eW" firstAttribute="leading" secondItem="Ko7-NM-ML8" secondAttribute="leading" id="MMm-Rv-vWj"/>
+                        <constraint firstAttribute="trailing" secondItem="UJo-WC-8eW" secondAttribute="trailing" id="jrO-Dd-Gjc"/>
+                        <constraint firstAttribute="bottom" secondItem="UJo-WC-8eW" secondAttribute="bottom" constant="75" id="ou5-3a-DP5"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ko7-NM-ML8" secondAttribute="bottom" id="JZk-uU-0yh"/>
+                <constraint firstItem="Ko7-NM-ML8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MY6-hm-ueq"/>
+                <constraint firstAttribute="trailing" secondItem="Ko7-NM-ML8" secondAttribute="trailing" id="aeJ-7i-F4D"/>
+                <constraint firstItem="Ko7-NM-ML8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fcr-lN-bo2"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="773" y="540"/>
         </view>
     </objects>
 </document>
