@@ -50,7 +50,6 @@
 		BB5510221D706F8D00556516 = {
 			isa = PBXGroup;
 			children = (
-				BB55104B1D707FB700556516 /* MapKit.framework */,
 				BB55102D1D706F8D00556516 /* SSOfflineMapKit */,
 				BB55102C1D706F8D00556516 /* Products */,
 			);
@@ -84,6 +83,7 @@
 		BB55102E1D706F8D00556516 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB55104B1D707FB700556516 /* MapKit.framework */,
 				BB55102F1D706F8D00556516 /* main.m */,
 			);
 			name = "Supporting Files";
