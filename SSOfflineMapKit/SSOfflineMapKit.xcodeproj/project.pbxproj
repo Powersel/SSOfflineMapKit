@@ -13,6 +13,9 @@
 		BB5510391D706F8D00556516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5510371D706F8D00556516 /* Main.storyboard */; };
 		BB55103B1D706F8D00556516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55103A1D706F8D00556516 /* Assets.xcassets */; };
 		BB55103E1D706F8D00556516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB55103C1D706F8D00556516 /* LaunchScreen.storyboard */; };
+		BB5510491D707D8500556516 /* SSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510471D707D8500556516 /* SSMapViewController.m */; };
+		BB55104A1D707D8500556516 /* SSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5510481D707D8500556516 /* SSMapViewController.xib */; };
+		BB55104C1D707FB700556516 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55104B1D707FB700556516 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		BB55103A1D706F8D00556516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB55103D1D706F8D00556516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB55103F1D706F8D00556516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB5510461D707D8500556516 /* SSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMapViewController.h; sourceTree = "<group>"; };
+		BB5510471D707D8500556516 /* SSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMapViewController.m; sourceTree = "<group>"; };
+		BB5510481D707D8500556516 /* SSMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapViewController.xib; sourceTree = "<group>"; };
+		BB55104B1D707FB700556516 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB55104C1D707FB700556516 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 		BB5510221D706F8D00556516 = {
 			isa = PBXGroup;
 			children = (
+				BB55104B1D707FB700556516 /* MapKit.framework */,
 				BB55102D1D706F8D00556516 /* SSOfflineMapKit */,
 				BB55102C1D706F8D00556516 /* Products */,
 			);
@@ -58,6 +67,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB5510451D707D3900556516 /* SSMapVC */,
 				BB5510311D706F8D00556516 /* AppDelegate.h */,
 				BB5510321D706F8D00556516 /* AppDelegate.m */,
 				BB5510341D706F8D00556516 /* ViewController.h */,
@@ -77,6 +87,16 @@
 				BB55102F1D706F8D00556516 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB5510451D707D3900556516 /* SSMapVC */ = {
+			isa = PBXGroup;
+			children = (
+				BB5510461D707D8500556516 /* SSMapViewController.h */,
+				BB5510471D707D8500556516 /* SSMapViewController.m */,
+				BB5510481D707D8500556516 /* SSMapViewController.xib */,
+			);
+			name = SSMapVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +159,7 @@
 				BB55103E1D706F8D00556516 /* LaunchScreen.storyboard in Resources */,
 				BB55103B1D706F8D00556516 /* Assets.xcassets in Resources */,
 				BB5510391D706F8D00556516 /* Main.storyboard in Resources */,
+				BB55104A1D707D8500556516 /* SSMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +173,7 @@
 				BB5510361D706F8D00556516 /* ViewController.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
+				BB5510491D707D8500556516 /* SSMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
