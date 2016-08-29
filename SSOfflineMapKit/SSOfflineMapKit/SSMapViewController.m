@@ -33,10 +33,10 @@
     [mapView setRegion:region];
     
 //    // Coordinats grid
-//    self.gridOverlay = [[GridTileOverlay alloc] init];
-//    self.gridOverlay.canReplaceMapContent = NO;
-//    [mapView addOverlay:self.gridOverlay level:MKOverlayLevelAboveLabels];
-//    
+    self.gridOverlay = [[GridTileOverlay alloc] init];
+    self.gridOverlay.canReplaceMapContent = NO;
+    [mapView addOverlay:self.gridOverlay level:MKOverlayLevelAboveLabels];
+//
 //    self.tileOverlay = [[SSTileOverlay alloc] init];
 //    self.tileOverlay.canReplaceMapContent = YES;
 //    [self.mapView insertOverlay:self.tileOverlay belowOverlay:self.gridOverlay];
@@ -52,30 +52,28 @@
 
 #pragma mark - MKMapViewDelegate Methods
 
-- (void)mapViewWillStartLoadingMap:(MKMapView *)mapView {
-    NSArray *tiles = mapView.overlays;
-    
-}
-
-
-//- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
-//    MKTileOverlay *customOverlay = (MKTileOverlay *)overlay;
+//- (void)mapViewWillStartLoadingMap:(MKMapView *)mapView {
+//    NSArray *tiles = mapView.overlays;
 //    
-//    MKTileOverlayRenderer *renderedTile = [[SSTileOverlayRender alloc] initWithTileOldOverlay:overlay];;
-////    MKTileOverlayRenderer *renderer = [[GridTileOverlayRenderer alloc] initWithTileOverlay:overlay];;
-//    
-//    return renderedTile;
 //}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
+    MKTileOverlay *customOverlay = (MKTileOverlay *)overlay;
+    
+//    MKTileOverlayRenderer *renderedTile = [[SSTileOverlayRender alloc] initWithTileOldOverlay:overlay];;
+    MKTileOverlayRenderer *renderer = [[GridTileOverlayRenderer alloc] initWithTileOverlay:overlay];;
+    
+    return renderer;
+}
 
 #pragma mark - Private
 
 - (void)reloadTileOverlay {
     NSString *baseURL = [[[NSBundle mainBundle] bundleURL] absoluteString];
-    NSString *urlTemplate = [baseURL stringByAppendingString:@"/{z}/{x}/{y}.jpg"];
+    NSString *urlTemplate = [baseURL stringByAppendingString:@"{z}_{x}_{y}.jpg"];
     
     self.tileOverlay = [[MKTileOverlay alloc] initWithURLTemplate:urlTemplate];
-    
-    self.tileOverlay.canReplaceMapContent=YES;
+    self.tileOverlay.canReplaceMapContent = YES;
     [self.mapView insertOverlay:self.tileOverlay belowOverlay:self.gridOverlay];}
 
 @end

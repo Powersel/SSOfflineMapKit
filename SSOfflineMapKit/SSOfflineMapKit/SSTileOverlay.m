@@ -9,21 +9,21 @@
 
 @implementation SSTileOverlay
 
-- (NSURL *)URLForTilePath:(MKTileOverlayPath)path {
-    NSString *tileKey = [[NSString alloc] initWithFormat:@"%ld_%ld_%ld.jpg", (long)path.x, (long)path.y, (long)path.z];
-    
-    return [NSURL URLWithString:tileKey];
-}
-
-
-// NEW overloaded methods
-
-- (instancetype)initWithURLTemplate:(nullable NSString *)URLTemplate {
-    self = [super initWithURLTemplate:URLTemplate];
-    
-    
-    return self;
-}
+//- (NSURL *)URLForTilePath:(MKTileOverlayPath)path {
+//    NSString *tileKey = [[NSString alloc] initWithFormat:@"%ld_%ld_%ld.jpg", (long)path.x, (long)path.y, (long)path.z];
+//    
+//    return [NSURL URLWithString:tileKey];
+//}
+//
+//
+//// NEW overloaded methods
+//
+//- (instancetype)initWithURLTemplate:(nullable NSString *)URLTemplate {
+//    self = [super initWithURLTemplate:URLTemplate];
+//    
+//    
+//    return self;
+//}
 
 - (void)loadTileAtPath:(MKTileOverlayPath)path
                 result:(void (^)(NSData * _Nullable, NSError * _Nullable))result {
