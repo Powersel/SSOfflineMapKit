@@ -5,11 +5,13 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "3AC0D9DEC3814685B2E8BD648D858283B0BDC3BF" : 0,
+    "E11ED9C1886DE900DAAB8B02E5DA11E23DF5F596" : 0,
     "EEB4520E36BABB9D6677CA00705AB1DA889F0CC9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33FACACA-A4D3-4C70-A390-E42CC63E6B1E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "3AC0D9DEC3814685B2E8BD648D858283B0BDC3BF" : "MapTileOverlayTutorial\/",
+    "E11ED9C1886DE900DAAB8B02E5DA11E23DF5F596" : "mbxmapkit\/",
     "EEB4520E36BABB9D6677CA00705AB1DA889F0CC9" : "SSOfflineMapKit\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SSOfflineMapKit",
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:viggiosoft\/MapTileOverlayTutorial.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3AC0D9DEC3814685B2E8BD648D858283B0BDC3BF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mapbox\/mbxmapkit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E11ED9C1886DE900DAAB8B02E5DA11E23DF5F596"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Powersel\/SSOfflineMapKit.git",
