@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
-//- (void)reloadTileOverlay;
+- (void)reloadTileOverlay;
 - (void)unzipArchive;
 
 @end
@@ -45,20 +45,9 @@
     MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     [mapView setRegion:region animated:YES];
-    
-//    // Coordinats grid
-//    self.gridOverlay = [[GridTileOverlay alloc] init];
-//    self.gridOverlay.canReplaceMapContent = NO;
-//    [mapView addOverlay:self.gridOverlay level:MKOverlayLevelAboveLabels];
-//
-    self.tileOverlay = [[SSTileOverlay alloc] init];
-    self.tileOverlay.canReplaceMapContent = YES;
-    [self.mapView addOverlay:self.tileOverlay level:MKOverlayLevelAboveLabels];
-//    [self.mapView insertOverlay:self.tileOverlay belowOverlay:self.gridOverlay];
-    
     mapView.delegate = self;
     
-//    [self reloadTileOverlay];
+    [self reloadTileOverlay];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,14 +66,11 @@
 
 #pragma mark - Private
 
-//- (void)reloadTileOverlay {
-//    NSString *baseURL = [[[NSBundle mainBundle] bundleURL] absoluteString];
-//    NSString *urlTemplate = [baseURL stringByAppendingString:@"{z}_{x}_{y}.jpg"];
-//    
-//    self.tileOverlay = [[MKTileOverlay alloc] initWithURLTemplate:urlTemplate];
-//    self.tileOverlay.canReplaceMapContent = YES;
-//    [self.mapView insertOverlay:self.tileOverlay belowOverlay:self.gridOverlay];
-//}
+- (void)reloadTileOverlay {
+    self.tileOverlay = [[SSTileOverlay alloc] init];
+    self.tileOverlay.canReplaceMapContent = YES;
+    [self.mapView addOverlay:self.tileOverlay level:MKOverlayLevelAboveLabels];
+}
 
 - (void)unzipArchive {
     NSString *archivePath = [[NSBundle mainBundle] pathForResource:@"ww_nsw-bwnp-gtpxx_maps" ofType:@"zip"];
