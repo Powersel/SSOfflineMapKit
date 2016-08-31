@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB18F24E1D75A7DD0011693B /* ww_nsw-bourndnp-ntl_maps.zip in Resources */ = {isa = PBXBuildFile; fileRef = BB18F24D1D75A7DD0011693B /* ww_nsw-bourndnp-ntl_maps.zip */; };
 		BB18F2501D75B0270011693B /* ww_nsw-bwnp-gtpxx_maps.zip in Resources */ = {isa = PBXBuildFile; fileRef = BB18F24F1D75B0270011693B /* ww_nsw-bwnp-gtpxx_maps.zip */; };
+		BB18F2541D75CFC10011693B /* SSAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB18F2531D75CFC10011693B /* SSAnnotationView.m */; };
 		BB5510301D706F8D00556516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB55102F1D706F8D00556516 /* main.m */; };
 		BB5510331D706F8D00556516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510321D706F8D00556516 /* AppDelegate.m */; };
 		BB5510391D706F8D00556516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5510371D706F8D00556516 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 		A3C98B9D1E199B909F35EE62 /* Pods-SSOfflineMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSOfflineMapKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSOfflineMapKit/Pods-SSOfflineMapKit.release.xcconfig"; sourceTree = "<group>"; };
 		BB18F24D1D75A7DD0011693B /* ww_nsw-bourndnp-ntl_maps.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ww_nsw-bourndnp-ntl_maps.zip"; sourceTree = "<group>"; };
 		BB18F24F1D75B0270011693B /* ww_nsw-bwnp-gtpxx_maps.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ww_nsw-bwnp-gtpxx_maps.zip"; sourceTree = "<group>"; };
+		BB18F2521D75CFC10011693B /* SSAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAnnotationView.h; sourceTree = "<group>"; };
+		BB18F2531D75CFC10011693B /* SSAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAnnotationView.m; sourceTree = "<group>"; };
 		BB55102B1D706F8D00556516 /* SSOfflineMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSOfflineMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55102F1D706F8D00556516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB5510311D706F8D00556516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +77,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BB18F2511D75CFA70011693B /* SSAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				BB18F2521D75CFC10011693B /* SSAnnotationView.h */,
+				BB18F2531D75CFC10011693B /* SSAnnotationView.m */,
+			);
+			name = SSAnnotationView;
+			sourceTree = "<group>";
+		};
 		BB5510221D706F8D00556516 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB18F2511D75CFA70011693B /* SSAnnotationView */,
 				BBE3B5201D74491C0026AD6B /* SSTileOverlayRender */,
 				BBE3A4E61D7418B80026AD6B /* SSTileOverlay */,
 				BB5510451D707D3900556516 /* SSMapVC */,
@@ -285,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */,
+				BB18F2541D75CFC10011693B /* SSAnnotationView.m in Sources */,
 				BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */,
 				BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */,
 				BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */,
