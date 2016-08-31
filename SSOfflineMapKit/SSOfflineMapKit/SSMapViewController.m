@@ -30,7 +30,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self unzipArchive];
-        
+        [self annotationsInitialisation];
     }
     
     return self;
@@ -129,5 +129,18 @@
     }
 }
 
+#pragma mark - Annotations Initialisation
+
+- (void)annotationsInitialisation {
+    NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
+    NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
+    
+    NSArray *annotations = [NSJSONSerialization JSONObjectWithData:rawJSON options:NSJSONReadingMutableContainers error:nil];
+    
+    for (NSDictionary *dict in annotations) {
+        NSLog(@"Dictionary keys: %@", dict.allKeys);
+    }
+    
+}
 
 @end
