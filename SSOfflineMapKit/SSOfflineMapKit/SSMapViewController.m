@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
 - (void)reloadTileOverlay;
+- (void)annotationsInitialisation;
 - (void)unzipArchive;
 
 @end
@@ -46,16 +47,13 @@
     MKMapView *mapView = self.mapView;
     mapView.delegate = self;
     [mapView setUserTrackingMode:MKUserTrackingModeFollow];
-    CLLocationDegrees latitude = -33.4316798442;
-    CLLocationDegrees longitude = 151.2765980607;
+    CLLocationDegrees latitude = -33.7039696858;
+    CLLocationDegrees longitude = 150.2912592792;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
     MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     [mapView setRegion:region animated:YES];
-    
-    
     mapView.showsCompass = YES;
-    mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
 }
@@ -95,9 +93,9 @@
 }
 
 - (void)unzipArchive {
-    NSString *archivePath = [[NSBundle mainBundle] pathForResource:@"ww_nsw-bwnp-gtpxx_maps" ofType:@"zip"];
+    NSString *archivePath = [[NSBundle mainBundle] pathForResource:@"ww_nsw-bmnp-sft_maps" ofType:@"zip"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    self.tilesFolderPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/nsw-bwnp-gtpxx"];
+    self.tilesFolderPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/nsw-bmnp-sft"];
     if (![fileManager fileExistsAtPath:self.tilesFolderPath]) {
         NSError *error = nil;
         [fileManager createDirectoryAtPath:self.tilesFolderPath withIntermediateDirectories:NO attributes:nil error:&error];

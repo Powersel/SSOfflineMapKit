@@ -32,7 +32,7 @@
     
     NSLog(@"Loading tile in SSTileOverlay z/x/y: %ld/%ld/%ld", (long)path.z, (long)path.x, (long)path.y);
     NSString *tileName = [NSString stringWithFormat:@"%ld_%ld_%ld.jpg",(long)path.z, (long)path.x,(long)path.y];
-    NSString *tilesFolder = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/nsw-bwnp-gtpxx"];
+    NSString *tilesFolder = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/nsw-bmnp-sft"];
     NSString *tilePath = [tilesFolder stringByAppendingPathComponent:tileName];
     
     NSData *tileData;
