@@ -7,8 +7,10 @@
 #import "SSZipArchive.h"
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface SSMapViewController () <MKMapViewDelegate>
+@interface SSMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKTileOverlay *tileOverlay;
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
 
@@ -27,6 +29,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self unzipArchive];
+        
     }
     
     return self;
@@ -37,15 +40,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MKMapView *mapView = self.mapView;
+    [self initialiseLocationManager];
+    CLLocation *location = self.locationManager.location;
     
+    MKMapView *mapView = self.mapView;
+    mapView.delegate = self;
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow];
     CLLocationDegrees latitude = -33.4316798442;
     CLLocationDegrees longitude = 151.2765980607;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
     MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     [mapView setRegion:region animated:YES];
-    mapView.delegate = self;
+    
+    
+    mapView.showsCompass = YES;
+    mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
 }
@@ -62,6 +72,18 @@
     }
     
     return nil;
+}
+
+- (void)mapViewWillStartLocatingUser:(MKMapView *)mapView {
+    
+}
+
+- (void)mapViewDidStopLocatingUser:(MKMapView *)mapView {
+    
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    
 }
 
 #pragma mark - Private
@@ -83,5 +105,31 @@
     }
     [SSZipArchive unzipFileAtPath:archivePath toDestination:self.tilesFolderPath];
 }
+
+- (void)initialiseLocationManager {
+    self.locationManager = [CLLocationManager new];
+    
+    CLLocationManager *locationManager = self.locationManager;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager requestAlwaysAuthorization];
+    [locationManager setDelegate:self];
+    [locationManager startUpdatingLocation];
+}
+
+#pragma mark - Delegates Methods
+
+- (void)        locationManager:(CLLocationManager *)manager
+   didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        
+    } else if (status == kCLAuthorizationStatusDenied)
+    {
+        
+    }
+}
+
 
 @end
