@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 
 @interface SSAnnotationsContainer : NSObject
+@property (nonatomic, readonly) NSArray *annotations;
+
 @property (nonatomic, readonly) NSArray *photoAnnotations;
 @property (nonatomic, readonly) NSArray *trackNotesAnnotations;
 

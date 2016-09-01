@@ -4,10 +4,11 @@
 #import "SSTrackNotesAnno.h"
 
 @interface SSTrackNotesAnno ()
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong)   NSURL   *imageURL;
 
 @property (nonatomic, strong) NSArray *bboxCoordinates;
-@property (nonatomic, strong) NSArray *coordinates;
+@property (nonatomic, strong) NSArray *pointsCoordinates;
 
 @property (nonatomic, strong) NSString    *noteType;
 @property (nonatomic, strong) NSString    *noteTypeSub;
@@ -33,7 +34,7 @@
     trackNotes.imageURL = [NSURL URLWithString:dictionary[@"properties"][@"640"]];
     
     trackNotes.bboxCoordinates = dictionary[@"bbox"];
-    trackNotes.coordinates = dictionary[@"geometry"][@"coordinates"];
+    trackNotes.pointsCoordinates = dictionary[@"geometry"][@"coordinates"];
     
     trackNotes.noteType = dictionary[@"properties"][@"entity"];
     trackNotes.noteTypeSub = dictionary[@"properties"][@"entity_sub"];
@@ -42,8 +43,16 @@
     trackNotes.geometryType = dictionary[@"geometry"][@"type"];
     
     trackNotes.day = dictionary[@"properties"][@"day"];
+     
     trackNotes.startLatitude = dictionary[@"properties"][@"start_lat"];
     trackNotes.startLongitude = dictionary[@"properties"][@"Start_long"];
+    
+    CLLocationDegrees latitude = trackNotes.startLatitude.doubleValue;
+    CLLocationDegrees longitude = trackNotes.startLongitude.doubleValue;
+    
+    CLLocationCoordinate2D noteCoordinates = CLLocationCoordinate2DMake(latitude, longitude);
+    trackNotes.coordinate = noteCoordinates;
+    
     trackNotes.endLatitude = dictionary[@"properties"][@"end_lat"];
     trackNotes.ednLongitude = dictionary[@"properties"][@"end_long"];
     

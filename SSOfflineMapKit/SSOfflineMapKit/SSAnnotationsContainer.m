@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 @interface SSAnnotationsContainer ()
 @property (nonatomic, strong) NSMutableArray *mutablePhotoAnnotations;
 @property (nonatomic, strong) NSMutableArray *mutableTrackNotesAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableAnnotations;
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON;
 
@@ -59,6 +60,10 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
     return [self.mutablePhotoAnnotations copy];
 }
 
+- (NSArray *)annotations {
+    return [self.mutableAnnotations copy];
+}
+
 #pragma mark - Private
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON {
@@ -72,6 +77,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
             {
                 SSAnnotationPoint *photoAnnotation = [SSAnnotationPoint initAnnotationWith:annotation];
                 [self.mutablePhotoAnnotations addObject:photoAnnotation];
+                [self.mutableAnnotations addObject:photoAnnotation];
             }
                 break;
                 
@@ -79,6 +85,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
             {
                 SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
                 [self.mutableTrackNotesAnnotations addObject:trackNotesAnnotation];
+                [self.mutableAnnotations addObject:trackNotesAnnotation];
             }
                 
                 break;

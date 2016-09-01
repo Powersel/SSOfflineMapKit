@@ -15,8 +15,11 @@
 @property (nonatomic, strong) MKTileOverlay *tileOverlay;
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
 
-@property (nonatomic, strong) SSAnnotationsContainer    *annotations;
 
+@property (nonatomic, assign) CFMutableDictionaryRef mapLine2View;   // MKPolyline(route line) -> MKPolylineView(route view)
+@property (nonatomic, assign) CFMutableDictionaryRef mapName2Line;   // NSString(name) -> MKPolyline(route line)
+
+@property (nonatomic, strong) NSArray    *customAnnotations;
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
 - (void)reloadTileOverlay;
@@ -45,18 +48,22 @@
     [super viewDidLoad];
     
     [self initialiseLocationManager];
-    CLLocation *location = self.locationManager.location;
-    
+   
     MKMapView *mapView = self.mapView;
     mapView.delegate = self;
+    
     [mapView setUserTrackingMode:MKUserTrackingModeFollow];
     CLLocationDegrees latitude = -33.7039696858;
     CLLocationDegrees longitude = 150.2912592792;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
     MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.02, 0.02);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
+    
     [mapView setRegion:region animated:YES];
+    [mapView addAnnotations:self.customAnnotations];
+    
     mapView.showsCompass = YES;
+    mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
 }
@@ -84,6 +91,39 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    
+}
+
+#warning !!!!!!
+#pragma mark - Annotations!!!!!!!!!!!!!!!!
+
+// mapView:viewForAnnotation: provides the view for each annotation.
+// This method may be called for all or some of the added annotations.
+// For MapKit provided annotations (eg. MKUserLocation) return nil to use the MapKit provided annotation view.
+- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+
+    return nil;
+}
+
+// mapView:didAddAnnotationViews: is called after the annotation views have been added and positioned in the map.
+// The delegate can implement this method to animate the adding of the annotations views.
+// Use the current positions of the annotation views as the destinations of the animation.
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
+    
+}
+
+// mapView:annotationView:calloutAccessoryControlTapped: is called when the user taps on left & right callout accessory UIControls.
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
     
 }
 
@@ -137,7 +177,7 @@
 - (void)annotationsInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-    self.annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON];
+    self.customAnnotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].annotations;
 }
 
 @end

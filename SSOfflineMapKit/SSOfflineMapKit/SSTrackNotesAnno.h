@@ -10,7 +10,7 @@
 @property (nonatomic, readonly)   NSURL   *imageURL;
 
 @property (nonatomic, readonly) NSArray *bboxCoordinates;
-@property (nonatomic, readonly) NSArray *coordinates;
+@property (nonatomic, readonly) NSArray *pointsCoordinates;
 
 @property (nonatomic, readonly) NSString    *noteType;
 @property (nonatomic, readonly) NSString    *noteTypeSub;
