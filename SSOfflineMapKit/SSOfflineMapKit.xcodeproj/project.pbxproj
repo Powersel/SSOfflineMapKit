@@ -19,6 +19,7 @@
 		BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDB1D70963400556516 /* GridTileOverlay.m */; };
 		BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */; };
 		BBCF878A1D7816D3003AD892 /* SSAnnotationsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87891D7816D3003AD892 /* SSAnnotationsContainer.m */; };
+		BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */; };
 		BBD0168A1D76CD9B006D1156 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD016891D76CD9B006D1156 /* CoreLocation.framework */; };
 		BBD0168E1D76F85E006D1156 /* nsw-bmnp-sft.json in Resources */ = {isa = PBXBuildFile; fileRef = BBD0168D1D76F85E006D1156 /* nsw-bmnp-sft.json */; };
 		BBD016901D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip in Resources */ = {isa = PBXBuildFile; fileRef = BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */; };
@@ -51,6 +52,8 @@
 		BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridTileOverlayRenderer.m; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlayRenderer.m; sourceTree = "<group>"; };
 		BBCF87881D7816D3003AD892 /* SSAnnotationsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAnnotationsContainer.h; sourceTree = "<group>"; };
 		BBCF87891D7816D3003AD892 /* SSAnnotationsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAnnotationsContainer.m; sourceTree = "<group>"; };
+		BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTrackNotesAnno.h; sourceTree = "<group>"; };
+		BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTrackNotesAnno.m; sourceTree = "<group>"; };
 		BBD016891D76CD9B006D1156 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BBD0168D1D76F85E006D1156 /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
 		BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ww_nsw-bmnp-sft_maps.zip"; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		BBCF87861D78107D003AD892 /* SSAnnotations */ = {
 			isa = PBXGroup;
 			children = (
+				BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */,
 				BBCF87871D781090003AD892 /* SSAnnotationParser */,
 				BBD016911D771AA7006D1156 /* SSAnnotationPoint */,
 			);
@@ -173,6 +177,15 @@
 				BBCF87891D7816D3003AD892 /* SSAnnotationsContainer.m */,
 			);
 			name = SSAnnotationParser;
+			sourceTree = "<group>";
+		};
+		BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */ = {
+			isa = PBXGroup;
+			children = (
+				BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */,
+				BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */,
+			);
+			name = SSTRackNotesAnno;
 			sourceTree = "<group>";
 		};
 		BBD016911D771AA7006D1156 /* SSAnnotationPoint */ = {
@@ -348,6 +361,7 @@
 				BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */,
 				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
+				BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
 				BB5510491D707D8500556516 /* SSMapViewController.m in Sources */,
 			);
