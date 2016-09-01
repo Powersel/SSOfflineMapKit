@@ -11,15 +11,12 @@
 #import <MapKit/MapKit.h>
 
 @interface SSAnnotationPoint : NSObject <MKAnnotation>
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly) NSString *annotationTitle;
-@property (nonatomic, readonly) NSString *annotationSubtitle;
 @property (nonatomic, readonly) NSNumber *annotationID;
 @property (nonatomic, readonly) NSNumber *annotationOrder;
 @property (nonatomic, readonly) NSURL    *image;
 
 + (instancetype)initAnnotationWith:(NSDictionary *)dictionary;
 
-//- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 
 @end
