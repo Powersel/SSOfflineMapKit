@@ -8,10 +8,14 @@
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
 #import "SSAnnotationsContainer.h"
+
 #import "SSPhotoAnnoVIew.h"
+#import "SSTrackNotesView.h"
+
 #import <CoreLocation/CoreLocation.h>
 
 static NSString * const SSPhotoAnnoViewIdentifier = @"SSPhotoAnnoVIew";
+static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 @interface SSMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -90,50 +94,18 @@ static NSString * const SSPhotoAnnoViewIdentifier = @"SSPhotoAnnoVIew";
     return nil;
 }
 
-- (void)mapViewWillStartLocatingUser:(MKMapView *)mapView {
-    
-}
-
-- (void)mapViewDidStopLocatingUser:(MKMapView *)mapView {
-    
-}
-
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-    
-}
-
-#warning !!!!!!
 #pragma mark - Annotations!!!!!!!!!!!!!!!!
 
-// mapView:viewForAnnotation: provides the view for each annotation.
-// This method may be called for all or some of the added annotations.
-// For MapKit provided annotations (eg. MKUserLocation) return nil to use the MapKit provided annotation view.
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    MKAnnotationView *annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
+    MKAnnotationView *annoView = nil;
+    
+    if ([annotation isKindOfClass:[SSPhotoAnnoVIew class]]) {
+        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
+    } else {
+        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSTrackNotesViewIdentifier];
+    }
     
     return annoView;
-}
-
-// mapView:didAddAnnotationViews: is called after the annotation views have been added and positioned in the map.
-// The delegate can implement this method to animate the adding of the annotations views.
-// Use the current positions of the annotation views as the destinations of the animation.
-
-- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
-    
-}
-
-// mapView:annotationView:calloutAccessoryControlTapped: is called when the user taps on left & right callout accessory UIControls.
-
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    
-}
-
-- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    
-}
-
-- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-    
 }
 
 #pragma mark - Private
