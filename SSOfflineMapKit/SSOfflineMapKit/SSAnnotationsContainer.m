@@ -8,6 +8,7 @@
 
 #import "SSAnnotationsContainer.h"
 #import "SSAnnotationPoint.h"
+#import "SSTrackNotesAnno.h"
 
 typedef NS_ENUM(NSUInteger, SSAnnotationType) {
     SSPhotoAnnotation = 3,
@@ -29,8 +30,9 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 
 #pragma mark - Class Methods
 
-+ (instancetype)initWithJSON:(NSData *)annotationsJSON {
++ (instancetype)initContainerWithJSON:(NSData *)annotationsJSON {
     SSAnnotationsContainer *container = [SSAnnotationsContainer new];
+    [container parseAnnotationJSON:annotationsJSON];
     
     return container;
 }
@@ -74,6 +76,10 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
                 break;
                 
             case SSTrackNoteAnnotation:
+            {
+                SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+                [self.mutableTrackNotesAnnotations addObject:trackNotesAnnotation];
+            }
                 
                 break;
                 

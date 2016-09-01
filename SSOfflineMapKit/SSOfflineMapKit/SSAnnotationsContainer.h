@@ -7,6 +7,6 @@
 @property (nonatomic, readonly) NSArray *photoAnnotations;
 @property (nonatomic, readonly) NSArray *trackNotesAnnotations;
 
-+ (instancetype)initWithJSON:(NSData *)annotationsJSON;
++ (instancetype)initContainerWithJSON:(NSData *)annotationsJSON;
 
 @end

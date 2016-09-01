@@ -7,12 +7,15 @@
 #import "SSZipArchive.h"
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
+#import "SSAnnotationsContainer.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface SSMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKTileOverlay *tileOverlay;
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
+
+@property (nonatomic, strong) SSAnnotationsContainer    *annotations;
 
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
@@ -134,9 +137,7 @@
 - (void)annotationsInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-
-    NSArray *annotations = [NSJSONSerialization JSONObjectWithData:rawJSON options:NSJSONReadingMutableContainers error:nil];
-    
+    self.annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON];
 }
 
 @end
