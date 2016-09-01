@@ -115,7 +115,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				BBD016911D771AA7006D1156 /* SSAnnotationPoint */,
+				BBCF87861D78107D003AD892 /* SSAnnotations */,
 				BB18F2511D75CFA70011693B /* SSAnnotationView */,
 				BBE3B5201D74491C0026AD6B /* SSTileOverlayRender */,
 				BBE3A4E61D7418B80026AD6B /* SSTileOverlay */,
@@ -152,6 +152,22 @@
 				BB5510481D707D8500556516 /* SSMapViewController.xib */,
 			);
 			name = SSMapVC;
+			sourceTree = "<group>";
+		};
+		BBCF87861D78107D003AD892 /* SSAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				BBCF87871D781090003AD892 /* SSAnnotationParser */,
+				BBD016911D771AA7006D1156 /* SSAnnotationPoint */,
+			);
+			name = SSAnnotations;
+			sourceTree = "<group>";
+		};
+		BBCF87871D781090003AD892 /* SSAnnotationParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SSAnnotationParser;
 			sourceTree = "<group>";
 		};
 		BBD016911D771AA7006D1156 /* SSAnnotationPoint */ = {

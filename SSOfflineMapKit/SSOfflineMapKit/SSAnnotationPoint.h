@@ -8,12 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface SSAnnotationPoint : NSObject
+@interface SSAnnotationPoint : NSObject <MKAnnotation>
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *subtitle;
+@property (nonatomic, readonly) NSString *annotationTitle;
+@property (nonatomic, readonly) NSString *annotationSubtitle;
+@property (nonatomic, readonly) NSNumber *annotationID;
+@property (nonatomic, readonly) NSNumber *annotationOrder;
+@property (nonatomic, readonly) NSURL    *image;
 
-- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
++ (instancetype)initAnnotationWith:(NSDictionary *)dictionary;
+
+//- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end
