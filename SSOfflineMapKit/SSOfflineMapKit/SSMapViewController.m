@@ -8,7 +8,10 @@
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
 #import "SSAnnotationsContainer.h"
+#import "SSPhotoAnnoVIew.h"
 #import <CoreLocation/CoreLocation.h>
+
+static NSString * const SSPhotoAnnoViewIdentifier = @"SSPhotoAnnoVIew";
 
 @interface SSMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -36,7 +39,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self unzipArchive];
-        [self annotationsInitialisation];
+        [self initialiseLocationManager];
     }
     
     return self;
@@ -47,7 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initialiseLocationManager];
+    
+    [self annotationsInitialisation];
    
     MKMapView *mapView = self.mapView;
     mapView.delegate = self;
@@ -60,12 +64,16 @@
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     
     [mapView setRegion:region animated:YES];
-    [mapView addAnnotations:self.customAnnotations];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
+    
+    NSArray *customAnnotations = self.customAnnotations;
+    
+    [mapView addAnnotations:customAnnotations];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,8 +109,9 @@
 // This method may be called for all or some of the added annotations.
 // For MapKit provided annotations (eg. MKUserLocation) return nil to use the MapKit provided annotation view.
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-
-    return nil;
+    MKAnnotationView *annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
+    
+    return annoView;
 }
 
 // mapView:didAddAnnotationViews: is called after the annotation views have been added and positioned in the map.
@@ -177,7 +186,9 @@
 - (void)annotationsInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-    self.customAnnotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].annotations;
+    NSArray *annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].annotations;
+    
+    self.customAnnotations = annotations;
 }
 
 @end

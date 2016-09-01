@@ -45,6 +45,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
     if (self) {
         self.mutablePhotoAnnotations = [NSMutableArray array];
         self.mutableTrackNotesAnnotations = [NSMutableArray array];
+        self.mutableAnnotations = [NSMutableArray array];
     }
     
     return self;
