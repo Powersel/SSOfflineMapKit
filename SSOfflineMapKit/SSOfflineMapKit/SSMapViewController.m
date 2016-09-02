@@ -9,6 +9,9 @@
 #import "SSTileOverlayRender.h"
 #import "SSAnnotationsContainer.h"
 
+#import "SSAnnotationPoint.h"
+#import "SSTrackNotesAnno.h"
+
 #import "SSPhotoAnnoVIew.h"
 #import "SSTrackNotesView.h"
 
@@ -32,6 +35,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 - (void)reloadTileOverlay;
 - (void)annotationsInitialisation;
 - (void)unzipArchive;
+- (void)initialiseLocationManager;
+- (void)drawRoutesWith:(NSArray *)routesArray;
 
 @end
 
@@ -44,6 +49,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     if (self) {
         [self unzipArchive];
         [self initialiseLocationManager];
+        [self annotationsInitialisation];
     }
     
     return self;
@@ -54,9 +60,6 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    [self annotationsInitialisation];
-   
     MKMapView *mapView = self.mapView;
     mapView.delegate = self;
     
@@ -64,7 +67,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     CLLocationDegrees latitude = -33.7039696858;
     CLLocationDegrees longitude = 150.2912592792;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
-    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.02, 0.02);
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.075, 0.075);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     
     [mapView setRegion:region animated:YES];
@@ -73,11 +76,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
-    
-    NSArray *customAnnotations = self.customAnnotations;
-    
-    [mapView addAnnotations:customAnnotations];
-    
+    [mapView addAnnotations:self.customAnnotations];
+    [self drawRoutesWith:self.customAnnotations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +91,12 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
         return [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay];
     }
     
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolylineRenderer *polyLineRender = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+        polyLineRender.strokeColor = [UIColor yellowColor];
+        return polyLineRender;
+    }
+    
     return nil;
 }
 
@@ -98,11 +104,12 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     MKAnnotationView *annoView = nil;
-    
-    if ([annotation isKindOfClass:[SSPhotoAnnoVIew class]]) {
-        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
-    } else {
+    if ([annotation isKindOfClass:[SSTrackNotesView class]]) {
         annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSTrackNotesViewIdentifier];
+    }
+    
+    if ([annotation isKindOfClass:[SSAnnotationPoint class]]) {
+        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
     }
     
     return annoView;
@@ -158,9 +165,31 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 - (void)annotationsInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-    NSArray *annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].annotations;
+    NSArray *annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].trackAnnotations;
     
     self.customAnnotations = annotations;
+}
+
+- (void)drawRoutesWith:(NSArray *)routesArray {
+    for (SSTrackNotesAnno *trackAnnotationPoint in routesArray) {
+        if ([trackAnnotationPoint isKindOfClass:[SSTrackNotesAnno class]]) {
+            NSArray *poiCoordinates = trackAnnotationPoint.pointsCoordinates;
+            CLLocationCoordinate2D coordinates[poiCoordinates.count];
+            NSInteger index = 0;
+            for (NSArray *currentPoi in poiCoordinates) {
+                NSNumber *longitude = currentPoi.firstObject;
+                NSNumber *latitude = currentPoi.lastObject;
+                CLLocationCoordinate2D pointsToUse = CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue);
+                
+                coordinates[index] = pointsToUse;
+                index++;
+            }
+            
+            MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:poiCoordinates.count];
+            [self.mapView addOverlay:polyLine];
+            
+        }
+    }
 }
 
 @end
