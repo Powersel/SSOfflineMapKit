@@ -93,7 +93,9 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolylineRenderer *polyLineRender = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-        polyLineRender.strokeColor = [UIColor yellowColor];
+        UIColor *wayCilor = [UIColor colorWithRed:10.0 green:100.0 blue:150. alpha:0.6];
+        polyLineRender.strokeColor = wayCilor;
+        polyLineRender.lineWidth = 3;
         return polyLineRender;
     }
     
