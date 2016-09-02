@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
 @interface SSAnnotationPoint : NSObject <MKAnnotation>
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly) NSNumber *annotationID;
 @property (nonatomic, readonly) NSNumber *annotationOrder;
+
 @property (nonatomic, readonly) NSURL    *image;
 
 + (instancetype)initAnnotationWith:(NSDictionary *)dictionary;

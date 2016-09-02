@@ -21,8 +21,10 @@
 + (instancetype)initAnnotationWith:(NSDictionary *)dictionary {
     SSAnnotationPoint *annotationPoint = [SSAnnotationPoint new];
     
-    NSArray *coordinates = dictionary[@"geometry"][@"coordinates"];
-    annotationPoint.coordinate = CLLocationCoordinate2DMake([coordinates.firstObject doubleValue], [coordinates.lastObject doubleValue]);
+    NSNumber *latitude = dictionary[@"properties"][@"lat"];
+    NSNumber *longitude = dictionary[@"properties"][@"long"];
+    annotationPoint.coordinate = CLLocationCoordinate2DMake(latitude.doubleValue ,longitude.doubleValue);
+    
     annotationPoint.name = dictionary[@"properties"][@"title"];
     annotationPoint.subName = dictionary[@"properties"][@"title"];
     annotationPoint.annotationOrder = dictionary[@"properties"][@"order"];

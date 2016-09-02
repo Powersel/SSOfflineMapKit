@@ -16,9 +16,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 };
 
 @interface SSAnnotationsContainer ()
-@property (nonatomic, strong) NSMutableArray *mutablePhotoAnnotations;
-@property (nonatomic, strong) NSMutableArray *mutableTrackNotesAnnotations;
-@property (nonatomic, strong) NSMutableArray *mutableAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableTrackAnnotations;
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON;
 
@@ -26,8 +24,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 
 @implementation SSAnnotationsContainer
 
-@dynamic photoAnnotations;
-@dynamic trackNotesAnnotations;
+@dynamic trackAnnotations;
 
 #pragma mark - Class Methods
 
@@ -43,9 +40,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mutablePhotoAnnotations = [NSMutableArray array];
-        self.mutableTrackNotesAnnotations = [NSMutableArray array];
-        self.mutableAnnotations = [NSMutableArray array];
+        self.mutableTrackAnnotations = [NSMutableArray array];
     }
     
     return self;
@@ -53,16 +48,8 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 
 #pragma mark - Accessors
 
-- (NSArray *)trackNotesAnnotations {
-    return [self.mutableTrackNotesAnnotations copy];
-}
-
-- (NSArray *)photoAnnotations {
-    return [self.mutablePhotoAnnotations copy];
-}
-
-- (NSArray *)annotations {
-    return [self.mutableAnnotations copy];
+- (NSArray *)trackAnnotations {
+    return [self.mutableTrackAnnotations copy];
 }
 
 #pragma mark - Private
@@ -77,16 +64,14 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
             case SSPhotoAnnotation:
             {
                 SSAnnotationPoint *photoAnnotation = [SSAnnotationPoint initAnnotationWith:annotation];
-                [self.mutablePhotoAnnotations addObject:photoAnnotation];
-                [self.mutableAnnotations addObject:photoAnnotation];
+                [self.mutableTrackAnnotations addObject:photoAnnotation];
             }
                 break;
                 
             case SSTrackNoteAnnotation:
             {
                 SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                [self.mutableTrackNotesAnnotations addObject:trackNotesAnnotation];
-                [self.mutableAnnotations addObject:trackNotesAnnotation];
+                [self.mutableTrackAnnotations addObject:trackNotesAnnotation];
             }
                 
                 break;

@@ -34,7 +34,10 @@
     trackNotes.imageURL = [NSURL URLWithString:dictionary[@"properties"][@"640"]];
     
     trackNotes.bboxCoordinates = dictionary[@"bbox"];
-    trackNotes.pointsCoordinates = dictionary[@"geometry"][@"coordinates"];
+    
+    NSArray *coords = dictionary[@"geometry"][@"coordinates"];
+    trackNotes.pointsCoordinates = [coords[0] isKindOfClass:[NSNumber class]] ? @[coords] : coords;
+    
     
     trackNotes.noteType = dictionary[@"properties"][@"entity"];
     trackNotes.noteTypeSub = dictionary[@"properties"][@"entity_sub"];
@@ -51,6 +54,7 @@
     CLLocationDegrees longitude = trackNotes.startLongitude.doubleValue;
     
     CLLocationCoordinate2D noteCoordinates = CLLocationCoordinate2DMake(latitude, longitude);
+    
     trackNotes.coordinate = noteCoordinates;
     
     trackNotes.endLatitude = dictionary[@"properties"][@"end_lat"];
