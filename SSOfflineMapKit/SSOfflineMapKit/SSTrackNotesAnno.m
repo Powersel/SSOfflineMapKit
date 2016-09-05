@@ -32,33 +32,43 @@
     SSTrackNotesAnno *trackNotes = [SSTrackNotesAnno new];
     
     trackNotes.imageURL = [NSURL URLWithString:dictionary[@"properties"][@"640"]];
-    
     trackNotes.bboxCoordinates = dictionary[@"bbox"];
-    
     NSArray *coords = dictionary[@"geometry"][@"coordinates"];
-    trackNotes.pointsCoordinates = [coords[0] isKindOfClass:[NSNumber class]] ? @[coords] : coords;
-    
-    
+    trackNotes.pointsCoordinates = [coords[0] isKindOfClass:[NSNumber class]] ? @[coords] : coords;;
     trackNotes.noteType = dictionary[@"properties"][@"entity"];
     trackNotes.noteTypeSub = dictionary[@"properties"][@"entity_sub"];
     trackNotes.noteTitle = dictionary[@"properties"][@"title"];
     trackNotes.notesText = dictionary[@"properties"][@"notes"];
     trackNotes.geometryType = dictionary[@"geometry"][@"type"];
-    
     trackNotes.day = dictionary[@"properties"][@"day"];
-     
-    trackNotes.startLatitude = dictionary[@"properties"][@"start_lat"];
-    trackNotes.startLongitude = dictionary[@"properties"][@"Start_long"];
     
-    CLLocationDegrees latitude = trackNotes.startLatitude.doubleValue;
-    CLLocationDegrees longitude = trackNotes.startLongitude.doubleValue;
+    NSArray *wayPointStartCoordinates = trackNotes.pointsCoordinates.firstObject;
     
+    trackNotes.startLatitude = wayPointStartCoordinates.firstObject;
+    trackNotes.startLongitude = wayPointStartCoordinates.lastObject;
+    CLLocationDegrees longitude = trackNotes.startLatitude.doubleValue;
+    CLLocationDegrees latitude = trackNotes.startLongitude.doubleValue;
     CLLocationCoordinate2D noteCoordinates = CLLocationCoordinate2DMake(latitude, longitude);
     
-    trackNotes.coordinate = noteCoordinates;
+    NSArray *wayPointLastCoordinates = nil;
+    if (trackNotes.pointsCoordinates.count > 1) {
+        wayPointLastCoordinates = trackNotes.pointsCoordinates.lastObject;
+    }
     
-    trackNotes.endLatitude = dictionary[@"properties"][@"end_lat"];
-    trackNotes.ednLongitude = dictionary[@"properties"][@"end_long"];
+    if (wayPointLastCoordinates) {
+        trackNotes.endLatitude = wayPointLastCoordinates.firstObject;
+        trackNotes.ednLongitude = wayPointLastCoordinates.lastObject;
+        
+        NSString *result = [NSString stringWithFormat:@"POI title:%@ ID:%@. Start points:%@ %@. End points:%@ %@", trackNotes.title,
+                            dictionary[@"properties"][@"id"], trackNotes.startLatitude, trackNotes.startLongitude, trackNotes.endLatitude, trackNotes.ednLongitude];
+        
+        NSLog(@"%@ ", result);
+        
+    }
+    
+    trackNotes.coordinate = noteCoordinates;
+//    trackNotes.endLatitude = dictionary[@"properties"][@"end_lat"];
+//    trackNotes.ednLongitude = dictionary[@"properties"][@"end_long"];
     
     return trackNotes;
 }
