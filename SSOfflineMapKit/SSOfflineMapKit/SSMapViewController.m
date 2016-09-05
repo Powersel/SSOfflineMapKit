@@ -67,7 +67,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     CLLocationDegrees latitude = -33.7039696858;
     CLLocationDegrees longitude = 150.2912592792;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
-    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.075, 0.075);
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.4, 0.4);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     
     [mapView setRegion:region animated:YES];
@@ -76,7 +76,9 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     mapView.showsUserLocation = YES;
     
     [self reloadTileOverlay];
+    
     [mapView addAnnotations:self.customAnnotations];
+    
     [self drawRoutesWith:self.customAnnotations];
 }
 
@@ -93,7 +95,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolylineRenderer *polyLineRender = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-        UIColor *wayCilor = [UIColor colorWithRed:10.0 green:100.0 blue:150. alpha:0.6];
+//        UIColor *wayCilor = [UIColor colorWithRed:10.0 green:100.0 blue:150. alpha:0.6];
+        UIColor *wayCilor = [UIColor blueColor];
         polyLineRender.strokeColor = wayCilor;
         polyLineRender.lineWidth = 3;
         return polyLineRender;
@@ -106,12 +109,15 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     MKAnnotationView *annoView = nil;
-    if ([annotation isKindOfClass:[SSTrackNotesView class]]) {
-        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSTrackNotesViewIdentifier];
-    }
-    
-    if ([annotation isKindOfClass:[SSAnnotationPoint class]]) {
-        annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:SSPhotoAnnoViewIdentifier];
+    if ([annotation isKindOfClass:[SSTrackNotesAnno class]]) {
+        annoView = [[SSTrackNotesView alloc] initWithAnnotation:annotation reuseIdentifier:SSTrackNotesViewIdentifier];
+        annoView.image = [UIImage imageNamed:@"wayPoint"];
+        annoView.canShowCallout = YES;
+        
+    } else if ([annotation isKindOfClass:[SSAnnotationPoint class]]) {
+        annoView = [[SSPhotoAnnoVIew alloc] initWithAnnotation:annotation reuseIdentifier:SSPhotoAnnoViewIdentifier];
+        annoView.canShowCallout = YES;
+        annoView.image = [UIImage imageNamed:@"photoImage"];
     }
     
     return annoView;
