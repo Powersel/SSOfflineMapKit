@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
         self.mutablePoi = [NSMutableArray array];
         self.mutablePhotos = [NSMutableArray array];
         self.mutableTransport = [NSMutableArray array];
-        self.mutableTrackAnnotations = [NSMutableArray array];
+        self.mutableTrackPoints = [NSMutableArray array];
     }
     
     return self;
@@ -95,14 +95,13 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
     for (NSDictionary *annotation in annotations) {
         NSString *entityType = annotation[@"properties"][@"entity"];
         if (entityType) {
-            
             SSAnnotationType annoType = [self entityOfAnnotationWith:entityType];
             
             switch (annoType) {
                 case SSTransportAnnotaion:
                 {
                     SSTrackNotesAnno *transportAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                    [self.mutableTrackAnnotations addObject:transportAnnotation];
+                    [self.mutableTransport addObject:transportAnnotation];
 
                 }
                     break;
@@ -117,13 +116,13 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
                     
                 case SStrackAnnotation: {
                     SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                    [self.mutableTrackAnnotations addObject:trackNotesAnnotation];
+                    [self.mutableTrackPoints addObject:trackNotesAnnotation];
                 }
                     break;
                     
                 case SSPhotoAnnotation: {
                     SSAnnotationPoint *photoAnnotation = [SSAnnotationPoint initAnnotationWith:annotation];
-                    [self.mutableTrackAnnotations addObject:photoAnnotation];
+                    [self.mutablePhotos addObject:photoAnnotation];
                 }
                     break;
                     

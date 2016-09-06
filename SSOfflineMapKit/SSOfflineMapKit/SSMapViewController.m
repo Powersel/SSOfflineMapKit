@@ -71,6 +71,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     [mapView setRegion:region animated:YES];
     [self reloadTileOverlay];
     
+    SSAnnotationsContainer *container = self.annotationsContainer;
+    
     [mapView addAnnotations:self.annotationsContainer.poiAnnotations];
     [mapView addAnnotations:self.annotationsContainer.photos];
     [mapView addAnnotations:self.annotationsContainer.trackPoints];
@@ -187,6 +189,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 }
 
 - (void)drawRoutesWith:(NSArray *)routesArray {
+    
     for (SSTrackNotesAnno *trackAnnotationPoint in routesArray) {
         if ([trackAnnotationPoint isKindOfClass:[SSTrackNotesAnno class]]) {
             NSArray *poiCoordinates = trackAnnotationPoint.pointsCoordinates;
