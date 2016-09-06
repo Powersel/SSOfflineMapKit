@@ -28,6 +28,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 @property (nonatomic, strong) NSArray    *customAnnotations;
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
+@property (nonatomic, strong) SSAnnotationsContainer *annotationsContainer;
+
 - (void)reloadTileOverlay;
 - (void)annotationsInitialisation;
 - (void)unzipArchive;
@@ -68,8 +70,12 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     
     [mapView setRegion:region animated:YES];
     [self reloadTileOverlay];
-    [mapView addAnnotations:self.customAnnotations];
-    [self drawRoutesWith:self.customAnnotations];
+    
+    [mapView addAnnotations:self.annotationsContainer.poiAnnotations];
+    [mapView addAnnotations:self.annotationsContainer.photos];
+    [mapView addAnnotations:self.annotationsContainer.trackPoints];
+    
+    [self drawRoutesWith:self.annotationsContainer.trackPoints];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
@@ -177,9 +183,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 - (void)annotationsInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-    NSArray *annotations = [SSAnnotationsContainer initContainerWithJSON:rawJSON].trackAnnotations;
-    
-    self.customAnnotations = annotations;
+    self.annotationsContainer = [SSAnnotationsContainer initContainerWithJSON:rawJSON];
 }
 
 - (void)drawRoutesWith:(NSArray *)routesArray {

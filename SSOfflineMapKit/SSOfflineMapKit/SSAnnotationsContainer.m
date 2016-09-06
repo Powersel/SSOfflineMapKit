@@ -69,6 +69,22 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
     return [self.mutableTrackAnnotations copy];
 }
 
+- (NSArray *)photos {
+    return [self.mutablePhotos copy];
+}
+
+- (NSArray *)poiAnnotations {
+    return [self.mutablePoi copy];
+}
+
+- (NSArray *)trackPoints {
+    return [self.mutableTrackPoints copy];
+}
+
+- (NSArray *)transport {
+    return [self.mutableTransport copy];
+}
+
 #pragma mark - Private
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON {
@@ -85,15 +101,18 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
             switch (annoType) {
                 case SSTransportAnnotaion:
                 {
-                    
+                    SSTrackNotesAnno *transportAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+                    [self.mutableTrackAnnotations addObject:transportAnnotation];
+
                 }
                     break;
                     
                 case SSPoiAnnotation:
                 {
-                    
+                    SSTrackNotesAnno *poiAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+                    [self.mutablePoi addObject:poiAnnotation];
+
                 }
-                    
                     break;
                     
                 case SStrackAnnotation: {
