@@ -58,17 +58,8 @@
     if (wayPointLastCoordinates) {
         trackNotes.endLatitude = wayPointLastCoordinates.firstObject;
         trackNotes.ednLongitude = wayPointLastCoordinates.lastObject;
-        
-        NSString *result = [NSString stringWithFormat:@"POI title:%@ ID:%@. Start points:%@ %@. End points:%@ %@", trackNotes.title,
-                            dictionary[@"properties"][@"id"], trackNotes.startLatitude, trackNotes.startLongitude, trackNotes.endLatitude, trackNotes.ednLongitude];
-        
-        NSLog(@"%@ ", result);
-        
     }
-    
     trackNotes.coordinate = noteCoordinates;
-//    trackNotes.endLatitude = dictionary[@"properties"][@"end_lat"];
-//    trackNotes.ednLongitude = dictionary[@"properties"][@"end_long"];
     
     return trackNotes;
 }
