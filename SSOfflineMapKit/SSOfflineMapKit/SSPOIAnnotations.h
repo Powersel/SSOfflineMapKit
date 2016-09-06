@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface SSPOIAnnotations : NSObject
+@interface SSPOIAnnotations : NSObject <MKAnnotation>
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+
 
 @end

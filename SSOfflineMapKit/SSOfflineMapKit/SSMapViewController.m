@@ -25,10 +25,6 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 @property (nonatomic, strong) MKTileOverlay *tileOverlay;
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
 
-
-@property (nonatomic, assign) CFMutableDictionaryRef mapLine2View;   // MKPolyline(route line) -> MKPolylineView(route view)
-@property (nonatomic, assign) CFMutableDictionaryRef mapName2Line;   // NSString(name) -> MKPolyline(route line)
-
 @property (nonatomic, strong) NSArray    *customAnnotations;
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
@@ -67,19 +63,17 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     CLLocationDegrees latitude = -33.7039696858;
     CLLocationDegrees longitude = 150.2912592792;
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(latitude, longitude);
-    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.4, 0.4);
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.008, 0.008);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
     
     [mapView setRegion:region animated:YES];
+    [self reloadTileOverlay];
+    [mapView addAnnotations:self.customAnnotations];
+    [self drawRoutesWith:self.customAnnotations];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
-    
-    [self reloadTileOverlay];
-    
-    [mapView addAnnotations:self.customAnnotations];
-    
-    [self drawRoutesWith:self.customAnnotations];
+    mapView.showsScale = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,6 +82,8 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 #pragma mark - MKMapViewDelegate Methods
 
+// Redner of the map tiles and routes
+
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
     if ([overlay isKindOfClass:[MKTileOverlay class]]) {
         return [[MKTileOverlayRenderer alloc] initWithTileOverlay:overlay];
@@ -95,7 +91,6 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolylineRenderer *polyLineRender = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-//        UIColor *wayCilor = [UIColor colorWithRed:10.0 green:100.0 blue:150. alpha:0.6];
         UIColor *wayCilor = [UIColor blueColor];
         polyLineRender.strokeColor = wayCilor;
         polyLineRender.lineWidth = 3;
@@ -103,6 +98,15 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     }
     
     return nil;
+}
+
+// Automatic zoom between 10 and 18 levels
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    CLLocationCoordinate2D coordinates = mapView.region.center;
+    MKCoordinateSpan zoomedValue = [self checkZoomLevelWith:mapView.region.span];
+    MKCoordinateRegion zoomedRegion = MKCoordinateRegionMake(coordinates, zoomedValue);
+    [mapView setRegion:zoomedRegion animated:YES];
 }
 
 #pragma mark - Annotations!!!!!!!!!!!!!!!!
@@ -198,6 +202,19 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
             
         }
     }
+}
+
+- (MKCoordinateSpan)checkZoomLevelWith:(MKCoordinateSpan)coordinatesSpan {
+    double latitude = coordinatesSpan.latitudeDelta;
+    MKCoordinateSpan returnedValue = coordinatesSpan;
+    
+    if (latitude < 0.004) {
+        returnedValue = MKCoordinateSpanMake(0.004, 0.004);
+    } else if (latitude > 0.8) {
+        returnedValue = MKCoordinateSpanMake(0.8, 0.8);
+    }
+    
+    return returnedValue;
 }
 
 @end
