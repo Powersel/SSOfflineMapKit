@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0BDE241D7EA8E400DF205D /* MKMapView+SSZoomLevel.m */; };
+		BB0BDE2A1D7F02E200DF205D /* SSPOIAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0BDE291D7F02E200DF205D /* SSPOIAnnotations.m */; };
+		BB0BDE2D1D7F02F000DF205D /* SSTransportAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0BDE2C1D7F02F000DF205D /* SSTransportAnnotations.m */; };
 		BB5510301D706F8D00556516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB55102F1D706F8D00556516 /* main.m */; };
 		BB5510331D706F8D00556516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510321D706F8D00556516 /* AppDelegate.m */; };
 		BB5510391D706F8D00556516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5510371D706F8D00556516 /* Main.storyboard */; };
@@ -33,6 +36,12 @@
 /* Begin PBXFileReference section */
 		A196CD2378D813A652599510 /* Pods-SSOfflineMapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSOfflineMapKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSOfflineMapKit/Pods-SSOfflineMapKit.debug.xcconfig"; sourceTree = "<group>"; };
 		A3C98B9D1E199B909F35EE62 /* Pods-SSOfflineMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSOfflineMapKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSOfflineMapKit/Pods-SSOfflineMapKit.release.xcconfig"; sourceTree = "<group>"; };
+		BB0BDE231D7EA8E400DF205D /* MKMapView+SSZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+SSZoomLevel.h"; sourceTree = "<group>"; };
+		BB0BDE241D7EA8E400DF205D /* MKMapView+SSZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+SSZoomLevel.m"; sourceTree = "<group>"; };
+		BB0BDE281D7F02E200DF205D /* SSPOIAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPOIAnnotations.h; sourceTree = "<group>"; };
+		BB0BDE291D7F02E200DF205D /* SSPOIAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPOIAnnotations.m; sourceTree = "<group>"; };
+		BB0BDE2B1D7F02F000DF205D /* SSTransportAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTransportAnnotations.h; sourceTree = "<group>"; };
+		BB0BDE2C1D7F02F000DF205D /* SSTransportAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTransportAnnotations.m; sourceTree = "<group>"; };
 		BB55102B1D706F8D00556516 /* SSOfflineMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSOfflineMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55102F1D706F8D00556516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB5510311D706F8D00556516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +99,33 @@
 				A3C98B9D1E199B909F35EE62 /* Pods-SSOfflineMapKit.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB0BDE221D7EA8A700DF205D /* ZoomLevelExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BB0BDE231D7EA8E400DF205D /* MKMapView+SSZoomLevel.h */,
+				BB0BDE241D7EA8E400DF205D /* MKMapView+SSZoomLevel.m */,
+			);
+			name = ZoomLevelExtension;
+			sourceTree = "<group>";
+		};
+		BB0BDE261D7F02B400DF205D /* SSTransportAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				BB0BDE2B1D7F02F000DF205D /* SSTransportAnnotations.h */,
+				BB0BDE2C1D7F02F000DF205D /* SSTransportAnnotations.m */,
+			);
+			name = SSTransportAnnotations;
+			sourceTree = "<group>";
+		};
+		BB0BDE271D7F02C900DF205D /* SSPOIAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				BB0BDE281D7F02E200DF205D /* SSPOIAnnotations.h */,
+				BB0BDE291D7F02E200DF205D /* SSPOIAnnotations.m */,
+			);
+			name = SSPOIAnnotations;
 			sourceTree = "<group>";
 		};
 		BB18F2511D75CFA70011693B /* SSAnnotationView */ = {
@@ -154,6 +190,7 @@
 		BB5510451D707D3900556516 /* SSMapVC */ = {
 			isa = PBXGroup;
 			children = (
+				BB0BDE221D7EA8A700DF205D /* ZoomLevelExtension */,
 				BB5510461D707D8500556516 /* SSMapViewController.h */,
 				BB5510471D707D8500556516 /* SSMapViewController.m */,
 				BB5510481D707D8500556516 /* SSMapViewController.xib */,
@@ -165,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				BBCF87871D781090003AD892 /* SSAnnotationContainer */,
+				BB0BDE271D7F02C900DF205D /* SSPOIAnnotations */,
+				BB0BDE261D7F02B400DF205D /* SSTransportAnnotations */,
 				BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */,
 				BBD016911D771AA7006D1156 /* SSAnnotationPoint */,
 			);
@@ -377,9 +416,12 @@
 				BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */,
 				BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */,
 				BBCF878A1D7816D3003AD892 /* SSAnnotationsContainer.m in Sources */,
+				BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */,
 				BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */,
+				BB0BDE2A1D7F02E200DF205D /* SSPOIAnnotations.m in Sources */,
 				BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */,
 				BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */,
+				BB0BDE2D1D7F02F000DF205D /* SSTransportAnnotations.m in Sources */,
 				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
 				BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */,
