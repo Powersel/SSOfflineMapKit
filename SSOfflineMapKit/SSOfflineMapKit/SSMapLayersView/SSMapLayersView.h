@@ -30,7 +30,6 @@ typedef NS_ENUM(NSUInteger, WWLayerButtons) {
 
 - (IBAction)buttonClicked:(id)sender;
 
-- (void)setButtonsStateWith:(NSDictionary *)state dictionaryCompletion:(WWDictionaryBlock)completionBlock;
 - (void)setButtonsStateWith:(NSArray *)state completion:(WWResultBlock)completionBlock;
 
 @end
