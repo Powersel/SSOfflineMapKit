@@ -9,15 +9,6 @@
 #import "HYIBDesignableView.h"
 #import "WWBlockTypeDef.h"
 
-typedef NS_ENUM(NSUInteger, WWLayerButtons) {
-    WWPOIButton = 0,
-    WWMainWPButton,
-    WWMainTrackButton,
-    WWSidetripsButton,
-    WWAlternatesButton,
-    WWImagesButton
-};
-
 @interface SSMapLayersView : HYIBDesignableView
 @property (strong, nonatomic) IBOutlet UIButton *POIButton;
 @property (strong, nonatomic) IBOutlet UIButton *mainWPButton;

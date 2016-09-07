@@ -4,6 +4,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+typedef NS_ENUM(NSUInteger, WWLayerButtons) {
+    WWPOIButton = 0,
+    WWMainWPButton,
+    WWMainTrackButton,
+    WWSidetripsButton,
+    WWAlternatesButton,
+    WWImagesButton
+};
+
 @interface SSMapViewController : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 

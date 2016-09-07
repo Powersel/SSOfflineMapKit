@@ -29,7 +29,10 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
 
 @property (nonatomic, strong) NSArray    *customAnnotations;
+@property (nonatomic, strong) NSArray    *layersState;
 @property (nonatomic, strong) NSString *tilesFolderPath;
+
+@property (nonatomic, copy) WWResultBlock   buttonsCompletion;
 
 @property (nonatomic, strong) SSAnnotationsContainer *annotationsContainer;
 
@@ -79,6 +82,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     [mapView addAnnotations:container.photos];
     [mapView addAnnotations:container.trackPoints];
     [self drawRoutesWith:container.trackPoints];
+    [self fillLayersOfTheMap];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
@@ -87,6 +91,14 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Accessors
+
+- (void)setLayersState:(NSArray *)layersState {
+    if (_layersState != layersState) {
+        _layersState = layersState;
+    }
 }
 
 #pragma mark - IBActions
@@ -107,7 +119,9 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
             CGRect frame = CGRectMake(originX, originY, width, height);
             
             SSMapLayersView *mapLayers = [[SSMapLayersView alloc] initWithFrame:frame];
-//            [proximityView setTapCompletion:^(id result) {
+           
+            [mapLayers setButtonsStateWith:self.layersState completion:self.buttonsCompletion];
+             //            [proximityView setTapCompletion:^(id result) {
 //                [popoverController closePopover];
 //                if (resultBlock) {
 //                    resultBlock(result);
@@ -254,6 +268,34 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     }
     
     return returnedValue;
+}
+
+- (WWResultBlock)buttonsCompletion {
+    WWResultBlock completion = ^(NSNumber *layerNumber) {
+        WWLayerButtons layer = layerNumber.integerValue;
+        switch (layer) {
+            case WWImagesButton:
+                [self removePhotoLyaer];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+        
+    };
+    
+    return completion;
+}
+
+- (void)fillLayersOfTheMap {
+    self.layersState = @[@(1), @(1), @(1), @(1), @(1), @(1)];
+}
+
+- (void)removePhotoLyaer {
+    [self.mapView removeAnnotations:self.annotationsContainer.photos];
+    [self.mapView reloadInputViews];
 }
 
 @end
