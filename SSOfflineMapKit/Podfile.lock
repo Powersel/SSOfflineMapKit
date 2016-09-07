@@ -1,10 +1,13 @@
 PODS:
+  - ARSPopover (2.2.1)
   - SSZipArchive (1.5)
 
 DEPENDENCIES:
+  - ARSPopover (~> 2.2)
   - SSZipArchive (~> 1.4)
 
 SPEC CHECKSUMS:
+  ARSPopover: ec2531fe8f498da1181e00f9ffeaa586a3d16d82
   SSZipArchive: 29daace2bccb90a47de2837744da397728ff9207
 
 COCOAPODS: 0.39.0

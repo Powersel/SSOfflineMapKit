@@ -6,6 +6,7 @@
 target 'SSOfflineMapKit' do
 
 pod 'SSZipArchive', '~> 1.4'
+pod 'ARSPopover', '~> 2.2'
 
 end
 

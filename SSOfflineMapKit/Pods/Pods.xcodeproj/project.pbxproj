@@ -10,186 +10,98 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>02CD3A6CFD8147915BB5DF20E40E5567</key>
+		<key>00E817413D6BEB0824996DCCC47E8682</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF40A0C29ED1F1EB9506EDE65EA3DF4C</string>
+			<string>62931BB0D19B229805DE7489B44F7472</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
 				<key>ATTRIBUTES</key>
 				<array>
-					<string>Public</string>
+					<string>Project</string>
 				</array>
 			</dict>
 		</dict>
-		<key>03286C7CB729CD1BF9C65D5D1B56BAFD</key>
+		<key>062617491D0EE2F1C2835D628DE03416</key>
 		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>prng.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/prng.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0610B5C6C624FA29BBCCFAB1E2A544A0</key>
+		<key>06A0FBE5AFBE9A8D3917BFA8B15E733D</key>
 		<dict>
-			<key>children</key>
+			<key>baseConfigurationReference</key>
+			<string>8158783AA4571D88E527379DB04B71CA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/ARSPopover/ARSPopover-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0A449EEDA21088A83394EDF831655146</key>
+		<dict>
+			<key>buildConfigurations</key>
 			<array>
-				<string>A694D4DB556609FFAC7922DF9D44CDB2</string>
-				<string>77C88BD14BA93A985883DCFDA105D3A9</string>
-				<string>C95FDB647F8CA1BAF724CDBA46C7D9C3</string>
-				<string>E0465D562C92241B99ECC77A116DA786</string>
-				<string>725A6476AB0998AF5666961E36814DC5</string>
-				<string>F0FDEFA1574C76FD258C292B0330787B</string>
-				<string>40F8D58D7D01AA9F9FC1E02B4E10F195</string>
-				<string>B027DE64DDFA344F53825D982579BF7E</string>
-				<string>5240E40C4EEDB7B21218430552129E1E</string>
-				<string>0DAF02A5936603C4C65C3B39F70DEF6E</string>
-				<string>778ABF0B18A2CCD5FD84B314ACD87838</string>
-				<string>C54CC6284610636E5EF318B183C0F4CA</string>
-				<string>410CFB15CCFAD557DD23BB3A6F3014F7</string>
-				<string>B20352A86456E2458F66EED846D365D2</string>
-				<string>DEB0434A3880759475E79B290FAC0A42</string>
-				<string>E7D50C0DE8B38C542FB0794BC4FE958F</string>
-				<string>3CD3E6A653B6F4CD7D2C05E7510752F1</string>
-				<string>A9A4885ECD961285FC633BE329CE3DE9</string>
-				<string>C6915432676007A73C656D02C5AF86F9</string>
-				<string>F40E11C86B366B02FBCE24AA21CCA9FE</string>
-				<string>D7EDBCED539825832D18D774B3AC5D05</string>
-				<string>72537539072A1679B381BD15CE219154</string>
-				<string>41FEB6D78827F687D80A1E496BB711C8</string>
-				<string>A96B98C1D29266B76F37E47DFD671911</string>
-				<string>DC32DF9B7E6F775F57C053DD6882BAE6</string>
-				<string>2E3C4561A0DF9D9D070DDDF2CBCF0A67</string>
-				<string>EF40A0C29ED1F1EB9506EDE65EA3DF4C</string>
-				<string>D7455BDFCE7030C7FB90007575F223B0</string>
-				<string>0B8D72D8453D6AD85769DD25FDD4099B</string>
-				<string>ED63EA734B639329053ACEA3596D61A2</string>
-				<string>2A6DE44BF100A322C9ED1142F16DE081</string>
-				<string>C3923322682C551FF49CBE639B143540</string>
-				<string>6C46BB706469B13B9E9F3B8DBF805255</string>
-				<string>85EA43546F3E11AF3FB592121AF6BE71</string>
-				<string>D44980CF09073C78A1B9543507781A88</string>
+				<string>90EA9AE2D14470B8C1780EF0BF4EA3FE</string>
+				<string>2BB5F735C2B724B942D7BCA48BC7F106</string>
 			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SSZipArchive</string>
-			<key>path</key>
-			<string>SSZipArchive</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>0B8D72D8453D6AD85769DD25FDD4099B</key>
+		<key>114C3104B92EFE5E9DFC08FE944F4CB0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SSZipCommon.h</string>
+			<string>aeskey.c</string>
 			<key>path</key>
-			<string>SSZipArchive/SSZipCommon.h</string>
+			<string>SSZipArchive/aes/aeskey.c</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0DAF02A5936603C4C65C3B39F70DEF6E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>crypt.h</string>
-			<key>path</key>
-			<string>SSZipArchive/minizip/crypt.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0E103CF8A49493C8FD909640CC9F734F</key>
+		<key>12FAAC548C2B282A32B26B1F12A785C6</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F40E11C86B366B02FBCE24AA21CCA9FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>1819D125C6BB8C881B4CE60F0D2FE407</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B027DE64DDFA344F53825D982579BF7E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>1B43CE7C9AEA2887635E2C8BE5281B3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5240E40C4EEDB7B21218430552129E1E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>200508450C40C1AE4F9D17759C4416C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SSZipArchive.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>227A029EA92CC24E00837CE5202F33FA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7144197F8831F304BBD34A3654461042</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>22E70CF07CC1B08DC29803C549B7A540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C54CC6284610636E5EF318B183C0F4CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>24FEC751CCA7D47A9AD2BBDA0C3AB648</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D7455BDFCE7030C7FB90007575F223B0</string>
+			<string>332D2B28DF3D67F01DEB5EC73BEF8192</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -198,31 +110,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>296838B12A54A446580593CBFDCEC22E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CD3E6A653B6F4CD7D2C05E7510752F1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>29777FC1A5AF407FBAC1EBBE38E926E2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F0FDEFA1574C76FD258C292B0330787B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>2A6DE44BF100A322C9ED1142F16DE081</key>
+		<key>130460C3E7FF5B4651ED032C9C6B619C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -236,6 +124,205 @@
 			<string>SSZipArchive/minizip/unzip.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>14B303D453015421C32AFDAD56D724DC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7F9EAE50DACA20CF9476229AF6ACF150</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>17702B0FC257056B9EEE9C5BCBC6A687</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>342B699A83E4AC36B17A13A85C8BFB22</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1986EEAD08D355BD5D03D6F26EC35E0D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8158783AA4571D88E527379DB04B71CA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/ARSPopover/ARSPopover-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1A3B93843E71EA8E9F402AB3BB09AE2D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>hmac.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/hmac.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DD96FEA0CE1776E014C2602AD5D5265</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D49778F939F28F8EB3D2166DAA742A2D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>21B33DBAD21882BCB62E22A49814676D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>21D8880DEBFEF23AA72CCFB1A80388B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2482035545608D90E44CF5BAE2E2D455</key>
+		<dict>
+			<key>fileRef</key>
+			<string>946EA36A2A796621E2B1976F4486C3B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>2578B70447FA8B1653236A13EDEEF576</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>14B303D453015421C32AFDAD56D724DC</string>
+				<string>17702B0FC257056B9EEE9C5BCBC6A687</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>27CD0073B01B9E69ABE114DD483A8A66</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DB3E185A9B3CD083F697457AF372168D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2929DF2A9DA0F72EE31C209467114FC6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>unzip.c</string>
+			<key>path</key>
+			<string>SSZipArchive/minizip/unzip.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2B24EDA6E13BD81D474C32FEED22AF66</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9B286E4DB697B87FFAC4ABD5F2706B28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
 		</dict>
 		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
 		<dict>
@@ -310,19 +397,39 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>2C294651544AFD6BBD16FC087E56CC8F</key>
+		<key>2BB5F735C2B724B942D7BCA48BC7F106</key>
 		<dict>
-			<key>fileRef</key>
-			<string>85EA43546F3E11AF3FB592121AF6BE71</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
+			<key>baseConfigurationReference</key>
+			<string>AE3CC9F470F702DD08E8C481B1512EFE</string>
+			<key>buildSettings</key>
 			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SSZipArchive/SSZipArchive-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
 			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -338,25 +445,22 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2E3C4561A0DF9D9D070DDDF2CBCF0A67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>sha1.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/sha1.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>323AEFA9FC31E5B0DF666067D50EB535</key>
+		<key>2DF2497D266314C0681DD3E12B1A2791</key>
 		<dict>
 			<key>fileRef</key>
-			<string>77C88BD14BA93A985883DCFDA105D3A9</string>
+			<string>8E109191A01C9DDB50F661D6AA4B39F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>2FD6F62974B9BA67DF3E8BB258D75E59</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CCAFA4CB9515ABDE3D37618F5B6214C9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -366,6 +470,46 @@
 					<string>Project</string>
 				</array>
 			</dict>
+		</dict>
+		<key>3160D52F0E78D3812E5DE253227CA751</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2578B70447FA8B1653236A13EDEEF576</string>
+			<key>buildPhases</key>
+			<array>
+				<string>70ACB8D97E556A88C9D26B7F9994CDF0</string>
+				<string>A2E4C792665E6444F5E9EC5071653AF6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CB0907617637782A150AEC19EBB18DF9</string>
+				<string>F42DFEB0EB8A9E2E72F1740C8D966636</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-SSOfflineMapKit</string>
+			<key>productName</key>
+			<string>Pods-SSOfflineMapKit</string>
+			<key>productReference</key>
+			<string>881A2235CF898B6F09A45BC05C958D45</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>332D2B28DF3D67F01DEB5EC73BEF8192</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>aestab.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/aestab.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>342B699A83E4AC36B17A13A85C8BFB22</key>
 		<dict>
@@ -380,7 +524,48 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>34DE61B315044A65C4C08D761AB6670E</key>
+		<key>3532E68ED69F638511D7FD2B52B100DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>834B5EE39508E88E9734AF92309DE767</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>36AEE90C7E3915AA4D182E7FE0CFFE9B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6580121F52FE62764428F809812255C9</string>
+				<string>AB9FD0550B4E3C9C1A51C283ABC5B162</string>
+				<string>12FAAC548C2B282A32B26B1F12A785C6</string>
+				<string>8A81BFB6024F605BA0D2CDE058365907</string>
+				<string>2DF2497D266314C0681DD3E12B1A2791</string>
+				<string>706F08AF31B48247E3603145F656E274</string>
+				<string>D6FAD06CBE5A50BD9267E49E8C4F99D2</string>
+				<string>6CFDB1B2C5313717EACF57E486A1FC3D</string>
+				<string>511B537CBBFECEADEF75F6088763AA19</string>
+				<string>2482035545608D90E44CF5BAE2E2D455</string>
+				<string>64EE183224F4EBBD0768617C46AA1D4B</string>
+				<string>8614FAEE67E225F02EDA6DECD53C2C43</string>
+				<string>8AA00DFCE6BB177CBFCEE715E0392A8E</string>
+				<string>E72A23CBE71027734786878BCD90ED60</string>
+				<string>E0EC681FEC5C90C9ABDC07702F19F553</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3B8035E5CA574167C49221DC398E14FE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -388,49 +573,12 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SSZipArchive-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C1EF54089BFFE600821523701053B94</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>529F74036784BBD2C5B799E53A3EA62B</string>
-				<string>B4A2442D5A961F91B1826E57ABD90427</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3CD3E6A653B6F4CD7D2C05E7510752F1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>ioapi.c</string>
+			<string>crypt.h</string>
 			<key>path</key>
-			<string>SSZipArchive/minizip/ioapi.c</string>
+			<string>SSZipArchive/minizip/crypt.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D4BCBE58901CE1CA79ADAB8491172B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>410CFB15CCFAD557DD23BB3A6F3014F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
 		</dict>
 		<key>3D4EA812D4D0DDA66BC60743F2F31185</key>
 		<dict>
@@ -466,54 +614,49 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>40958C37DE25A410D48C8AE3D24FF161</key>
+		<key>4487306A083D880D1F633A2935C663A4</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>200508450C40C1AE4F9D17759C4416C5</string>
-			<key>buildSettings</key>
+			<key>fileRef</key>
+			<string>4C1B1719018B083DFABE03F5341E309E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
 			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SSZipArchive/SSZipArchive-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
 			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
 		</dict>
-		<key>40A8A0FBB8C36C03B3767F5B100CDA62</key>
+		<key>44E7439C54D65AA56BB4B180AD2C144D</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1986EEAD08D355BD5D03D6F26EC35E0D</string>
+				<string>06A0FBE5AFBE9A8D3917BFA8B15E733D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A4266E2F11917401E8C7B2B7230C09F2</string>
-			<key>remoteInfo</key>
-			<string>SSZipArchive</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>40F8D58D7D01AA9F9FC1E02B4E10F195</key>
+		<key>4A4BB30999DFD4683AD9313EDFBF608D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>93E2F044E40420EF725E3EF10C298A83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4C1B1719018B083DFABE03F5341E309E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -528,47 +671,50 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>410CFB15CCFAD557DD23BB3A6F3014F7</key>
+		<key>4CB50E801317A410B1CB6FE0CDF8A312</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>8158783AA4571D88E527379DB04B71CA</string>
+				<string>DB3E185A9B3CD083F697457AF372168D</string>
+				<string>F4E696467967CF3522611B492984766E</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>fileenc.c</string>
+			<string>Support Files</string>
 			<key>path</key>
-			<string>SSZipArchive/aes/fileenc.c</string>
+			<string>../Target Support Files/ARSPopover</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>41FEB6D78827F687D80A1E496BB711C8</key>
+		<key>4D728FAE105E92329AFEFD15CBC0F925</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>27CD0073B01B9E69ABE114DD483A8A66</string>
+				<string>9BE4192E39043B76092F6BD4B32C9E00</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>pwd2key.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/pwd2key.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>490A62CBA4004213C88E139E20519375</key>
+		<key>511B537CBBFECEADEF75F6088763AA19</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A96B98C1D29266B76F37E47DFD671911</string>
+			<string>062617491D0EE2F1C2835D628DE03416</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>5240E40C4EEDB7B21218430552129E1E</key>
+		<key>52ACD7AA250D0222DE81E6997F9D53E8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -577,43 +723,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>brg_types.h</string>
+			<string>prng.h</string>
 			<key>path</key>
-			<string>SSZipArchive/aes/brg_types.h</string>
+			<string>SSZipArchive/aes/prng.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>529F74036784BBD2C5B799E53A3EA62B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7F9EAE50DACA20CF9476229AF6ACF150</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
 		</dict>
 		<key>55429B8C73CA1A3311464290131DC46A</key>
 		<dict>
@@ -627,30 +741,6 @@
 			<string>Pods-SSOfflineMapKit-acknowledgements.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>567F67ABFFC4D93AB771783242BFBD1E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0610B5C6C624FA29BBCCFAB1E2A544A0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58DE0D17BED843716F8F4DC94190442A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SSZipArchive</string>
-			<key>target</key>
-			<string>A4266E2F11917401E8C7B2B7230C09F2</string>
-			<key>targetProxy</key>
-			<string>40A8A0FBB8C36C03B3767F5B100CDA62</string>
 		</dict>
 		<key>5A0C6FE968931D888F00C9EC18DDF5BC</key>
 		<dict>
@@ -720,74 +810,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>5FD90F40058774E4114DCDA4990AF5CC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9A4885ECD961285FC633BE329CE3DE9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>60EB8436CFA002B250EB04D7956D4E14</key>
-		<dict>
-			<key>fileRef</key>
-			<string>41FEB6D78827F687D80A1E496BB711C8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>65453A3CB9219C4CA7071F79FCF0CAC1</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>200508450C40C1AE4F9D17759C4416C5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SSZipArchive/SSZipArchive-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>68FB53981B281FD8C0141D856EA84BF6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6C46BB706469B13B9E9F3B8DBF805255</key>
+		<key>5AD1E686D38E288A5F29361F803B6B35</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -802,7 +825,105 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7144197F8831F304BBD34A3654461042</key>
+		<key>5EC61DDEE08D0B9972536A1BF14916C3</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libARSPopover.a</string>
+			<key>path</key>
+			<string>libARSPopover.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>600DB0C26C823B50B64BA54CFF90EA55</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8C029E1EBBD85B96F7CEBB89E871AE63</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>62748B488FCBB6AF32223B79CAD033A0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5EC61DDEE08D0B9972536A1BF14916C3</string>
+				<string>881A2235CF898B6F09A45BC05C958D45</string>
+				<string>AF58239A05DD2F6F2760DDC9BDFE8289</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>62931BB0D19B229805DE7489B44F7472</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>fileenc.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/fileenc.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64EE183224F4EBBD0768617C46AA1D4B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8C9CB4F7B03AF64A3D8A51FCE143EA72</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>6580121F52FE62764428F809812255C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6AD99374936D1FCA384558F76A7F193</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>67AC5491BDACE984FA0AEB2C62A1AC17</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>entropy.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/entropy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67E401C082EDCA89E21685CA56A4206D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -815,106 +936,121 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>715B5000FC1728E76D64FD4AC5305E59</key>
+		<key>6B356612FCAAC7FD606D9D6D7272D6FB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>brg_endian.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/brg_endian.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6CFDB1B2C5313717EACF57E486A1FC3D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6C46BB706469B13B9E9F3B8DBF805255</string>
+			<string>AE2970B4EA29CBC99F9EB7343AEA1A4A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>7165F750683A23F5FBECEB701709D09D</key>
+		<key>6F0AAA2E0B190AA2F037B440015E6F48</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>89ABB878776D3F4ACD8BABEEA7E1E712</string>
-				<string>323AEFA9FC31E5B0DF666067D50EB535</string>
-				<string>802E2120FBE01E6146A19CAB8D7AE09F</string>
-				<string>74FFAF624319FD8DD1942688988598DC</string>
-				<string>1819D125C6BB8C881B4CE60F0D2FE407</string>
-				<string>1B43CE7C9AEA2887635E2C8BE5281B3F</string>
-				<string>F609A5ED004CEE7381AEC97EDB415ED7</string>
-				<string>22E70CF07CC1B08DC29803C549B7A540</string>
-				<string>E17A1D508C00FD2743E614137013567E</string>
-				<string>9A3F851E20BEE6A058608F88242542AF</string>
-				<string>5FD90F40058774E4114DCDA4990AF5CC</string>
-				<string>0E103CF8A49493C8FD909640CC9F734F</string>
-				<string>C24E3F801C910F6F8BAC5FC416E84914</string>
-				<string>490A62CBA4004213C88E139E20519375</string>
-				<string>EEF3C7E5B0C3F6D6DF923E15BF9B316B</string>
-				<string>02CD3A6CFD8147915BB5DF20E40E5567</string>
-				<string>CEFAA391C7A8F4F0C481C28F98AE70E9</string>
-				<string>831C0DDC0E6C6C02B0B7A14F3522E47B</string>
-				<string>715B5000FC1728E76D64FD4AC5305E59</string>
-				<string>2C294651544AFD6BBD16FC087E56CC8F</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SSZipArchive.m</string>
+			<key>path</key>
+			<string>SSZipArchive/SSZipArchive.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>720515594E1B5CCF636701A0438943C6</key>
+		<key>706F08AF31B48247E3603145F656E274</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FCBA4FD4E6B1F2E562BDFF0D36FF32B4</string>
+			<string>1A3B93843E71EA8E9F402AB3BB09AE2D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
 		</dict>
-		<key>72537539072A1679B381BD15CE219154</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>prng.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/prng.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>725A6476AB0998AF5666961E36814DC5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>aesopt.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aesopt.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73722B6C8740A59B4007E1831443A8E7</key>
+		<key>70ACB8D97E556A88C9D26B7F9994CDF0</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>720515594E1B5CCF636701A0438943C6</string>
+				<string>F5979FD2B6440B39C8236B553697ACE1</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>74FFAF624319FD8DD1942688988598DC</key>
+		<key>726DFF0EB5BFF7E5BB2B89B25B9D3173</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>sha1.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/sha1.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>76DEB2227A0FDAEFC5C442E2C6527EDE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>40F8D58D7D01AA9F9FC1E02B4E10F195</string>
+			<string>92840F8000BBFAB9570B07809044902B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>78C6A1C55BEFE63134D4C593D370A33F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SSZipCommon.h</string>
+			<key>path</key>
+			<string>SSZipArchive/SSZipCommon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7907AD43F362FE73FAC8EEC8E6785C1D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6B356612FCAAC7FD606D9D6D7272D6FB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -925,33 +1061,30 @@
 				</array>
 			</dict>
 		</dict>
-		<key>778ABF0B18A2CCD5FD84B314ACD87838</key>
+		<key>792B00BD748B485ACC14FBD4081881E5</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurationList</key>
+			<string>44E7439C54D65AA56BB4B180AD2C144D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4D728FAE105E92329AFEFD15CBC0F925</string>
+				<string>A093391360D92E2AA4270C1585D88C06</string>
+				<string>BB7DF203929B040740E94384A98C0E6A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>entropy.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/entropy.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77C88BD14BA93A985883DCFDA105D3A9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>aes_via_ace.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aes_via_ace.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>ARSPopover</string>
+			<key>productName</key>
+			<string>ARSPopover</string>
+			<key>productReference</key>
+			<string>5EC61DDEE08D0B9972536A1BF14916C3</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
@@ -959,14 +1092,59 @@
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>567F67ABFFC4D93AB771783242BFBD1E</string>
-				<string>DEBA3992F36B50DEF024DB4B6306591A</string>
+				<string>93591A0AF35AB84A5EC9C9E6DD745F14</string>
+				<string>62748B488FCBB6AF32223B79CAD033A0</string>
 				<string>B930D3850017B93B8964E45D4D235D28</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E21F9CBCB814FA3CD3604DEFCEFBAB2</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>792B00BD748B485ACC14FBD4081881E5</string>
+			<key>remoteInfo</key>
+			<string>ARSPopover</string>
+		</dict>
+		<key>7E8B21852C87D98B7C4D496020B19BB5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CA0FEBA22E841161F99AA48707CACD6E</string>
+				<string>2FD6F62974B9BA67DF3E8BB258D75E59</string>
+				<string>1DD96FEA0CE1776E014C2602AD5D5265</string>
+				<string>4487306A083D880D1F633A2935C663A4</string>
+				<string>7907AD43F362FE73FAC8EEC8E6785C1D</string>
+				<string>A75DCACA2F54C90FF2944132373C8C0F</string>
+				<string>C1B386D886091A25785A17BF663150CE</string>
+				<string>EB525D32DE2C6BA652DD4E3B0C46D6B2</string>
+				<string>00E817413D6BEB0824996DCCC47E8682</string>
+				<string>2B24EDA6E13BD81D474C32FEED22AF66</string>
+				<string>E5BF974C01B18FF0543E62A9149A1007</string>
+				<string>3532E68ED69F638511D7FD2B52B100DC</string>
+				<string>EE4A7971CDBA251A6964712231E59A5B</string>
+				<string>C9AAB6B898B6F8A3B9D51CA4088805B4</string>
+				<string>B91F43958461F7F3CD599EBF64781FC4</string>
+				<string>600DB0C26C823B50B64BA54CFF90EA55</string>
+				<string>957BFB17DC5DFA7F57C658037A15DECD</string>
+				<string>8760D9E58B1142EA7BB72D862E27FC21</string>
+				<string>A8E9F5DDA1B16BFD87A9CC658CD3BFED</string>
+				<string>4A4BB30999DFD4683AD9313EDFBF608D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>7F9EAE50DACA20CF9476229AF6ACF150</key>
 		<dict>
@@ -994,59 +1172,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>802E2120FBE01E6146A19CAB8D7AE09F</key>
+		<key>8158783AA4571D88E527379DB04B71CA</key>
 		<dict>
-			<key>fileRef</key>
-			<string>725A6476AB0998AF5666961E36814DC5</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>ARSPopover.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>81BACF7FC7D5A5FBB817998300162301</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DC32DF9B7E6F775F57C053DD6882BAE6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>831C0DDC0E6C6C02B0B7A14F3522E47B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2A6DE44BF100A322C9ED1142F16DE081</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8526840D01298610F7DD7F47B3650413</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ED63EA734B639329053ACEA3596D61A2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>85EA43546F3E11AF3FB592121AF6BE71</key>
+		<key>834B5EE39508E88E9734AF92309DE767</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1055,160 +1194,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ZipArchive.h</string>
+			<string>mztools.h</string>
 			<key>path</key>
-			<string>SSZipArchive/ZipArchive.h</string>
+			<string>SSZipArchive/minizip/mztools.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>85F96697A7EE17173DEE8D2C7226EF51</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D7EDBCED539825832D18D774B3AC5D05</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>8710CC029695168DC07C94D87E7FBAC0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>40958C37DE25A410D48C8AE3D24FF161</string>
-				<string>65453A3CB9219C4CA7071F79FCF0CAC1</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>89ABB878776D3F4ACD8BABEEA7E1E712</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A694D4DB556609FFAC7922DF9D44CDB2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8C5E2DE637293BA89DADE36C8F914547</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>68FB53981B281FD8C0141D856EA84BF6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9A3F851E20BEE6A058608F88242542AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E7D50C0DE8B38C542FB0794BC4FE958F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9DDB47D6A54DA038EEBAF116078AEBC0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>03286C7CB729CD1BF9C65D5D1B56BAFD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A261105A1501312A1C9056EE2F464B2C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEB0434A3880759475E79B290FAC0A42</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>A4266E2F11917401E8C7B2B7230C09F2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8710CC029695168DC07C94D87E7FBAC0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B593C77DE6A460D06F7F8B8C80B68B89</string>
-				<string>9DDB47D6A54DA038EEBAF116078AEBC0</string>
-				<string>7165F750683A23F5FBECEB701709D09D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SSZipArchive</string>
-			<key>productName</key>
-			<string>SSZipArchive</string>
-			<key>productReference</key>
-			<string>B98A8FC8D009A130CCCA56322936818D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>A694D4DB556609FFAC7922DF9D44CDB2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>aes.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A96B98C1D29266B76F37E47DFD671911</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>pwd2key.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/pwd2key.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9A4885ECD961285FC633BE329CE3DE9</key>
+		<key>84188D404F86C80EF0F334C4BF461FE4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1223,6 +1215,377 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>8614FAEE67E225F02EDA6DECD53C2C43</key>
+		<dict>
+			<key>fileRef</key>
+			<string>67E401C082EDCA89E21685CA56A4206D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8760D9E58B1142EA7BB72D862E27FC21</key>
+		<dict>
+			<key>fileRef</key>
+			<string>130460C3E7FF5B4651ED032C9C6B619C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>881A2235CF898B6F09A45BC05C958D45</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-SSOfflineMapKit.a</string>
+			<key>path</key>
+			<string>libPods-SSOfflineMapKit.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>8A81BFB6024F605BA0D2CDE058365907</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BDD41EBB9C6D8D61585CC63997713D6B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>8AA00DFCE6BB177CBFCEE715E0392A8E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6F0AAA2E0B190AA2F037B440015E6F48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>8C029E1EBBD85B96F7CEBB89E871AE63</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SSZipArchive.h</string>
+			<key>path</key>
+			<string>SSZipArchive/SSZipArchive.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8C601BA9F8532F14AFB647563C1CF876</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C8E938F62DDABC057D4A5FEA979835DC</string>
+			<key>remoteInfo</key>
+			<string>SSZipArchive</string>
+		</dict>
+		<key>8C9CB4F7B03AF64A3D8A51FCE143EA72</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>sha1.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/sha1.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E109191A01C9DDB50F661D6AA4B39F7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>fileenc.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/fileenc.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90EA9AE2D14470B8C1780EF0BF4EA3FE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>AE3CC9F470F702DD08E8C481B1512EFE</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SSZipArchive/SSZipArchive-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>92840F8000BBFAB9570B07809044902B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ARSPopover.h</string>
+			<key>path</key>
+			<string>Source/ARSPopover.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>93591A0AF35AB84A5EC9C9E6DD745F14</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D629DA75333ECBB27301D363AE2061CB</string>
+				<string>9E80801DB81F5DB6CCC2E6F21EE3E724</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>93E2F044E40420EF725E3EF10C298A83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ZipArchive.h</string>
+			<key>path</key>
+			<string>SSZipArchive/ZipArchive.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>946EA36A2A796621E2B1976F4486C3B2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>pwd2key.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/pwd2key.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>957BFB17DC5DFA7F57C658037A15DECD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>78C6A1C55BEFE63134D4C593D370A33F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>95FC003C22BC3BB305E5D78531758864</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>aes.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/aes.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B286E4DB697B87FFAC4ABD5F2706B28</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>hmac.h</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/hmac.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9BE4192E39043B76092F6BD4B32C9E00</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E52167C6709EF3D01BB5611AFDF472CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9E80801DB81F5DB6CCC2E6F21EE3E724</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>95FC003C22BC3BB305E5D78531758864</string>
+				<string>CCAFA4CB9515ABDE3D37618F5B6214C9</string>
+				<string>D6AD99374936D1FCA384558F76A7F193</string>
+				<string>114C3104B92EFE5E9DFC08FE944F4CB0</string>
+				<string>D49778F939F28F8EB3D2166DAA742A2D</string>
+				<string>332D2B28DF3D67F01DEB5EC73BEF8192</string>
+				<string>4C1B1719018B083DFABE03F5341E309E</string>
+				<string>6B356612FCAAC7FD606D9D6D7272D6FB</string>
+				<string>D3A7609A888EBA79889FFF1D892B82F3</string>
+				<string>3B8035E5CA574167C49221DC398E14FE</string>
+				<string>BDD41EBB9C6D8D61585CC63997713D6B</string>
+				<string>67AC5491BDACE984FA0AEB2C62A1AC17</string>
+				<string>8E109191A01C9DDB50F661D6AA4B39F7</string>
+				<string>62931BB0D19B229805DE7489B44F7472</string>
+				<string>1A3B93843E71EA8E9F402AB3BB09AE2D</string>
+				<string>9B286E4DB697B87FFAC4ABD5F2706B28</string>
+				<string>C0FF52465D02AD6714C92CCD620C752A</string>
+				<string>84188D404F86C80EF0F334C4BF461FE4</string>
+				<string>AE2970B4EA29CBC99F9EB7343AEA1A4A</string>
+				<string>834B5EE39508E88E9734AF92309DE767</string>
+				<string>062617491D0EE2F1C2835D628DE03416</string>
+				<string>52ACD7AA250D0222DE81E6997F9D53E8</string>
+				<string>946EA36A2A796621E2B1976F4486C3B2</string>
+				<string>ED154893B29180499D54589044781869</string>
+				<string>8C9CB4F7B03AF64A3D8A51FCE143EA72</string>
+				<string>726DFF0EB5BFF7E5BB2B89B25B9D3173</string>
+				<string>8C029E1EBBD85B96F7CEBB89E871AE63</string>
+				<string>6F0AAA2E0B190AA2F037B440015E6F48</string>
+				<string>78C6A1C55BEFE63134D4C593D370A33F</string>
+				<string>2929DF2A9DA0F72EE31C209467114FC6</string>
+				<string>130460C3E7FF5B4651ED032C9C6B619C</string>
+				<string>B86AF61E8323FCFF04586E87731101A8</string>
+				<string>5AD1E686D38E288A5F29361F803B6B35</string>
+				<string>93E2F044E40420EF725E3EF10C298A83</string>
+				<string>B61301B57190BF6FDA117C54C464A73C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SSZipArchive</string>
+			<key>path</key>
+			<string>SSZipArchive</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A093391360D92E2AA4270C1585D88C06</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>21B33DBAD21882BCB62E22A49814676D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A2E4C792665E6444F5E9EC5071653AF6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>21D8880DEBFEF23AA72CCFB1A80388B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A75DCACA2F54C90FF2944132373C8C0F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D3A7609A888EBA79889FFF1D892B82F3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A8E9F5DDA1B16BFD87A9CC658CD3BFED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AD1E686D38E288A5F29361F803B6B35</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>AB9FD0550B4E3C9C1A51C283ABC5B162</key>
+		<dict>
+			<key>fileRef</key>
+			<string>114C3104B92EFE5E9DFC08FE944F4CB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
 		<key>ACF9677F71D3AFFC998B8DBC3F6369F6</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1236,109 +1599,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B027DE64DDFA344F53825D982579BF7E</key>
+		<key>AE2970B4EA29CBC99F9EB7343AEA1A4A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>mztools.c</string>
+			<key>path</key>
+			<string>SSZipArchive/minizip/mztools.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AE3CC9F470F702DD08E8C481B1512EFE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>brg_endian.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>SSZipArchive/aes/brg_endian.h</string>
+			<string>SSZipArchive.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B20352A86456E2458F66EED846D365D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>fileenc.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/fileenc.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B4A2442D5A961F91B1826E57ABD90427</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>342B699A83E4AC36B17A13A85C8BFB22</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B593C77DE6A460D06F7F8B8C80B68B89</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C933E16EAC8744CE2BE8F3955DAABDAF</string>
-				<string>D7B3DD8CD20D25972F0239D71C2BFCB2</string>
-				<string>29777FC1A5AF407FBAC1EBBE38E926E2</string>
-				<string>BA6DF3CD087364E7C9D164E5863FC3A2</string>
-				<string>3D4BCBE58901CE1CA79ADAB8491172B6</string>
-				<string>A261105A1501312A1C9056EE2F464B2C</string>
-				<string>296838B12A54A446580593CBFDCEC22E</string>
-				<string>FA4A6890AB3757FD38A9B7764B109D70</string>
-				<string>85F96697A7EE17173DEE8D2C7226EF51</string>
-				<string>60EB8436CFA002B250EB04D7956D4E14</string>
-				<string>81BACF7FC7D5A5FBB817998300162301</string>
-				<string>227A029EA92CC24E00837CE5202F33FA</string>
-				<string>24FEC751CCA7D47A9AD2BBDA0C3AB648</string>
-				<string>8526840D01298610F7DD7F47B3650413</string>
-				<string>E72F7FBA06EF520E9FFE9BE7EBC87836</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B930D3850017B93B8964E45D4D235D28</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3D4EA812D4D0DDA66BC60743F2F31185</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B98A8FC8D009A130CCCA56322936818D</key>
+		<key>AF58239A05DD2F6F2760DDC9BDFE8289</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1352,6 +1639,63 @@
 			<string>libSSZipArchive.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B61301B57190BF6FDA117C54C464A73C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AE3CC9F470F702DD08E8C481B1512EFE</string>
+				<string>67E401C082EDCA89E21685CA56A4206D</string>
+				<string>F23D720B40FE1D97EC93F85639F5F805</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/SSZipArchive</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B86AF61E8323FCFF04586E87731101A8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>zip.c</string>
+			<key>path</key>
+			<string>SSZipArchive/minizip/zip.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B91F43958461F7F3CD599EBF64781FC4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>726DFF0EB5BFF7E5BB2B89B25B9D3173</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B930D3850017B93B8964E45D4D235D28</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3D4EA812D4D0DDA66BC60743F2F31185</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -1370,17 +1714,18 @@
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
 		</dict>
-		<key>BA6DF3CD087364E7C9D164E5863FC3A2</key>
+		<key>BB7DF203929B040740E94384A98C0E6A</key>
 		<dict>
-			<key>fileRef</key>
-			<string>778ABF0B18A2CCD5FD84B314ACD87838</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>76DEB2227A0FDAEFC5C442E2C6527EDE</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
 		<dict>
@@ -1395,20 +1740,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BDD11D5C060B2EC76EC8B16EEF62BDC8</key>
+		<key>BDD41EBB9C6D8D61585CC63997713D6B</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>0</string>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>libPods-SSOfflineMapKit.a</string>
+			<string>entropy.c</string>
 			<key>path</key>
-			<string>libPods-SSOfflineMapKit.a</string>
+			<string>SSZipArchive/aes/entropy.c</string>
 			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
 		<dict>
@@ -1423,10 +1766,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C24E3F801C910F6F8BAC5FC416E84914</key>
+		<key>C0FF52465D02AD6714C92CCD620C752A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>ioapi.c</string>
+			<key>path</key>
+			<string>SSZipArchive/minizip/ioapi.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C1B386D886091A25785A17BF663150CE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>72537539072A1679B381BD15CE219154</string>
+			<string>3B8035E5CA574167C49221DC398E14FE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1437,20 +1793,71 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C3923322682C551FF49CBE639B143540</key>
+		<key>C8E938F62DDABC057D4A5FEA979835DC</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurationList</key>
+			<string>0A449EEDA21088A83394EDF831655146</string>
+			<key>buildPhases</key>
+			<array>
+				<string>36AEE90C7E3915AA4D182E7FE0CFFE9B</string>
+				<string>F66304FC8FD4D86098B6AC6E4EC06C9A</string>
+				<string>7E8B21852C87D98B7C4D496020B19BB5</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>zip.c</string>
-			<key>path</key>
-			<string>SSZipArchive/minizip/zip.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>SSZipArchive</string>
+			<key>productName</key>
+			<string>SSZipArchive</string>
+			<key>productReference</key>
+			<string>AF58239A05DD2F6F2760DDC9BDFE8289</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>C54CC6284610636E5EF318B183C0F4CA</key>
+		<key>C9AAB6B898B6F8A3B9D51CA4088805B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ED154893B29180499D54589044781869</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CA0FEBA22E841161F99AA48707CACD6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>95FC003C22BC3BB305E5D78531758864</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CB0907617637782A150AEC19EBB18DF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>ARSPopover</string>
+			<key>target</key>
+			<string>792B00BD748B485ACC14FBD4081881E5</string>
+			<key>targetProxy</key>
+			<string>7E21F9CBCB814FA3CD3604DEFCEFBAB2</string>
+		</dict>
+		<key>CCAFA4CB9515ABDE3D37618F5B6214C9</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1459,63 +1866,26 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>entropy.h</string>
+			<string>aes_via_ace.h</string>
 			<key>path</key>
-			<string>SSZipArchive/aes/entropy.h</string>
+			<string>SSZipArchive/aes/aes_via_ace.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C6915432676007A73C656D02C5AF86F9</key>
+		<key>D3A7609A888EBA79889FFF1D892B82F3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>mztools.c</string>
+			<string>brg_types.h</string>
 			<key>path</key>
-			<string>SSZipArchive/minizip/mztools.c</string>
+			<string>SSZipArchive/aes/brg_types.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C933E16EAC8744CE2BE8F3955DAABDAF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C95FDB647F8CA1BAF724CDBA46C7D9C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>C95FDB647F8CA1BAF724CDBA46C7D9C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>aescrypt.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aescrypt.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEFAA391C7A8F4F0C481C28F98AE70E9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B8D72D8453D6AD85769DD25FDD4099B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -1543,7 +1913,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>DEBA3992F36B50DEF024DB4B6306591A</string>
+			<string>62748B488FCBB6AF32223B79CAD033A0</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -1552,46 +1922,60 @@
 			<string></string>
 			<key>targets</key>
 			<array>
-				<string>F81DE413B7F65F2A8769F4A38EFB0EFE</string>
-				<string>A4266E2F11917401E8C7B2B7230C09F2</string>
+				<string>792B00BD748B485ACC14FBD4081881E5</string>
+				<string>3160D52F0E78D3812E5DE253227CA751</string>
+				<string>C8E938F62DDABC057D4A5FEA979835DC</string>
 			</array>
 		</dict>
-		<key>D44980CF09073C78A1B9543507781A88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>200508450C40C1AE4F9D17759C4416C5</string>
-				<string>7144197F8831F304BBD34A3654461042</string>
-				<string>34DE61B315044A65C4C08D761AB6670E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/SSZipArchive</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7455BDFCE7030C7FB90007575F223B0</key>
+		<key>D49778F939F28F8EB3D2166DAA742A2D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SSZipArchive.m</string>
+			<string>aesopt.h</string>
 			<key>path</key>
-			<string>SSZipArchive/SSZipArchive.m</string>
+			<string>SSZipArchive/aes/aesopt.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D7B3DD8CD20D25972F0239D71C2BFCB2</key>
+		<key>D629DA75333ECBB27301D363AE2061CB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>92840F8000BBFAB9570B07809044902B</string>
+				<string>E52167C6709EF3D01BB5611AFDF472CE</string>
+				<string>4CB50E801317A410B1CB6FE0CDF8A312</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ARSPopover</string>
+			<key>path</key>
+			<string>ARSPopover</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D6AD99374936D1FCA384558F76A7F193</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>aescrypt.c</string>
+			<key>path</key>
+			<string>SSZipArchive/aes/aescrypt.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D6FAD06CBE5A50BD9267E49E8C4F99D2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E0465D562C92241B99ECC77A116DA786</string>
+			<string>C0FF52465D02AD6714C92CCD620C752A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1600,76 +1984,57 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>D7EDBCED539825832D18D774B3AC5D05</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>prng.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/prng.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DC32DF9B7E6F775F57C053DD6882BAE6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>sha1.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/sha1.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEB0434A3880759475E79B290FAC0A42</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>hmac.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/hmac.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEBA3992F36B50DEF024DB4B6306591A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BDD11D5C060B2EC76EC8B16EEF62BDC8</string>
-				<string>B98A8FC8D009A130CCCA56322936818D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0465D562C92241B99ECC77A116DA786</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>aeskey.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aeskey.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E17A1D508C00FD2743E614137013567E</key>
+		<key>D7CB337DCC05A39F5072AF0D931F723E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B20352A86456E2458F66EED846D365D2</string>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DB3E185A9B3CD083F697457AF372168D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ARSPopover-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E0EC681FEC5C90C9ABDC07702F19F553</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B86AF61E8323FCFF04586E87731101A8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>E52167C6709EF3D01BB5611AFDF472CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ARSPopover.m</string>
+			<key>path</key>
+			<string>Source/ARSPopover.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E5BF974C01B18FF0543E62A9149A1007</key>
+		<dict>
+			<key>fileRef</key>
+			<string>84188D404F86C80EF0F334C4BF461FE4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1693,10 +2058,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E72F7FBA06EF520E9FFE9BE7EBC87836</key>
+		<key>E72A23CBE71027734786878BCD90ED60</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C3923322682C551FF49CBE639B143540</string>
+			<string>2929DF2A9DA0F72EE31C209467114FC6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1705,38 +2070,10 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>E7D50C0DE8B38C542FB0794BC4FE958F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>hmac.h</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/hmac.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED63EA734B639329053ACEA3596D61A2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>unzip.c</string>
-			<key>path</key>
-			<string>SSZipArchive/minizip/unzip.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EEF3C7E5B0C3F6D6DF923E15BF9B316B</key>
+		<key>EB525D32DE2C6BA652DD4E3B0C46D6B2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2E3C4561A0DF9D9D070DDDF2CBCF0A67</string>
+			<string>67AC5491BDACE984FA0AEB2C62A1AC17</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1747,7 +2084,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>EF40A0C29ED1F1EB9506EDE65EA3DF4C</key>
+		<key>ED154893B29180499D54589044781869</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1756,44 +2093,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SSZipArchive.h</string>
+			<string>pwd2key.h</string>
 			<key>path</key>
-			<string>SSZipArchive/SSZipArchive.h</string>
+			<string>SSZipArchive/aes/pwd2key.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F0FDEFA1574C76FD258C292B0330787B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>aestab.c</string>
-			<key>path</key>
-			<string>SSZipArchive/aes/aestab.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F40E11C86B366B02FBCE24AA21CCA9FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>mztools.h</string>
-			<key>path</key>
-			<string>SSZipArchive/minizip/mztools.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F609A5ED004CEE7381AEC97EDB415ED7</key>
+		<key>EE4A7971CDBA251A6964712231E59A5B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0DAF02A5936603C4C65C3B39F70DEF6E</string>
+			<string>52ACD7AA250D0222DE81E6997F9D53E8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1804,43 +2113,62 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F81DE413B7F65F2A8769F4A38EFB0EFE</key>
+		<key>F23D720B40FE1D97EC93F85639F5F805</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>3C1EF54089BFFE600821523701053B94</string>
-			<key>buildPhases</key>
-			<array>
-				<string>73722B6C8740A59B4007E1831443A8E7</string>
-				<string>8C5E2DE637293BA89DADE36C8F914547</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>58DE0D17BED843716F8F4DC94190442A</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-SSOfflineMapKit</string>
-			<key>productName</key>
-			<string>Pods-SSOfflineMapKit</string>
-			<key>productReference</key>
-			<string>BDD11D5C060B2EC76EC8B16EEF62BDC8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SSZipArchive-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FA4A6890AB3757FD38A9B7764B109D70</key>
+		<key>F42DFEB0EB8A9E2E72F1740C8D966636</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SSZipArchive</string>
+			<key>target</key>
+			<string>C8E938F62DDABC057D4A5FEA979835DC</string>
+			<key>targetProxy</key>
+			<string>8C601BA9F8532F14AFB647563C1CF876</string>
+		</dict>
+		<key>F4E696467967CF3522611B492984766E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ARSPopover-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5979FD2B6440B39C8236B553697ACE1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C6915432676007A73C656D02C5AF86F9</string>
+			<string>FCBA4FD4E6B1F2E562BDFF0D36FF32B4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
+		</dict>
+		<key>F66304FC8FD4D86098B6AC6E4EC06C9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D7CB337DCC05A39F5072AF0D931F723E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>FCBA4FD4E6B1F2E562BDFF0D36FF32B4</key>
 		<dict>
