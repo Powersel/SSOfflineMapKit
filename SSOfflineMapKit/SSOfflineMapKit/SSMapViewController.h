@@ -7,4 +7,6 @@
 @interface SSMapViewController : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
+- (IBAction)layersButton:(id)sender;
+
 @end

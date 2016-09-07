@@ -15,7 +15,10 @@
 #import "SSPhotoAnnoVIew.h"
 #import "SSTrackNotesView.h"
 
+#import <ARSPopover/ARSPopover.h>
 #import <CoreLocation/CoreLocation.h>
+
+#import "SSMapLayersView.h"
 
 static NSString * const SSPhotoAnnoViewIdentifier = @"SSPhotoAnnoVIew";
 static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
@@ -84,6 +87,37 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)layersButton:(id)sender {
+    ARSPopover *popoverController = [ARSPopover new];
+    UIButton *button = sender;
+    popoverController.sourceView = button;
+    popoverController.sourceRect = CGRectMake(CGRectGetMidX(button.bounds), CGRectGetMaxY(button.bounds), 0, 0);
+    popoverController.contentSize = CGSizeMake(145, 190);
+    popoverController.arrowDirection = UIPopoverArrowDirectionUp;
+    [self presentViewController:popoverController animated:YES completion:^{
+        [popoverController insertContentIntoPopover:^(ARSPopover *popover, CGSize popoverPresentedSize, CGFloat popoverArrowHeight) {
+            CGFloat originX = 0;
+            CGFloat originY = 0;
+            CGFloat width = popoverPresentedSize.width;
+            CGFloat height = popoverPresentedSize.height - popoverArrowHeight;
+            CGRect frame = CGRectMake(originX, originY, width, height);
+            
+            SSMapLayersView *mapLayers = [[SSMapLayersView alloc] initWithFrame:frame];
+//            [proximityView setTapCompletion:^(id result) {
+//                [popoverController closePopover];
+//                if (resultBlock) {
+//                    resultBlock(result);
+//                }
+//            }];
+            [popover.view addSubview:mapLayers];
+        }];
+    }];
+    
+    
 }
 
 #pragma mark - MKMapViewDelegate Methods
