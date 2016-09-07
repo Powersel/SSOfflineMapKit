@@ -6,11 +6,11 @@
 //  Copyright © 2016 anahoret.com. All rights reserved.
 //
 
-#import "WWView.h"
+#import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
 
-@interface HYIBDesignableView : WWView
+@interface HYIBDesignableView : UIView
 
 - (UIView *)loadViewFromNib; //override if need customize loading with nib
 

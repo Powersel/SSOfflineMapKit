@@ -48,6 +48,7 @@
 		BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMapLayersView.m; sourceTree = "<group>"; };
 		BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapLayersView.xib; sourceTree = "<group>"; };
 		BB1620A91D800D610069CEB7 /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
+		BB1620AB1D8032580069CEB7 /* WWBlockTypeDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBlockTypeDef.h; sourceTree = "<group>"; };
 		BB55102B1D706F8D00556516 /* SSOfflineMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSOfflineMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55102F1D706F8D00556516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB5510311D706F8D00556516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB1620AB1D8032580069CEB7 /* WWBlockTypeDef.h */,
 				BB16209F1D7FFD410069CEB7 /* SSMapLayersView */,
 				BB0BDE2E1D7F090B00DF205D /* Extensions */,
 				BBCF87861D78107D003AD892 /* SSAnnotations */,
