@@ -72,12 +72,10 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     [self reloadTileOverlay];
     
     SSAnnotationsContainer *container = self.annotationsContainer;
-    
-    [mapView addAnnotations:self.annotationsContainer.poiAnnotations];
-    [mapView addAnnotations:self.annotationsContainer.photos];
-    [mapView addAnnotations:self.annotationsContainer.trackPoints];
-    
-    [self drawRoutesWith:self.annotationsContainer.trackPoints];
+    [mapView addAnnotations:container.poiAnnotations];
+    [mapView addAnnotations:container.photos];
+    [mapView addAnnotations:container.trackPoints];
+    [self drawRoutesWith:container.trackPoints];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
