@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0BDE241D7EA8E400DF205D /* MKMapView+SSZoomLevel.m */; };
 		BB0BDE311D7F092300DF205D /* MKMapView+SSZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0BDE301D7F092300DF205D /* MKMapView+SSZoomLevel.m */; };
+		BB1620A31D7FFD870069CEB7 /* HYIBDesignableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1620A21D7FFD870069CEB7 /* HYIBDesignableView.m */; };
+		BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */; };
+		BB1620A81D7FFDCA0069CEB7 /* SSMapLayersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */; };
 		BB5510301D706F8D00556516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB55102F1D706F8D00556516 /* main.m */; };
 		BB5510331D706F8D00556516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510321D706F8D00556516 /* AppDelegate.m */; };
 		BB5510391D706F8D00556516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5510371D706F8D00556516 /* Main.storyboard */; };
@@ -39,6 +42,11 @@
 		BB0BDE241D7EA8E400DF205D /* MKMapView+SSZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+SSZoomLevel.m"; sourceTree = "<group>"; };
 		BB0BDE2F1D7F092300DF205D /* MKMapView+SSZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+SSZoomLevel.h"; sourceTree = "<group>"; };
 		BB0BDE301D7F092300DF205D /* MKMapView+SSZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+SSZoomLevel.m"; sourceTree = "<group>"; };
+		BB1620A11D7FFD870069CEB7 /* HYIBDesignableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYIBDesignableView.h; sourceTree = "<group>"; };
+		BB1620A21D7FFD870069CEB7 /* HYIBDesignableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYIBDesignableView.m; sourceTree = "<group>"; };
+		BB1620A41D7FFDB30069CEB7 /* SSMapLayersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMapLayersView.h; sourceTree = "<group>"; };
+		BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMapLayersView.m; sourceTree = "<group>"; };
+		BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapLayersView.xib; sourceTree = "<group>"; };
 		BB55102B1D706F8D00556516 /* SSOfflineMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSOfflineMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55102F1D706F8D00556516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB5510311D706F8D00556516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +124,26 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		BB16209F1D7FFD410069CEB7 /* SSMapLayersView */ = {
+			isa = PBXGroup;
+			children = (
+				BB1620A01D7FFD7F0069CEB7 /* HYDesingbleView */,
+				BB1620A41D7FFDB30069CEB7 /* SSMapLayersView.h */,
+				BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */,
+				BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */,
+			);
+			path = SSMapLayersView;
+			sourceTree = "<group>";
+		};
+		BB1620A01D7FFD7F0069CEB7 /* HYDesingbleView */ = {
+			isa = PBXGroup;
+			children = (
+				BB1620A11D7FFD870069CEB7 /* HYIBDesignableView.h */,
+				BB1620A21D7FFD870069CEB7 /* HYIBDesignableView.m */,
+			);
+			path = HYDesingbleView;
+			sourceTree = "<group>";
+		};
 		BB18F2511D75CFA70011693B /* SSAnnotationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +174,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB16209F1D7FFD410069CEB7 /* SSMapLayersView */,
 				BB0BDE2E1D7F090B00DF205D /* Extensions */,
 				BBCF87861D78107D003AD892 /* SSAnnotations */,
 				BB18F2511D75CFA70011693B /* SSAnnotationView */,
@@ -338,6 +367,7 @@
 			files = (
 				BB55103E1D706F8D00556516 /* LaunchScreen.storyboard in Resources */,
 				BB55103B1D706F8D00556516 /* Assets.xcassets in Resources */,
+				BB1620A81D7FFDCA0069CEB7 /* SSMapLayersView.xib in Resources */,
 				BBD016901D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip in Resources */,
 				BB5510391D706F8D00556516 /* Main.storyboard in Resources */,
 				BBD0168E1D76F85E006D1156 /* nsw-bmnp-sft.json in Resources */,
@@ -405,11 +435,13 @@
 				BBCF878A1D7816D3003AD892 /* SSAnnotationsContainer.m in Sources */,
 				BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */,
 				BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */,
+				BB1620A31D7FFD870069CEB7 /* HYIBDesignableView.m in Sources */,
 				BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */,
 				BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */,
 				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
 				BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */,
+				BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
 				BB0BDE311D7F092300DF205D /* MKMapView+SSZoomLevel.m in Sources */,
 				BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */,
