@@ -5,12 +5,146 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSMapLayersView">
+            <connections>
+                <outlet property="POIButton" destination="WQ4-u0-WwJ" id="XAC-C8-1R6"/>
+                <outlet property="alternatesButton" destination="xhY-di-9Ad" id="z6k-AJ-3jX"/>
+                <outlet property="imagesButton" destination="YWX-kF-uuE" id="j8a-ub-WIM"/>
+                <outlet property="mainTrackButton" destination="wDo-sU-gsa" id="v1w-fz-GlS"/>
+                <outlet property="mainWPButton" destination="uAH-tc-za2" id="3Su-cW-dM5"/>
+                <outlet property="sidetripsButton" destination="mJl-Ne-ZDV" id="0jG-oX-wPq"/>
+                <outletCollection property="buttons" destination="WQ4-u0-WwJ" id="fAh-vc-dTI"/>
+                <outletCollection property="buttons" destination="uAH-tc-za2" id="4wS-i4-cEs"/>
+                <outletCollection property="buttons" destination="wDo-sU-gsa" id="6Vb-7r-TZI"/>
+                <outletCollection property="buttons" destination="mJl-Ne-ZDV" id="pwO-VQ-beM"/>
+                <outletCollection property="buttons" destination="xhY-di-9Ad" id="84i-V7-lSk"/>
+                <outletCollection property="buttons" destination="YWX-kF-uuE" id="sOJ-eb-oE7"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="165" height="275"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00c-fi-e6T" userLabel="mainContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="275"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ4-u0-WwJ">
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="46"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="POIs" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="e7F-rY-xbM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAH-tc-za2">
+                            <rect key="frame" x="0.0" y="46" width="165" height="46"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Main WP" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="Oam-bF-boc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDo-sU-gsa">
+                            <rect key="frame" x="0.0" y="92" width="165" height="46"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Main track" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="aqO-o0-ENE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJl-Ne-ZDV">
+                            <rect key="frame" x="0.0" y="138" width="165" height="45"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Sidetrips" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="isB-Ic-qG8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWX-kF-uuE">
+                            <rect key="frame" x="0.0" y="229" width="165" height="46"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Images" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="FK5-bI-ZZD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhY-di-9Ad">
+                            <rect key="frame" x="0.0" y="183" width="165" height="46"/>
+                            <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Alternates" image="checkBoxON">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="checkBoxOFF"/>
+                            <connections>
+                                <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="BPF-4r-dXx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="YWX-kF-uuE" firstAttribute="top" secondItem="xhY-di-9Ad" secondAttribute="bottom" id="0eU-s6-E2f"/>
+                        <constraint firstItem="mJl-Ne-ZDV" firstAttribute="top" secondItem="wDo-sU-gsa" secondAttribute="bottom" id="1f5-Rr-D1Y"/>
+                        <constraint firstAttribute="trailing" secondItem="xhY-di-9Ad" secondAttribute="trailing" id="1gL-Gc-a2U"/>
+                        <constraint firstItem="wDo-sU-gsa" firstAttribute="height" secondItem="mJl-Ne-ZDV" secondAttribute="height" id="9jC-8S-msG"/>
+                        <constraint firstItem="YWX-kF-uuE" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="ArZ-M0-UGd"/>
+                        <constraint firstItem="WQ4-u0-WwJ" firstAttribute="height" secondItem="uAH-tc-za2" secondAttribute="height" id="BOc-Z2-UJh"/>
+                        <constraint firstItem="xhY-di-9Ad" firstAttribute="height" secondItem="YWX-kF-uuE" secondAttribute="height" id="Bgd-8U-Hjk"/>
+                        <constraint firstAttribute="trailing" secondItem="YWX-kF-uuE" secondAttribute="trailing" id="DLN-SJ-fBN"/>
+                        <constraint firstItem="xhY-di-9Ad" firstAttribute="top" secondItem="mJl-Ne-ZDV" secondAttribute="bottom" id="JzJ-zi-Q81"/>
+                        <constraint firstItem="uAH-tc-za2" firstAttribute="height" secondItem="wDo-sU-gsa" secondAttribute="height" id="Kej-Vq-hcJ"/>
+                        <constraint firstItem="uAH-tc-za2" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="TIh-X6-uN7"/>
+                        <constraint firstItem="wDo-sU-gsa" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="UHV-AV-Xyd"/>
+                        <constraint firstAttribute="trailing" secondItem="wDo-sU-gsa" secondAttribute="trailing" id="V0w-d1-4Ea"/>
+                        <constraint firstAttribute="trailing" secondItem="uAH-tc-za2" secondAttribute="trailing" id="V1h-7t-ajK"/>
+                        <constraint firstItem="wDo-sU-gsa" firstAttribute="top" secondItem="uAH-tc-za2" secondAttribute="bottom" id="eyV-jS-TPW"/>
+                        <constraint firstItem="mJl-Ne-ZDV" firstAttribute="height" secondItem="xhY-di-9Ad" secondAttribute="height" id="gwz-rN-pXY"/>
+                        <constraint firstItem="xhY-di-9Ad" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="hfH-O1-NY0"/>
+                        <constraint firstItem="uAH-tc-za2" firstAttribute="top" secondItem="WQ4-u0-WwJ" secondAttribute="bottom" id="khA-3j-N1W"/>
+                        <constraint firstItem="WQ4-u0-WwJ" firstAttribute="top" secondItem="00c-fi-e6T" secondAttribute="top" id="lI5-eD-ggE"/>
+                        <constraint firstAttribute="trailing" secondItem="WQ4-u0-WwJ" secondAttribute="trailing" id="mqr-rk-cAV"/>
+                        <constraint firstItem="mJl-Ne-ZDV" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="mtc-x2-rJJ"/>
+                        <constraint firstAttribute="trailing" secondItem="mJl-Ne-ZDV" secondAttribute="trailing" id="nIR-bh-JNA"/>
+                        <constraint firstItem="WQ4-u0-WwJ" firstAttribute="leading" secondItem="00c-fi-e6T" secondAttribute="leading" id="t5Z-I0-AoJ"/>
+                        <constraint firstAttribute="bottom" secondItem="YWX-kF-uuE" secondAttribute="bottom" id="xdX-pt-cu6"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="00c-fi-e6T" secondAttribute="trailing" id="7Xv-mH-8lg"/>
+                <constraint firstAttribute="bottom" secondItem="00c-fi-e6T" secondAttribute="bottom" id="YfR-RA-gBp"/>
+                <constraint firstItem="00c-fi-e6T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uAe-Ww-kxN"/>
+                <constraint firstItem="00c-fi-e6T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z5B-e0-vp1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1074" y="755.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="checkBoxOFF" width="24" height="24"/>
+        <image name="checkBoxON" width="24" height="24"/>
+    </resources>
 </document>
