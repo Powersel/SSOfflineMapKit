@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, WWAnnotationType) {
 
 + (instancetype)annotationWithDictionary:(NSDictionary *)dictionary;
 
-- (instancetype)initAnnotationWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 

@@ -7,15 +7,15 @@
 #import "WWPOIAnnotation.h"
 #import "WWTrackAnnotation.h"
 
-typedef NS_ENUM(NSUInteger, WWAnnotationPrivateTypes) {
-    WWPOIType = 0,
-    WWTrackType,
-    WWImageType
+typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
+    WWTypePOI = 0,
+    WWTypeTrack,
+    WWTypeImage,
+    WWTypeCount,
+    WWTypeUndefined
 };
 
 @interface WWAnnotationPoint ()
-
-- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary;
 
 @end
 
@@ -24,18 +24,22 @@ typedef NS_ENUM(NSUInteger, WWAnnotationPrivateTypes) {
 #pragma mark - Class Methods
 
 + (instancetype)annotationWithDictionary:(NSDictionary *)dictionary {
-    WWAnnotationPoint *annotationPoint = [[WWAnnotationPoint alloc] clasterWithDictionary:dictionary];
+    NSDictionary *annoTypes = @{
+                                @"poi"      :   @(WWTypePOI),
+                                @"image"    :   @(WWTypeImage),
+                                @"track"    :   @(WWTypeTrack)
+                                };
+    NSString *entityValue = dictionary[@"properties"][@"entity"];
+    NSNumber *annotationType = annoTypes[entityValue];
+    WWAnnotationPrivateType type = !annotationType ? WWTypeUndefined : annotationType.integerValue;
     
-    return annotationPoint;
+    return (type < WWTypeCount) ? [[[self classWithType:type] alloc] initWithDictionary:dictionary] : nil;
 }
 
 #pragma mark - Initialisation and Dealoccation
 
-- (instancetype)initAnnotationWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
-    if (self) {
-        
-    }
     
     return self;
 }
@@ -47,26 +51,22 @@ typedef NS_ENUM(NSUInteger, WWAnnotationPrivateTypes) {
 }
 
 #pragma mark - Private
+//
+//- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary {
+//    NSDictionary *annoTypes = @{@"poi":[NSNumber numberWithInteger:WWTypePOI],
+//                                @"image":[NSNumber numberWithInteger:WWTypeImage],
+//                                @"track":[NSNumber numberWithInteger:WWTypeTrack]};
+//    NSString *entityValue = dictionary[@"properties"][@"entity"];
+//    NSNumber *annotationType = annoTypes[entityValue];
+//    
+//    WWAnnotationPrivateType type = [annotationType integerValue];
+//    return (type < WWTypeCount) ? [[[self classWithType:type] alloc] initWithDictionary:dictionary] : nil;
+//}
 
-- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary {
-    NSDictionary *annoTypes = @{@"poi":[NSNumber numberWithInteger:WWPOIType],
-                                @"image":[NSNumber numberWithInteger:WWImageType],
-                                @"track":[NSNumber numberWithInteger:WWTrackType]};
-    NSString *entityValue = dictionary[@"properties"][@"entity"];
-    NSNumber *annotationType = annoTypes[entityValue];
-    
-    if (annotationType.integerValue) {
-        switch (annotationType.integerValue) {
-            case WWPOIType:
-                return [[WWPOIAnnotation alloc] initAnnotationWithDictionary:dictionary];
-            case WWTrackType:
-                return [[WWTrackAnnotation alloc] initAnnotationWithDictionary:dictionary];
-            case WWImageType:
-                return [[WWImageAnnotation alloc] initAnnotationWithDictionary:dictionary];
-        }
-    }
-    
-    return nil;
++ (Class)classWithType:(WWAnnotationPrivateType)annotationType {
+    return @[[WWPOIAnnotation class],
+             [WWTrackAnnotation class],
+             [WWImageAnnotation class]][annotationType];
 }
 
 @end
