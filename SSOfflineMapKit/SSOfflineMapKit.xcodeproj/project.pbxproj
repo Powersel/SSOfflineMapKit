@@ -30,6 +30,7 @@
 		BBD0168A1D76CD9B006D1156 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD016891D76CD9B006D1156 /* CoreLocation.framework */; };
 		BBD016901D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip in Resources */ = {isa = PBXBuildFile; fileRef = BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */; };
 		BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */; };
+		BBE0C9AD1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */; };
 		BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE3A4E41D7418B30026AD6B /* SSTileOverlay.m */; };
 		BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE3B5221D74493A0026AD6B /* SSTileOverlayRender.m */; };
 		CE2C9011B1EAC8F1C7CB7EBF /* libPods-SSOfflineMapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B1B9834C7C493E9FA3BC7A /* libPods-SSOfflineMapKit.a */; };
@@ -77,6 +78,8 @@
 		BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ww_nsw-bmnp-sft_maps.zip"; sourceTree = "<group>"; };
 		BBD016921D771B0A006D1156 /* SSAnnotationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAnnotationPoint.h; sourceTree = "<group>"; };
 		BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAnnotationPoint.m; sourceTree = "<group>"; };
+		BBE0C9AB1D8149E300A0DEB0 /* WWWeakyStrongyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWWeakyStrongyMacros.h; sourceTree = "<group>"; };
+		BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWWeakyStrongyMacros.m; sourceTree = "<group>"; };
 		BBE3A4E31D7418B30026AD6B /* SSTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTileOverlay.h; sourceTree = "<group>"; };
 		BBE3A4E41D7418B30026AD6B /* SSTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTileOverlay.m; sourceTree = "<group>"; };
 		BBE3B5211D74493A0026AD6B /* SSTileOverlayRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTileOverlayRender.h; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		BB55102D1D706F8D00556516 /* SSOfflineMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				BBE0C9AA1D8149E300A0DEB0 /* WWWeakyStrongyMacros */,
 				BB1620AB1D8032580069CEB7 /* WWBlockTypeDef.h */,
 				BB16209F1D7FFD410069CEB7 /* SSMapLayersView */,
 				BB0BDE2E1D7F090B00DF205D /* Extensions */,
@@ -273,6 +277,15 @@
 				BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */,
 			);
 			name = SSAnnotationPoint;
+			sourceTree = "<group>";
+		};
+		BBE0C9AA1D8149E300A0DEB0 /* WWWeakyStrongyMacros */ = {
+			isa = PBXGroup;
+			children = (
+				BBE0C9AB1D8149E300A0DEB0 /* WWWeakyStrongyMacros.h */,
+				BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */,
+			);
+			path = WWWeakyStrongyMacros;
 			sourceTree = "<group>";
 		};
 		BBE3A4E61D7418B80026AD6B /* SSTileOverlay */ = {
@@ -443,6 +456,7 @@
 				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
 				BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */,
+				BBE0C9AD1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m in Sources */,
 				BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
 				BB0BDE311D7F092300DF205D /* MKMapView+SSZoomLevel.m in Sources */,

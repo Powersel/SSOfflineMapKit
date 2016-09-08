@@ -20,7 +20,6 @@
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *buttons;
 
 - (IBAction)buttonClicked:(id)sender;
-
 - (void)setButtonsStateWith:(NSArray *)state completion:(WWResultBlock)completionBlock;
 
 @end

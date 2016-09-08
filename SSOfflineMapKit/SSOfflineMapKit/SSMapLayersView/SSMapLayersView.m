@@ -13,12 +13,7 @@
 - (IBAction)buttonClicked:(id)sender {
     NSInteger tag = [sender tag];
     UIButton *currentButton = self.buttons[tag];
-    BOOL buttonState = currentButton.selected;
-    if (buttonState) {
-        currentButton.selected = NO;
-    } else {
-        currentButton.selected = YES;
-    }
+    currentButton.selected = currentButton.selected ? NO : true;
     if (self.resultCompletion) {
         self.resultCompletion(@(tag));
     }
@@ -28,11 +23,11 @@
     if (completionBlock) {
         self.resultCompletion = completionBlock;
     }
-    for (NSInteger index =0; index < state.count; index++) {
-        NSNumber *buttonState = state[index];
-        BOOL isButtonClicked = buttonState.boolValue;
-            UIButton *currentButton = self.buttons[index];
-        currentButton.selected = !isButtonClicked;
+    
+    for (NSInteger index = 0; index < state.count; index++) {
+        UIButton *currentButton = self.buttons[index];
+        NSNumber *isSelected = state[index];
+        currentButton.selected = isSelected.boolValue;
     }
 }
 
