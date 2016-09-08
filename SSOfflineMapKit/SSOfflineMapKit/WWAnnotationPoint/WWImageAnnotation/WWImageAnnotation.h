@@ -4,5 +4,6 @@
 #import "WWAnnotationPoint.h"
 
 @interface WWImageAnnotation : WWAnnotationPoint
+@property (nonatomic, readonly) NSURL    *image;
 
 @end
