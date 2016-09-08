@@ -17,7 +17,9 @@ typedef NS_ENUM(NSUInteger, WWAnnotationType) {
 @property (nonatomic, readonly) CLLocationCoordinate2D  coordinate;
 @property (nonatomic, assign)   WWAnnotationType    annotationType;
 
-+ (instancetype)initAnnotationWith:(NSDictionary *)dictionary;
++ (instancetype)annotationWithDictionary:(NSDictionary *)dictionary;
+
+- (instancetype)initAnnotationWithDictionary:(NSDictionary *)dictionary;
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 

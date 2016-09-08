@@ -3,9 +3,19 @@
 
 #import "WWAnnotationPoint.h"
 
+#import "WWImageAnnotation.h"
+#import "WWPOIAnnotation.h"
+#import "WWTrackAnnotation.h"
+
+typedef NS_ENUM(NSUInteger, WWAnnotationPrivateTypes) {
+    WWPOIType = 0,
+    WWTrackType,
+    WWImageType
+};
+
 @interface WWAnnotationPoint ()
 
-- (instancetype)classFabricWith:(NSDictionary *)dictionary;
+- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary;
 
 @end
 
@@ -13,10 +23,21 @@
 
 #pragma mark - Class Methods
 
-+ (instancetype)initAnnotationWith:(NSDictionary *)dictionary {
-    WWAnnotationPoint *annotationPoint = [WWAnnotationPoint new];
++ (instancetype)annotationWithDictionary:(NSDictionary *)dictionary {
+    WWAnnotationPoint *annotationPoint = [[WWAnnotationPoint alloc] clasterWithDictionary:dictionary];
     
     return annotationPoint;
+}
+
+#pragma mark - Initialisation and Dealoccation
+
+- (instancetype)initAnnotationWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        
+    }
+    
+    return self;
 }
 
 #pragma mark - Accessors
@@ -27,8 +48,25 @@
 
 #pragma mark - Private
 
-- (instancetype)classFabricWith:(NSDictionary *)dictionary {
+- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary {
+    NSDictionary *annoTypes = @{@"poi":[NSNumber numberWithInteger:WWPOIType],
+                                @"image":[NSNumber numberWithInteger:WWImageType],
+                                @"track":[NSNumber numberWithInteger:WWTrackType]};
+    NSString *entityValue = dictionary[@"properties"][@"entity"];
+    NSNumber *annotationType = annoTypes[entityValue];
     
+    if (annotationType.integerValue) {
+        switch (annotationType.integerValue) {
+            case WWPOIType:
+                return [[WWPOIAnnotation alloc] initAnnotationWithDictionary:dictionary];
+            case WWTrackType:
+                return [[WWTrackAnnotation alloc] initAnnotationWithDictionary:dictionary];
+            case WWImageType:
+                return [[WWImageAnnotation alloc] initAnnotationWithDictionary:dictionary];
+        }
+    }
+    
+    return nil;
 }
 
 @end
