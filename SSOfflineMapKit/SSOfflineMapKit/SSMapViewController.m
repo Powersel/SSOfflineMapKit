@@ -1,6 +1,7 @@
 //  Created by Sergiy Shevchuk on 8/26/16.
 //  Copyright © 2016 Sergiy Shevchuk. All rights reserved.
 
+#import "WWWeakyStrongyMacros.h"
 #import "SSMapViewController.h"
 #import "GridTileOverlay.h"
 #import "GridTileOverlayRenderer.h"
@@ -29,10 +30,11 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 @property (strong, nonatomic) MKTileOverlay *gridOverlay;
 
 @property (nonatomic, strong) NSArray    *customAnnotations;
-@property (nonatomic, strong) NSArray    *layersState;
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
-@property (nonatomic, copy) WWResultBlock   buttonsCompletion;
+@property (nonatomic, strong) NSMutableArray    *layersState;
+
+@property (nonatomic, copy) WWResultBlock   buttonSelectCompletion;
 
 @property (nonatomic, strong) SSAnnotationsContainer *annotationsContainer;
 
@@ -82,7 +84,9 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     [mapView addAnnotations:container.photos];
     [mapView addAnnotations:container.trackPoints];
     [self drawRoutesWith:container.trackPoints];
-    [self fillLayersOfTheMap];
+    
+    NSArray *layersState = @[@(0), @(0), @(0), @(0), @(0), @(0)];
+    self.layersState = [layersState mutableCopy];
     
     mapView.showsCompass = YES;
     mapView.showsUserLocation = YES;
@@ -91,47 +95,6 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - Accessors
-
-- (void)setLayersState:(NSArray *)layersState {
-    if (_layersState != layersState) {
-        _layersState = layersState;
-    }
-}
-
-#pragma mark - IBActions
-
-- (IBAction)layersButton:(id)sender {
-    ARSPopover *popoverController = [ARSPopover new];
-    UIButton *button = sender;
-    popoverController.sourceView = button;
-    popoverController.sourceRect = CGRectMake(CGRectGetMidX(button.bounds), CGRectGetMaxY(button.bounds), 0, 0);
-    popoverController.contentSize = CGSizeMake(145, 190);
-    popoverController.arrowDirection = UIPopoverArrowDirectionUp;
-    [self presentViewController:popoverController animated:YES completion:^{
-        [popoverController insertContentIntoPopover:^(ARSPopover *popover, CGSize popoverPresentedSize, CGFloat popoverArrowHeight) {
-            CGFloat originX = 0;
-            CGFloat originY = 0;
-            CGFloat width = popoverPresentedSize.width;
-            CGFloat height = popoverPresentedSize.height - popoverArrowHeight;
-            CGRect frame = CGRectMake(originX, originY, width, height);
-            
-            SSMapLayersView *mapLayers = [[SSMapLayersView alloc] initWithFrame:frame];
-           
-            [mapLayers setButtonsStateWith:self.layersState completion:self.buttonsCompletion];
-             //            [proximityView setTapCompletion:^(id result) {
-//                [popoverController closePopover];
-//                if (resultBlock) {
-//                    resultBlock(result);
-//                }
-//            }];
-            [popover.view addSubview:mapLayers];
-        }];
-    }];
-    
-    
 }
 
 #pragma mark - MKMapViewDelegate Methods
@@ -270,31 +233,59 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     return returnedValue;
 }
 
-- (WWResultBlock)buttonsCompletion {
-    WWResultBlock completion = ^(NSNumber *layerNumber) {
-        WWLayerButtons layer = layerNumber.integerValue;
-        switch (layer) {
-            case WWImagesButton:
-                [self removePhotoLyaer];
-                break;
-                
-            default:
-                break;
-        }
-        
-        
-        
+#pragma mark - IBActions
+
+- (IBAction)layersButton:(id)sender {
+    ARSPopover *popoverController = [ARSPopover new];
+    UIButton *button = sender;
+    popoverController.sourceView = button;
+    popoverController.sourceRect = CGRectMake(CGRectGetMidX(button.bounds), CGRectGetMaxY(button.bounds), 0, 0);
+    popoverController.contentSize = CGSizeMake(145, 190);
+    popoverController.arrowDirection = UIPopoverArrowDirectionUp;
+    [self presentViewController:popoverController animated:YES completion:^{
+        [popoverController insertContentIntoPopover:^(ARSPopover *popover, CGSize popoverPresentedSize, CGFloat popoverArrowHeight) {
+            CGFloat originX = 0;
+            CGFloat originY = 0;
+            CGFloat width = popoverPresentedSize.width;
+            CGFloat height = popoverPresentedSize.height - popoverArrowHeight;
+            CGRect frame = CGRectMake(originX, originY, width, height);
+            SSMapLayersView *mapLayers = [[SSMapLayersView alloc] initWithFrame:frame];
+            
+            [mapLayers setButtonsStateWith:self.layersState completion:self.buttonSelectCompletion];
+            [popover.view addSubview:mapLayers];
+        }];
+    }];
+}
+
+- (WWResultBlock)buttonSelectCompletion {
+    WWWeakify(self);
+    WWResultBlock completionBlock = ^(NSNumber *buttonTag) {
+        WWStrongify(self);
+        WWLayerButtons layerNumber = buttonTag.integerValue;
+        [self changeLayerState:layerNumber];
     };
     
-    return completion;
+    return completionBlock;
 }
 
-- (void)fillLayersOfTheMap {
-    self.layersState = @[@(1), @(1), @(1), @(1), @(1), @(1)];
+- (void)changeLayerState:(WWLayerButtons)layerButton {
+    NSNumber *layerState = self.layersState[layerButton];
+    BOOL layerPathState = layerState.boolValue;
+    if (layerPathState) {
+        [self showImages];
+    } else {
+        [self hideImages];
+    }
+    [self.layersState replaceObjectAtIndex:layerButton withObject:@(!layerPathState)];
 }
 
-- (void)removePhotoLyaer {
+- (void)hideImages {
     [self.mapView removeAnnotations:self.annotationsContainer.photos];
+    [self.mapView reloadInputViews];
+}
+
+- (void)showImages {
+    [self.mapView addAnnotations:self.annotationsContainer.photos];
     [self.mapView reloadInputViews];
 }
 

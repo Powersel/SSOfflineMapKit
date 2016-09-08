@@ -10,28 +10,19 @@
 #import "SSAnnotationPoint.h"
 #import "SSTrackNotesAnno.h"
 
-typedef NS_ENUM(NSUInteger, SSAnnotationType) {
-    SSTransportAnnotaion,
-    SSPoiAnnotation,
-    SStrackAnnotation,
-    SSPhotoAnnotation
-};
-
 @interface SSAnnotationsContainer ()
-@property (nonatomic, strong) NSMutableArray *mutableTrackAnnotations;
-
-@property (nonatomic, strong) NSMutableArray *mutablePhotos;
-@property (nonatomic, strong) NSMutableArray *mutablePoi;
-@property (nonatomic, strong) NSMutableArray *mutableTrackPoints;
-@property (nonatomic, strong) NSMutableArray *mutableTransport;
+@property (nonatomic, strong) NSMutableArray *mutablePoiAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableMainWPAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableMainTrackAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableSidetripsAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableAlternatesAnnotations;
+@property (nonatomic, strong) NSMutableArray *mutableImagesAnnotations;
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON;
 
 @end
 
 @implementation SSAnnotationsContainer
-
-@dynamic trackAnnotations;
 
 @dynamic photos;
 @dynamic poiAnnotations;
@@ -52,37 +43,15 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.mutableTrackAnnotations = [NSMutableArray array];
-        
-        self.mutablePoi = [NSMutableArray array];
-        self.mutablePhotos = [NSMutableArray array];
-        self.mutableTransport = [NSMutableArray array];
-        self.mutableTrackPoints = [NSMutableArray array];
+        self.mutablePoiAnnotations = [NSMutableArray array];
+        self.mutableMainWPAnnotations = [NSMutableArray array];
+        self.mutableMainTrackAnnotations = [NSMutableArray array];
+        self.mutableSidetripsAnnotations = [NSMutableArray array];
+        self.mutableAlternatesAnnotations = [NSMutableArray array];
+        self.mutableImagesAnnotations = [NSMutableArray array];
     }
     
     return self;
-}
-
-#pragma mark - Accessors
-
-- (NSArray *)trackAnnotations {
-    return [self.mutableTrackAnnotations copy];
-}
-
-- (NSArray *)photos {
-    return [self.mutablePhotos copy];
-}
-
-- (NSArray *)poiAnnotations {
-    return [self.mutablePoi copy];
-}
-
-- (NSArray *)trackPoints {
-    return [self.mutableTrackPoints copy];
-}
-
-- (NSArray *)transport {
-    return [self.mutableTransport copy];
 }
 
 #pragma mark - Private
@@ -93,56 +62,72 @@ typedef NS_ENUM(NSUInteger, SSAnnotationType) {
                                                            options:NSJSONReadingMutableContainers
                                                              error:&parseError];
     for (NSDictionary *annotation in annotations) {
-        NSString *entityType = annotation[@"properties"][@"entity"];
-        if (entityType) {
-            SSAnnotationType annoType = [self entityOfAnnotationWith:entityType];
-            
-            switch (annoType) {
-                case SSTransportAnnotaion:
-                {
-                    SSTrackNotesAnno *transportAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                    [self.mutableTransport addObject:transportAnnotation];
+        
+//        NSString *entityType = annotation[@"properties"][@"entity"];
+//        if (entityType) {
+        
+//            WWAnnotationLayer layerType = [self entityOfAnnotationWith:annotation];
+        
+//            switch (layerType) {
+//                case WWPOILayer:
+//                {
+////                    SSTrackNotesAnno *transportAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+////                    [self.mutableTransport addObject:transportAnnotation];
+//
+//                }
+//                    break;
+//                    
+//                case WWMainWPLayer:
+//                {
+////                    SSTrackNotesAnno *poiAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+////                    [self.mutablePoi addObject:poiAnnotation];
+//
+//                }
+//                    break;
+//                    
+//                case WWMainTrackLayer: {
+////                    SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
+////                    [self.mutableTrackPoints addObject:trackNotesAnnotation];
+//                }
+//                    break;
+//                    
+//                case WWSidetripsLayer: {
+////                    SSAnnotationPoint *photoAnnotation = [SSAnnotationPoint initAnnotationWith:annotation];
+////                    [self.mutablePhotos addObject:photoAnnotation];
+//                }
+//                    break;
+//                    
+//                case WWAlternatesLayer: {
+//                    
+//                }
+//                    break;
+//                    
+//                case WWImagesLayer: {
+//                    
+//                }
+//                    
+//                default:
+//                    break;
+//            }
+//}
+//}
 
-                }
-                    break;
-                    
-                case SSPoiAnnotation:
-                {
-                    SSTrackNotesAnno *poiAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                    [self.mutablePoi addObject:poiAnnotation];
+//- (WWAnnotationLayer)entityOfAnnotationWith:(NSDictionary *)notation {
+//    if (<#condition#>) {
+//        <#statements#>
+//    }
+//    NSDictionary *annoTypes = @{@"poi":[NSNumber numberWithInteger:WWPOILayer],
+//                                @"image":[NSNumber numberWithInteger:WWImagesLayer],
+//                                @"track":[NSNumber numberWithInteger:SStrackAnnotation]};
+//    
+//    NSNumber *annoEntity = annoTypes[annotationType];
+//    
+//    return annoEntity.integerValue;
+//}
 
-                }
-                    break;
-                    
-                case SStrackAnnotation: {
-                    SSTrackNotesAnno *trackNotesAnnotation = [SSTrackNotesAnno initNotesWith:annotation];
-                    [self.mutableTrackPoints addObject:trackNotesAnnotation];
-                }
-                    break;
-                    
-                case SSPhotoAnnotation: {
-                    SSAnnotationPoint *photoAnnotation = [SSAnnotationPoint initAnnotationWith:annotation];
-                    [self.mutablePhotos addObject:photoAnnotation];
-                }
-                    break;
-                    
-                    
-                default:
-                    break;
-            }
-        }
-    }
-}
-
-- (SSAnnotationType)entityOfAnnotationWith:(NSString *)annotationType {
-    NSDictionary *annoTypes = @{@"image":[NSNumber numberWithInteger:SSPhotoAnnotation],
-                                @"transport":[NSNumber numberWithInteger:SSTransportAnnotaion],
-                                @"poi":[NSNumber numberWithInteger:SSPoiAnnotation],
-                                @"track":[NSNumber numberWithInteger:SStrackAnnotation]};
+- (NSArray *)annotationsLayerWith:(WWAnnotationLayer)layer {
     
-    NSNumber *annoEntity = annoTypes[annotationType];
-    
-    return annoEntity.integerValue;
+    return nil;
 }
 
 @end
