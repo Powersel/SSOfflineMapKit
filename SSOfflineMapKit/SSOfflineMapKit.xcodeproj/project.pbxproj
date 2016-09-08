@@ -32,6 +32,10 @@
 		BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */; };
 		BBE0C9AD1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */; };
 		BBE0C9B21D81900100A0DEB0 /* WWAnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9B11D81900100A0DEB0 /* WWAnnotationPoint.m */; };
+		BBE0C9BB1D8194C300A0DEB0 /* WWPOIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9BA1D8194C300A0DEB0 /* WWPOIAnnotation.m */; };
+		BBE0C9BE1D81953400A0DEB0 /* WWMainWPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9BD1D81953400A0DEB0 /* WWMainWPAnnotation.m */; };
+		BBE0C9C11D81954600A0DEB0 /* WWTrackAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9C01D81954600A0DEB0 /* WWTrackAnnotation.m */; };
+		BBE0C9C51D81956300A0DEB0 /* WWImageAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9C41D81956300A0DEB0 /* WWImageAnnotation.m */; };
 		BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE3A4E41D7418B30026AD6B /* SSTileOverlay.m */; };
 		BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE3B5221D74493A0026AD6B /* SSTileOverlayRender.m */; };
 		CE2C9011B1EAC8F1C7CB7EBF /* libPods-SSOfflineMapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B1B9834C7C493E9FA3BC7A /* libPods-SSOfflineMapKit.a */; };
@@ -83,6 +87,14 @@
 		BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWWeakyStrongyMacros.m; sourceTree = "<group>"; };
 		BBE0C9B01D81900100A0DEB0 /* WWAnnotationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWAnnotationPoint.h; sourceTree = "<group>"; };
 		BBE0C9B11D81900100A0DEB0 /* WWAnnotationPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWAnnotationPoint.m; sourceTree = "<group>"; };
+		BBE0C9B91D8194C300A0DEB0 /* WWPOIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWPOIAnnotation.h; sourceTree = "<group>"; };
+		BBE0C9BA1D8194C300A0DEB0 /* WWPOIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWPOIAnnotation.m; sourceTree = "<group>"; };
+		BBE0C9BC1D81953400A0DEB0 /* WWMainWPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWMainWPAnnotation.h; sourceTree = "<group>"; };
+		BBE0C9BD1D81953400A0DEB0 /* WWMainWPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWMainWPAnnotation.m; sourceTree = "<group>"; };
+		BBE0C9BF1D81954600A0DEB0 /* WWTrackAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTrackAnnotation.h; sourceTree = "<group>"; };
+		BBE0C9C01D81954600A0DEB0 /* WWTrackAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTrackAnnotation.m; sourceTree = "<group>"; };
+		BBE0C9C31D81956300A0DEB0 /* WWImageAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWImageAnnotation.h; sourceTree = "<group>"; };
+		BBE0C9C41D81956300A0DEB0 /* WWImageAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWImageAnnotation.m; sourceTree = "<group>"; };
 		BBE3A4E31D7418B30026AD6B /* SSTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTileOverlay.h; sourceTree = "<group>"; };
 		BBE3A4E41D7418B30026AD6B /* SSTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTileOverlay.m; sourceTree = "<group>"; };
 		BBE3B5211D74493A0026AD6B /* SSTileOverlayRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTileOverlayRender.h; sourceTree = "<group>"; };
@@ -297,8 +309,48 @@
 			children = (
 				BBE0C9B01D81900100A0DEB0 /* WWAnnotationPoint.h */,
 				BBE0C9B11D81900100A0DEB0 /* WWAnnotationPoint.m */,
+				BBE0C9C21D81954E00A0DEB0 /* WWImageAnnotation */,
+				BBE0C9B31D81935200A0DEB0 /* WWMainWPAnnotation */,
+				BBE0C9B41D81935200A0DEB0 /* WWPOIAnnotation */,
+				BBE0C9B51D81935200A0DEB0 /* WWTrackAnnotation */,
 			);
 			path = WWAnnotationPoint;
+			sourceTree = "<group>";
+		};
+		BBE0C9B31D81935200A0DEB0 /* WWMainWPAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BBE0C9BC1D81953400A0DEB0 /* WWMainWPAnnotation.h */,
+				BBE0C9BD1D81953400A0DEB0 /* WWMainWPAnnotation.m */,
+			);
+			path = WWMainWPAnnotation;
+			sourceTree = "<group>";
+		};
+		BBE0C9B41D81935200A0DEB0 /* WWPOIAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BBE0C9B91D8194C300A0DEB0 /* WWPOIAnnotation.h */,
+				BBE0C9BA1D8194C300A0DEB0 /* WWPOIAnnotation.m */,
+			);
+			path = WWPOIAnnotation;
+			sourceTree = "<group>";
+		};
+		BBE0C9B51D81935200A0DEB0 /* WWTrackAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BBE0C9BF1D81954600A0DEB0 /* WWTrackAnnotation.h */,
+				BBE0C9C01D81954600A0DEB0 /* WWTrackAnnotation.m */,
+			);
+			path = WWTrackAnnotation;
+			sourceTree = "<group>";
+		};
+		BBE0C9C21D81954E00A0DEB0 /* WWImageAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				BBE0C9C31D81956300A0DEB0 /* WWImageAnnotation.h */,
+				BBE0C9C41D81956300A0DEB0 /* WWImageAnnotation.m */,
+			);
+			path = WWImageAnnotation;
 			sourceTree = "<group>";
 		};
 		BBE3A4E61D7418B80026AD6B /* SSTileOverlay */ = {
@@ -458,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE0C9C51D81956300A0DEB0 /* WWImageAnnotation.m in Sources */,
 				BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */,
 				BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */,
 				BBCF878A1D7816D3003AD892 /* SSAnnotationsContainer.m in Sources */,
@@ -474,7 +527,10 @@
 				BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
 				BB0BDE311D7F092300DF205D /* MKMapView+SSZoomLevel.m in Sources */,
+				BBE0C9BE1D81953400A0DEB0 /* WWMainWPAnnotation.m in Sources */,
+				BBE0C9BB1D8194C300A0DEB0 /* WWPOIAnnotation.m in Sources */,
 				BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */,
+				BBE0C9C11D81954600A0DEB0 /* WWTrackAnnotation.m in Sources */,
 				BB5510491D707D8500556516 /* SSMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

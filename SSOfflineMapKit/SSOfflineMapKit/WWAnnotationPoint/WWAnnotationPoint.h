@@ -5,12 +5,12 @@
 #import <MapKit/MapKit.h>
 
 typedef NS_ENUM(NSUInteger, WWAnnotationType) {
-    WWPOIAnnotation = 0,
-    WWMainWPAnnotation,
-    WWMainTrackAnnotation,
-    WWSidetripAnnotation,
-    WWAlternateAnnotation,
-    WWImageAnnotation
+    WWPOIAnnotationType = 0,
+    WWMainWPAnnotationType,
+    WWMainTrackAnnotationType,
+    WWSidetripAnnotationType,
+    WWAlternateAnnotationType,
+    WWImageAnnotationType
 };
 
 @interface WWAnnotationPoint : NSObject <MKAnnotation>
