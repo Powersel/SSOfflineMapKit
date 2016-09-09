@@ -8,21 +8,23 @@
 #import "SSZipArchive.h"
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
-#import "SSAnnotationsContainer.h"
-
-#import "SSAnnotationPoint.h"
-#import "SSTrackNotesAnno.h"
-
-#import "SSPhotoAnnoVIew.h"
-#import "SSTrackNotesView.h"
 
 #import <ARSPopover/ARSPopover.h>
 #import <CoreLocation/CoreLocation.h>
+#import "WWBlockTypeDef.h"
 
 #import "SSMapLayersView.h"
+#import "WWAnnotationsContainer.h"
+#import "WWAnnotationPoint.h"
+#import "WWTrackAnnotation.h"
 
-static NSString * const SSPhotoAnnoViewIdentifier = @"SSPhotoAnnoVIew";
-static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
+static NSString * const WWPOIAnnotationViewID = @"WWPOIAnnotationView";
+static NSString * const WWMainWPAnnotationViewID = @"WWMainWPAnnotationView";
+static NSString * const WWMainTrackAnnotationViewID = @"WWMainTrackAnnotationView";
+static NSString * const WWSidetripsAnnotationViewID = @"WWSidetripsAnnotationView";
+static NSString * const WWAlternateAnnotationViewID = @"WWAlternateAnnotationView";
+static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
+
 
 @interface SSMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -36,13 +38,15 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 
 @property (nonatomic, copy) WWResultBlock   buttonSelectCompletion;
 
-@property (nonatomic, strong) SSAnnotationsContainer *annotationsContainer;
+@property (nonatomic, strong) WWAnnotationsContainer *annotationsContainer;
 
 - (void)reloadTileOverlay;
-- (void)annotationsInitialisation;
+- (void)annotationLayersInitialisation;
 - (void)unzipArchive;
 - (void)initialiseLocationManager;
 - (void)drawRoutesWith:(NSArray *)routesArray;
+- (void)fillMapWithAnnotationLayers;
+- (MKCoordinateSpan)checkZoomLevelWith:(MKCoordinateSpan)coordinatesSpan;
 
 @end
 
@@ -55,7 +59,7 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     if (self) {
         [self unzipArchive];
         [self initialiseLocationManager];
-        [self annotationsInitialisation];
+        [self annotationLayersInitialisation];
     }
     
     return self;
@@ -78,19 +82,11 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     
     [mapView setRegion:region animated:YES];
     [self reloadTileOverlay];
-    
-    SSAnnotationsContainer *container = self.annotationsContainer;
-    [mapView addAnnotations:container.poiAnnotations];
-    [mapView addAnnotations:container.photos];
-    [mapView addAnnotations:container.trackPoints];
-    [self drawRoutesWith:container.trackPoints];
-    
-    NSArray *layersState = @[@(0), @(0), @(0), @(0), @(0), @(0)];
-    self.layersState = [layersState mutableCopy];
-    
-    mapView.showsCompass = YES;
+    [self fillMapWithAnnotationLayers];
+
     mapView.showsUserLocation = YES;
     mapView.showsScale = YES;
+    mapView.rotateEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,22 +123,6 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
 }
 
 #pragma mark - Annotations!!!!!!!!!!!!!!!!
-
-- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    MKAnnotationView *annoView = nil;
-    if ([annotation isKindOfClass:[SSTrackNotesAnno class]]) {
-        annoView = [[SSTrackNotesView alloc] initWithAnnotation:annotation reuseIdentifier:SSTrackNotesViewIdentifier];
-        annoView.image = [UIImage imageNamed:@"wayPoint"];
-        annoView.canShowCallout = YES;
-        
-    } else if ([annotation isKindOfClass:[SSAnnotationPoint class]]) {
-        annoView = [[SSPhotoAnnoVIew alloc] initWithAnnotation:annotation reuseIdentifier:SSPhotoAnnoViewIdentifier];
-        annoView.canShowCallout = YES;
-        annoView.image = [UIImage imageNamed:@"photoImage"];
-    }
-    
-    return annoView;
-}
 
 #pragma mark - Private
 
@@ -189,19 +169,60 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     }
 }
 
+- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    MKPinAnnotationView *annoView = nil;
+    if ([annotation isKindOfClass:[WWAnnotationPoint class]]) {
+        WWAnnotationPoint *wayPoint = (WWAnnotationPoint *)annotation;
+        switch (wayPoint.annotationType) {
+            case WWPOIAnnotationType: {
+                annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:WWPOIAnnotationViewID];
+                annoView.pinTintColor = [UIColor darkGrayColor];
+            }
+                break;
+                
+            case WWMainWPAnnotationType: {
+                
+            }
+                break;
+                
+            case WWMainTrackAnnotationType: {
+                
+            }
+                break;
+                
+            case WWSidetripAnnotationType: {
+                
+            }
+                break;
+                
+            case WWAlternateAnnotationType: {
+                
+            }
+                break;
+                
+            case WWImageAnnotationType: {
+                annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:WWImageAnnotationViewID];
+                annoView.pinTintColor = [UIColor redColor];
+            }
+                break;
+        }
+    }
+    
+    return annoView;
+}
+
 #pragma mark - Annotations Initialisation
 
-- (void)annotationsInitialisation {
+- (void)annotationLayersInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
-    self.annotationsContainer = [SSAnnotationsContainer initContainerWithJSON:rawJSON];
+    self.annotationsContainer = [WWAnnotationsContainer initContainerWithJSON:rawJSON];
 }
 
 - (void)drawRoutesWith:(NSArray *)routesArray {
-    
-    for (SSTrackNotesAnno *trackAnnotationPoint in routesArray) {
-        if ([trackAnnotationPoint isKindOfClass:[SSTrackNotesAnno class]]) {
-            NSArray *poiCoordinates = trackAnnotationPoint.pointsCoordinates;
+    for (WWTrackAnnotation *trackAnnotationPoint in routesArray) {
+        if ([trackAnnotationPoint isKindOfClass:[WWTrackAnnotation class]]) {
+            NSArray *poiCoordinates = trackAnnotationPoint.waypointsCoordinates;
             CLLocationCoordinate2D coordinates[poiCoordinates.count];
             NSInteger index = 0;
             for (NSArray *currentPoi in poiCoordinates) {
@@ -261,32 +282,52 @@ static NSString * const SSTrackNotesViewIdentifier = @"SSTrackNotesView";
     WWWeakify(self);
     WWResultBlock completionBlock = ^(NSNumber *buttonTag) {
         WWStrongify(self);
-        WWLayerButtons layerNumber = buttonTag.integerValue;
+        WWLayerButton layerNumber = buttonTag.integerValue;
         [self changeLayerState:layerNumber];
     };
     
     return completionBlock;
 }
 
-- (void)changeLayerState:(WWLayerButtons)layerButton {
+- (void)changeLayerState:(WWLayerButton)layerButton {
     NSNumber *layerState = self.layersState[layerButton];
     BOOL layerPathState = layerState.boolValue;
     if (layerPathState) {
-        [self showImages];
+        [self showPointsLayerWithIndex:layerButton];
     } else {
-        [self hideImages];
+        [self hidePointsLayerWithIndex:layerButton];
     }
     [self.layersState replaceObjectAtIndex:layerButton withObject:@(!layerPathState)];
 }
 
-- (void)hideImages {
-    [self.mapView removeAnnotations:self.annotationsContainer.photos];
+- (void)hidePointsLayerWithIndex:(NSInteger)layerIndex {
+    [self.mapView removeAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
     [self.mapView reloadInputViews];
 }
 
-- (void)showImages {
-    [self.mapView addAnnotations:self.annotationsContainer.photos];
+- (void)showPointsLayerWithIndex:(NSInteger)layerIndex {
+    [self.mapView addAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
     [self.mapView reloadInputViews];
+}
+
+- (void)fillMapWithAnnotationLayers {
+    MKMapView *mapView = self.mapView;
+    WWAnnotationsContainer *container = self.annotationsContainer;
+    
+    NSArray *mapLayersState = @[@(0), @(0), @(0), @(0), @(0), @(0)];
+    self.layersState = [mapLayersState mutableCopy];
+    
+    [mapView addAnnotations:container.poiAnnotations];
+    [mapView addAnnotations:container.mainWPAnnotations];
+    [mapView addAnnotations:container.mainTrackAnnotations];
+    [mapView addAnnotations:container.sidetripsAnnotations];
+    [mapView addAnnotations:container.alternateAnnotations];
+    [mapView addAnnotations:container.imageAnnotations];
+    
+    [self drawRoutesWith:container.poiAnnotations];
+    
+    NSArray *layersState = @[@(0), @(0), @(0), @(0), @(0), @(0)];
+    self.layersState = [layersState mutableCopy];
 }
 
 @end

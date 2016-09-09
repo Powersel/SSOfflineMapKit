@@ -4,7 +4,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-typedef NS_ENUM(NSUInteger, WWLayerButtons) {
+typedef NS_ENUM(NSUInteger, WWLayerButton) {
     WWPOIButton = 0,
     WWMainWPButton,
     WWMainTrackButton,
