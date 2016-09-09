@@ -4,5 +4,9 @@
 #import "WWAnnotationPoint.h"
 
 @interface WWTrackAnnotation : WWAnnotationPoint
+@property (nonatomic, readonly) NSArray *waypointsCoordinates;
+
+@property (nonatomic, readonly) NSString    *annotationDescription;
+@property (nonatomic, readonly) NSURL       *imageURL;
 
 @end

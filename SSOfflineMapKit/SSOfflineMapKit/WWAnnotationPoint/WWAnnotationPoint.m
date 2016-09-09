@@ -2,9 +2,7 @@
 //  Copyright © 2016 Sergiy Shevchuk. All rights reserved.
 
 #import "WWAnnotationPoint.h"
-
 #import "WWImageAnnotation.h"
-#import "WWPOIAnnotation.h"
 #import "WWTrackAnnotation.h"
 
 typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
@@ -51,20 +49,9 @@ typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
 }
 
 #pragma mark - Private
-//
-//- (instancetype)clasterWithDictionary:(NSDictionary *)dictionary {
-//    NSDictionary *annoTypes = @{@"poi":[NSNumber numberWithInteger:WWTypePOI],
-//                                @"image":[NSNumber numberWithInteger:WWTypeImage],
-//                                @"track":[NSNumber numberWithInteger:WWTypeTrack]};
-//    NSString *entityValue = dictionary[@"properties"][@"entity"];
-//    NSNumber *annotationType = annoTypes[entityValue];
-//    
-//    WWAnnotationPrivateType type = [annotationType integerValue];
-//    return (type < WWTypeCount) ? [[[self classWithType:type] alloc] initWithDictionary:dictionary] : nil;
-//}
 
 + (Class)classWithType:(WWAnnotationPrivateType)annotationType {
-    return @[[WWPOIAnnotation class],
+    return @[[WWTrackAnnotation class],
              [WWTrackAnnotation class],
              [WWImageAnnotation class]][annotationType];
 }

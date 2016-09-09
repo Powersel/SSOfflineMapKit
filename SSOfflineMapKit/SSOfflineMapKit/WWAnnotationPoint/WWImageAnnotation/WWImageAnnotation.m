@@ -25,6 +25,7 @@
     self.name = dictionary[@"properties"][@"title"];
     self.subName = dictionary[@"properties"][@"title"];
     self.image = [NSURL URLWithString:dictionary[@"properties"][@"640"]];
+    self.annotationType = WWImageAnnotationType;
     
     return self;
 }

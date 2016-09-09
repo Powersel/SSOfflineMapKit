@@ -10,7 +10,8 @@ typedef NS_ENUM(NSUInteger, WWAnnotationType) {
     WWMainTrackAnnotationType,
     WWSidetripAnnotationType,
     WWAlternateAnnotationType,
-    WWImageAnnotationType
+    WWImageAnnotationType,
+    WWUndefinedAnnotationType
 };
 
 @interface WWAnnotationPoint : NSObject <MKAnnotation>
