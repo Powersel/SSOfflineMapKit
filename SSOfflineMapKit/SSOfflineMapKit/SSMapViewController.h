@@ -17,5 +17,6 @@ typedef NS_ENUM(NSUInteger, WWLayerButton) {
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 - (IBAction)layersButton:(id)sender;
+- (IBAction)locationClicked:(id)sender;
 
 @end

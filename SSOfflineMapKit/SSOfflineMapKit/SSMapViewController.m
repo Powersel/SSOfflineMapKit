@@ -278,6 +278,18 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     }];
 }
 
+- (IBAction)locationClicked:(id)sender {
+    CLLocation *location = [CLLocationManager new].location;
+    
+    CLLocationCoordinate2D center = location.coordinate;
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.008, 0.008);
+    MKCoordinateRegion region = MKCoordinateRegionMake(center, coordinateSpan);
+    
+    [self.mapView setRegion:region animated:YES];
+}
+
+#pragma mark - Private
+
 - (WWResultBlock)buttonSelectCompletion {
     WWWeakify(self);
     WWResultBlock completionBlock = ^(NSNumber *buttonTag) {
