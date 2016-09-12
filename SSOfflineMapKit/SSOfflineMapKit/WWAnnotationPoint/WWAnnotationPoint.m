@@ -5,14 +5,6 @@
 #import "WWImageAnnotation.h"
 #import "WWTrackAnnotation.h"
 
-typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
-    WWTypePOI = 0,
-    WWTypeTrack,
-    WWTypeImage,
-    WWTypeCount,
-    WWTypeUndefined
-};
-
 @interface WWAnnotationPoint ()
 
 @end
@@ -22,16 +14,10 @@ typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
 #pragma mark - Class Methods
 
 + (instancetype)annotationWithDictionary:(NSDictionary *)dictionary {
-    NSDictionary *annoTypes = @{
-                                @"poi"      :   @(WWTypePOI),
-                                @"image"    :   @(WWTypeImage),
-                                @"track"    :   @(WWTypeTrack)
-                                };
-    NSString *entityValue = dictionary[@"properties"][@"entity"];
-    NSNumber *annotationType = annoTypes[entityValue];
-    WWAnnotationPrivateType type = !annotationType ? WWTypeUndefined : annotationType.integerValue;
-    
-    return (type < WWTypeCount) ? [[[self classWithType:type] alloc] initWithDictionary:dictionary] : nil;
+    if ([dictionary[@"properties"][@"entity"] isEqualToString:@"image"]) {
+        return [[WWImageAnnotation alloc] initWithDictionary:dictionary];
+    }
+        return [[WWTrackAnnotation alloc] initWithDictionary:dictionary];
 }
 
 #pragma mark - Initialisation and Dealoccation
@@ -49,11 +35,5 @@ typedef NS_ENUM(NSUInteger, WWAnnotationPrivateType) {
 }
 
 #pragma mark - Private
-
-+ (Class)classWithType:(WWAnnotationPrivateType)annotationType {
-    return @[[WWTrackAnnotation class],
-             [WWTrackAnnotation class],
-             [WWImageAnnotation class]][annotationType];
-}
 
 @end

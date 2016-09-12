@@ -14,6 +14,8 @@ typedef NS_ENUM(NSUInteger, WWPrivateTrackpointType) {
 
 @interface WWTrackAnnotation ()
 @property (nonatomic, strong) NSArray *waypointsCoordinates;
+@property (nonatomic, strong) NSMutableArray    *mutableWaypointAnnotations;
+@property (nonatomic, strong) NSMutableArray    *mutableMainAnnotations;
 
 @property (nonatomic, strong) NSNumber    *startLatitude;
 @property (nonatomic, strong) NSNumber    *startLongitude;
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSUInteger, WWPrivateTrackpointType) {
 
 @property (nonatomic, assign) CLLocationCoordinate2D waypointCoordinates;
 
-- (void)setAnnotationCoordinatesWithArray:(NSArray *)array;
+- (void)setAnnotationCoordinatesWithArray:(NSDictionary *)dictionary;
 - (void)setAnnotationTypeWithDictionary:(NSDictionary *)dictionary;
 - (void)setTrackpointAnnotationTypeWithDictionary:(NSDictionary *)dictionary;
 
@@ -65,50 +67,39 @@ typedef NS_ENUM(NSUInteger, WWPrivateTrackpointType) {
 
 #pragma mark - Private
 
-- (void)setAnnotationCoordinatesWithArray:(NSArray *)array {
-    NSArray *startCoordinates = array.firstObject;
+- (void)setAnnotationCoordinatesWithArray:(NSDictionary *)dictionary {
+    self.startLatitude = dictionary[@"properties"][@"start_lat"];
+    self.startLongitude = dictionary[@"properties"][@"Start_long"];
     
-    self.startLatitude = startCoordinates.firstObject;
-    self.startLongitude = startCoordinates.lastObject;
-    
-    CLLocationDegrees longitude = self.startLatitude.doubleValue;
-    CLLocationDegrees latitude = self.startLongitude.doubleValue;
+    CLLocationDegrees longitude = self.startLongitude.doubleValue;
+    CLLocationDegrees latitude = self.startLatitude.doubleValue;
     CLLocationCoordinate2D noteCoordinates = CLLocationCoordinate2DMake(latitude, longitude);
     self.waypointCoordinates = noteCoordinates;
 }
 
 - (void)setAnnotationTypeWithDictionary:(NSDictionary *)dictionary {
-    NSString *pointUndefinedType = dictionary[@"entity"];
-    if ([pointUndefinedType isEqualToString:@"track"]) {
-        [self setAnnotationCoordinatesWithArray:self.waypointsCoordinates];
-        self.annotationType = WWMainWPAnnotationType;
-    } else {
-        [self setAnnotationCoordinatesWithArray:self.waypointsCoordinates];
-        self.annotationType = WWPOIAnnotationType;
+    NSString *annotationUndefinedType = dictionary[@"properties"][@"entity"];
+    if ([annotationUndefinedType isEqualToString:@"poi"]) {
+    [self setAnnotationCoordinatesWithArray:dictionary];
+    self.annotationType = WWPOIAnnotationType;
+    }
+    if ([annotationUndefinedType isEqualToString:@"track"]) {
+        [self setTrackpointAnnotationTypeWithDictionary:dictionary];
     }
 }
 
 - (void)setTrackpointAnnotationTypeWithDictionary:(NSDictionary *)dictionary {
-    
+        if ([dictionary[@"properties"][@"alt_route"]isEqualToString:@""]) {
+            [self setAnnotationCoordinatesWithArray:dictionary];
+            self.annotationType = WWMainTrackAnnotationType;
+        } else {
+            [self setAnnotationCoordinatesWithArray:dictionary];
+            self.annotationType = WWAlternateAnnotationType;
+        }
+        if (![dictionary[@"properties"][@"sidetrip"]isEqualToString:@""]) {
+            [self setAnnotationCoordinatesWithArray:dictionary];
+            self.annotationType = WWSidetripAnnotationType;
+        }
 }
-
-//- (void)setTrackpointAnnotationTypeWithDictionary:(NSDictionary *)dictionary {
-//    NSArray *annotationCoordinates = self.waypointsCoordinates;
-//    NSNumber *mainWPCumDistance = dictionary[@"properties"][@"cum_distance"];
-//    if (<#condition#>) {
-//        <#statements#>
-//    }
-//    if ([dictionary[@"properties"][@"alt_route"]isEqualToString:@""]) {
-//        [self setAnnotationCoordinatesWithArray:annotationCoordinates];
-//        self.annotationType = WWMainTrackAnnotationType;
-//    } else {
-//        [self setAnnotationCoordinatesWithArray:annotationCoordinates];
-//        self.annotationType = WWAlternateAnnotationType;
-//    } else if (![dictionary[@"properties"][@"sidetrip"]isEqualToString:@""]) {
-//        [self setAnnotationCoordinatesWithArray:annotationCoordinates];
-//        self.annotationType = WWSidetripAnnotationType;
-//    }
-//}
-
 
 @end

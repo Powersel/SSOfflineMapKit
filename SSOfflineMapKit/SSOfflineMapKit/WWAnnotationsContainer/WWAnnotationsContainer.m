@@ -8,6 +8,9 @@
 
 #import "WWAnnotationsContainer.h"
 #import "WWAnnotationPoint.h"
+#import "WWTrackAnnotation.h"
+
+#define CLCOORDINATES_EQUAL( coord1, coord2 ) (coord1.latitude == coord2.latitude && coord1.longitude == coord2.longitude)
 
 @interface WWAnnotationsContainer ()
 @property (nonatomic, strong) NSMutableArray *poiAnnotations;
@@ -19,6 +22,7 @@
 
 - (void)parseAnnotationJSON:(NSData *)annotationsJSON;
 - (NSMutableArray *)mutableArrayWithAnnotationsLayer:(WWAnnotationLayer)layerIndex;
+- (void)mergeSeparation;
 
 @end
 
@@ -64,11 +68,11 @@
                                                              error:&parseError];
     for (NSDictionary *annotation in annotations) {
         WWAnnotationPoint *annotationPoint = [WWAnnotationPoint annotationWithDictionary:annotation];
-        if (annotationPoint) {
             NSInteger layerIndex = annotationPoint.annotationType;
             [[self mutableArrayWithAnnotationsLayer:layerIndex] addObject:annotationPoint];
-        }
     }
+    [self fillMainWPAnnotationContainer];
+    
 }
 
 - (NSMutableArray *)mutableArrayWithAnnotationsLayer:(WWAnnotationLayer)layerIndex {
@@ -87,6 +91,22 @@
             return self.imageAnnotations;
         default:
             return nil;
+    }
+}
+
+- (void)fillMainWPAnnotationContainer {
+    NSMutableArray *mainWPAnnotations = self.mainWPAnnotations;
+    for (WWTrackAnnotation *trackAnnotation in self.mainTrackAnnotations) {
+        trackAnnotation.annotationType = WWMainWPAnnotationType;
+        [mainWPAnnotations addObject:trackAnnotation];
+    }
+    for (WWTrackAnnotation *trackAnnotation in self.sidetripsAnnotations) {
+        trackAnnotation.annotationType = WWMainWPAnnotationType;
+        [mainWPAnnotations addObject:trackAnnotation];
+    }
+    for (WWTrackAnnotation *trackAnnotation in self.alternateAnnotations) {
+        trackAnnotation.annotationType = WWMainWPAnnotationType;
+        [mainWPAnnotations addObject:trackAnnotation];
     }
 }
 

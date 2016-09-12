@@ -34,6 +34,10 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 @property (nonatomic, strong) NSArray    *customAnnotations;
 @property (nonatomic, strong) NSString *tilesFolderPath;
 
+@property (nonatomic, strong) NSArray   *mainTrackRoute;
+@property (nonatomic, strong) NSArray   *sidetripsRoute;
+@property (nonatomic, strong) NSArray   *alternatesRoute;
+
 @property (nonatomic, strong) NSMutableArray    *layersState;
 
 @property (nonatomic, copy) WWResultBlock   buttonSelectCompletion;
@@ -176,33 +180,18 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
         switch (wayPoint.annotationType) {
             case WWPOIAnnotationType: {
                 annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:WWPOIAnnotationViewID];
-                annoView.pinTintColor = [UIColor darkGrayColor];
+                annoView.pinTintColor = [UIColor whiteColor];
             }
                 break;
                 
             case WWMainWPAnnotationType: {
-                
+                annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:WWMainWPAnnotationViewID];
+                annoView.pinTintColor = [UIColor blueColor];
             }
                 break;
-                
-            case WWMainTrackAnnotationType: {
-                
-            }
-                break;
-                
-            case WWSidetripAnnotationType: {
-                
-            }
-                break;
-                
-            case WWAlternateAnnotationType: {
-                
-            }
-                break;
-                
             case WWImageAnnotationType: {
                 annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:WWImageAnnotationViewID];
-                annoView.pinTintColor = [UIColor redColor];
+                annoView.pinTintColor = [UIColor orangeColor];
             }
                 break;
         }
@@ -219,7 +208,8 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     self.annotationsContainer = [WWAnnotationsContainer initContainerWithJSON:rawJSON];
 }
 
-- (void)drawRoutesWith:(NSArray *)routesArray {
+- (NSArray *)mapRouteWithArray:(NSArray *)routesArray {
+    NSMutableArray *returnedValue = [NSMutableArray array];
     for (WWTrackAnnotation *trackAnnotationPoint in routesArray) {
         if ([trackAnnotationPoint isKindOfClass:[WWTrackAnnotation class]]) {
             NSArray *poiCoordinates = trackAnnotationPoint.waypointsCoordinates;
@@ -234,11 +224,11 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
                 index++;
             }
             
-            MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:poiCoordinates.count];
-            [self.mapView addOverlay:polyLine];
-            
+            [returnedValue addObject:[MKPolyline polylineWithCoordinates:coordinates count:poiCoordinates.count]];
         }
     }
+    
+    return [returnedValue copy];
 }
 
 - (MKCoordinateSpan)checkZoomLevelWith:(MKCoordinateSpan)coordinatesSpan {
@@ -313,13 +303,51 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 }
 
 - (void)hidePointsLayerWithIndex:(NSInteger)layerIndex {
-    [self.mapView removeAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
-    [self.mapView reloadInputViews];
+    MKMapView *mapView = self.mapView;
+    switch (layerIndex) {
+        case WWPOIButton:
+        case WWMainWPButton:
+        case WWImagesButton:
+            [mapView removeAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
+            [mapView reloadInputViews];
+            break;
+            
+        case WWMainTrackButton:
+            [mapView removeOverlays:self.mainTrackRoute];
+            break;
+            
+        case WWSidetripsButton:
+            [mapView removeOverlays:self.sidetripsRoute];
+            break;
+            
+        case WWAlternatesButton:
+            [mapView removeOverlays:self.alternatesRoute];
+            break;
+    }
 }
 
 - (void)showPointsLayerWithIndex:(NSInteger)layerIndex {
-    [self.mapView addAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
-    [self.mapView reloadInputViews];
+    MKMapView *mapView = self.mapView;
+    switch (layerIndex) {
+        case WWPOIButton:
+        case WWMainWPButton:
+        case WWImagesButton:
+            [mapView addAnnotations:[self.annotationsContainer annotationsWithAnnotationLayer:layerIndex]];
+            [mapView reloadInputViews];
+            break;
+            
+        case WWMainTrackButton:
+            [mapView addOverlays:self.mainTrackRoute];
+            break;
+            
+        case WWSidetripsButton:
+            [mapView addOverlays:self.sidetripsRoute];
+            break;
+            
+        case WWAlternatesButton:
+            [mapView addOverlays:self.alternatesRoute];
+            break;
+    }
 }
 
 - (void)fillMapWithAnnotationLayers {
@@ -331,12 +359,14 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     
     [mapView addAnnotations:container.poiAnnotations];
     [mapView addAnnotations:container.mainWPAnnotations];
-    [mapView addAnnotations:container.mainTrackAnnotations];
-    [mapView addAnnotations:container.sidetripsAnnotations];
-    [mapView addAnnotations:container.alternateAnnotations];
     [mapView addAnnotations:container.imageAnnotations];
     
-    [self drawRoutesWith:container.poiAnnotations];
+    self.mainTrackRoute = [self mapRouteWithArray:container.mainTrackAnnotations];
+    [mapView addOverlays:self.mainTrackRoute];
+    self.sidetripsRoute = [self mapRouteWithArray:container.sidetripsAnnotations];
+    [mapView addOverlays:self.sidetripsRoute];
+    self.alternatesRoute = [self mapRouteWithArray:container.alternateAnnotations];
+    [mapView addOverlays:self.alternatesRoute];
     
     NSArray *layersState = @[@(0), @(0), @(0), @(0), @(0), @(0)];
     self.layersState = [layersState mutableCopy];

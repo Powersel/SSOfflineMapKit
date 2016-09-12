@@ -12,7 +12,6 @@
 		BB1620A31D7FFD870069CEB7 /* HYIBDesignableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1620A21D7FFD870069CEB7 /* HYIBDesignableView.m */; };
 		BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */; };
 		BB1620A81D7FFDCA0069CEB7 /* SSMapLayersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */; };
-		BB1620AA1D800D610069CEB7 /* nsw-bmnp-sft.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1620A91D800D610069CEB7 /* nsw-bmnp-sft.json */; };
 		BB5510301D706F8D00556516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB55102F1D706F8D00556516 /* main.m */; };
 		BB5510331D706F8D00556516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510321D706F8D00556516 /* AppDelegate.m */; };
 		BB5510391D706F8D00556516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5510371D706F8D00556516 /* Main.storyboard */; };
@@ -23,6 +22,7 @@
 		BB55104C1D707FB700556516 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55104B1D707FB700556516 /* MapKit.framework */; };
 		BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDB1D70963400556516 /* GridTileOverlay.m */; };
 		BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */; };
+		BBBA06561D86A5E0005432BA /* nsw-bmnp-sft.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */; };
 		BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */; };
 		BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87971D786B0B003AD892 /* SSPhotoAnnoVIew.m */; };
 		BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF879B1D787556003AD892 /* SSTrackNotesView.m */; };
@@ -51,7 +51,6 @@
 		BB1620A41D7FFDB30069CEB7 /* SSMapLayersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMapLayersView.h; sourceTree = "<group>"; };
 		BB1620A51D7FFDB30069CEB7 /* SSMapLayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMapLayersView.m; sourceTree = "<group>"; };
 		BB1620A71D7FFDCA0069CEB7 /* SSMapLayersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapLayersView.xib; sourceTree = "<group>"; };
-		BB1620A91D800D610069CEB7 /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
 		BB1620AB1D8032580069CEB7 /* WWBlockTypeDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWBlockTypeDef.h; sourceTree = "<group>"; };
 		BB55102B1D706F8D00556516 /* SSOfflineMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSOfflineMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55102F1D706F8D00556516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		BB552EDB1D70963400556516 /* GridTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridTileOverlay.m; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlay.m; sourceTree = "<group>"; };
 		BB552EDD1D7096F100556516 /* GridTileOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridTileOverlayRenderer.h; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlayRenderer.h; sourceTree = "<group>"; };
 		BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridTileOverlayRenderer.m; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlayRenderer.m; sourceTree = "<group>"; };
+		BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
 		BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTrackNotesAnno.h; sourceTree = "<group>"; };
 		BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTrackNotesAnno.m; sourceTree = "<group>"; };
 		BBCF87961D786B0B003AD892 /* SSPhotoAnnoVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPhotoAnnoVIew.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		BB5510221D706F8D00556516 = {
 			isa = PBXGroup;
 			children = (
-				BB1620A91D800D610069CEB7 /* nsw-bmnp-sft.json */,
+				BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */,
 				BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */,
 				BB55102D1D706F8D00556516 /* SSOfflineMapKit */,
 				BB55102C1D706F8D00556516 /* Products */,
@@ -235,7 +235,6 @@
 		BBCF87861D78107D003AD892 /* SSAnnotations */ = {
 			isa = PBXGroup;
 			children = (
-				BBE0C9AF1D818FEB00A0DEB0 /* WWAnnotationPoint */,
 				BBCF87871D781090003AD892 /* SSAnnotationContainer */,
 				BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */,
 				BBD016911D771AA7006D1156 /* SSAnnotationPoint_00 */,
@@ -305,7 +304,8 @@
 				BBE0C9C21D81954E00A0DEB0 /* WWImageAnnotation */,
 				BBE0C9B51D81935200A0DEB0 /* WWTrackAnnotation */,
 			);
-			path = WWAnnotationPoint;
+			name = WWAnnotationPoint;
+			path = ../WWAnnotationPoint;
 			sourceTree = "<group>";
 		};
 		BBE0C9B51D81935200A0DEB0 /* WWTrackAnnotation */ = {
@@ -349,6 +349,7 @@
 			children = (
 				BBEBDED11D82E0450067C695 /* WWAnnotationsContainer.h */,
 				BBEBDED21D82E0450067C695 /* WWAnnotationsContainer.m */,
+				BBE0C9AF1D818FEB00A0DEB0 /* WWAnnotationPoint */,
 			);
 			path = WWAnnotationsContainer;
 			sourceTree = "<group>";
@@ -432,7 +433,7 @@
 				BB1620A81D7FFDCA0069CEB7 /* SSMapLayersView.xib in Resources */,
 				BBD016901D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip in Resources */,
 				BB5510391D706F8D00556516 /* Main.storyboard in Resources */,
-				BB1620AA1D800D610069CEB7 /* nsw-bmnp-sft.json in Resources */,
+				BBBA06561D86A5E0005432BA /* nsw-bmnp-sft.json in Resources */,
 				BB55104A1D707D8500556516 /* SSMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
