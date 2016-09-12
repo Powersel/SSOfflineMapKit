@@ -20,8 +20,6 @@
 		BB5510491D707D8500556516 /* SSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5510471D707D8500556516 /* SSMapViewController.m */; };
 		BB55104A1D707D8500556516 /* SSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5510481D707D8500556516 /* SSMapViewController.xib */; };
 		BB55104C1D707FB700556516 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55104B1D707FB700556516 /* MapKit.framework */; };
-		BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDB1D70963400556516 /* GridTileOverlay.m */; };
-		BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */; };
 		BBBA06561D86A5E0005432BA /* nsw-bmnp-sft.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */; };
 		BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */; };
 		BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87971D786B0B003AD892 /* SSPhotoAnnoVIew.m */; };
@@ -64,10 +62,6 @@
 		BB5510471D707D8500556516 /* SSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMapViewController.m; sourceTree = "<group>"; };
 		BB5510481D707D8500556516 /* SSMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapViewController.xib; sourceTree = "<group>"; };
 		BB55104B1D707FB700556516 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		BB552EDA1D70963400556516 /* GridTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridTileOverlay.h; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlay.h; sourceTree = "<group>"; };
-		BB552EDB1D70963400556516 /* GridTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridTileOverlay.m; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlay.m; sourceTree = "<group>"; };
-		BB552EDD1D7096F100556516 /* GridTileOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridTileOverlayRenderer.h; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlayRenderer.h; sourceTree = "<group>"; };
-		BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridTileOverlayRenderer.m; path = ../../../MapTileOverlayTutorial/CustomMap/GridTileOverlayRenderer.m; sourceTree = "<group>"; };
 		BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
 		BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTrackNotesAnno.h; sourceTree = "<group>"; };
 		BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTrackNotesAnno.m; sourceTree = "<group>"; };
@@ -199,10 +193,6 @@
 				BB5510451D707D3900556516 /* SSMapVC */,
 				BB5510311D706F8D00556516 /* AppDelegate.h */,
 				BB5510321D706F8D00556516 /* AppDelegate.m */,
-				BB552EDA1D70963400556516 /* GridTileOverlay.h */,
-				BB552EDB1D70963400556516 /* GridTileOverlay.m */,
-				BB552EDD1D7096F100556516 /* GridTileOverlayRenderer.h */,
-				BB552EDE1D7096F100556516 /* GridTileOverlayRenderer.m */,
 				BB5510371D706F8D00556516 /* Main.storyboard */,
 				BB55103A1D706F8D00556516 /* Assets.xcassets */,
 				BB55103C1D706F8D00556516 /* LaunchScreen.storyboard */,
@@ -497,10 +487,8 @@
 				BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */,
 				BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */,
 				BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */,
-				BB552EDC1D70963400556516 /* GridTileOverlay.m in Sources */,
 				BB1620A31D7FFD870069CEB7 /* HYIBDesignableView.m in Sources */,
 				BBE3B5231D74493A0026AD6B /* SSTileOverlayRender.m in Sources */,
-				BB552EDF1D7096F100556516 /* GridTileOverlayRenderer.m in Sources */,
 				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BBE0C9B21D81900100A0DEB0 /* WWAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,

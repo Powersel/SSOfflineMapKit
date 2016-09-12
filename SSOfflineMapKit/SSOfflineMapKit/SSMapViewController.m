@@ -3,8 +3,6 @@
 
 #import "WWWeakyStrongyMacros.h"
 #import "SSMapViewController.h"
-#import "GridTileOverlay.h"
-#import "GridTileOverlayRenderer.h"
 #import "SSZipArchive.h"
 #import "SSTileOverlay.h"
 #import "SSTileOverlayRender.h"
