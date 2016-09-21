@@ -5,7 +5,6 @@
 #import "SSMapViewController.h"
 #import "SSZipArchive.h"
 #import "SSTileOverlay.h"
-#import "SSTileOverlayRender.h"
 
 #import <ARSPopover/ARSPopover.h>
 #import <CoreLocation/CoreLocation.h>
@@ -35,7 +34,6 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 @property (nonatomic, strong) NSArray   *mainTrackRoute;
 @property (nonatomic, strong) NSArray   *sidetripsRoute;
 @property (nonatomic, strong) NSArray   *alternatesRoute;
-
 @property (nonatomic, strong) NSMutableArray    *layersState;
 
 @property (nonatomic, copy) WWResultBlock   buttonSelectCompletion;
@@ -171,6 +169,7 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     }
 }
 
+// Added
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     MKPinAnnotationView *annoView = nil;
     if ([annotation isKindOfClass:[WWAnnotationPoint class]]) {
@@ -200,12 +199,15 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 
 #pragma mark - Annotations Initialisation
 
+// Added
 - (void)annotationLayersInitialisation {
     NSString *annotationsPath = [[NSBundle mainBundle] pathForResource:@"nsw-bmnp-sft" ofType:@"json"];
     NSData *rawJSON = [NSData dataWithContentsOfFile:annotationsPath];
     self.annotationsContainer = [WWAnnotationsContainer initContainerWithJSON:rawJSON];
 }
 
+
+// Added
 - (NSArray *)mapRouteWithArray:(NSArray *)routesArray {
     NSMutableArray *returnedValue = [NSMutableArray array];
     for (WWTrackAnnotation *trackAnnotationPoint in routesArray) {
@@ -229,6 +231,7 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     return [returnedValue copy];
 }
 
+// Added
 - (MKCoordinateSpan)checkZoomLevelWith:(MKCoordinateSpan)coordinatesSpan {
     double latitude = coordinatesSpan.latitudeDelta;
     MKCoordinateSpan returnedValue = coordinatesSpan;
