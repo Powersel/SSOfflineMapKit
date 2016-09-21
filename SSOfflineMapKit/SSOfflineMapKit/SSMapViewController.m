@@ -114,7 +114,7 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 }
 
 // Automatic zoom between 10 and 18 levels
-
+// Added
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     CLLocationCoordinate2D coordinates = mapView.region.center;
     MKCoordinateSpan zoomedValue = [self checkZoomLevelWith:mapView.region.span];
@@ -125,13 +125,13 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 #pragma mark - Annotations!!!!!!!!!!!!!!!!
 
 #pragma mark - Private
-
+// Added
 - (void)reloadTileOverlay {
     self.tileOverlay = [[SSTileOverlay alloc] init];
     self.tileOverlay.canReplaceMapContent = YES;
     [self.mapView addOverlay:self.tileOverlay level:MKOverlayLevelAboveLabels];
 }
-
+// Added
 - (void)unzipArchive {
     NSString *archivePath = [[NSBundle mainBundle] pathForResource:@"ww_nsw-bmnp-sft_maps" ofType:@"zip"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -143,7 +143,7 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
     }
     [SSZipArchive unzipFileAtPath:archivePath toDestination:self.tilesFolderPath];
 }
-
+// Added
 - (void)initialiseLocationManager {
     self.locationManager = [CLLocationManager new];
     
@@ -156,7 +156,7 @@ static NSString * const WWImageAnnotationViewID = @"WWImageAnnotationView";
 }
 
 #pragma mark - Delegates Methods
-
+// Added
 - (void)        locationManager:(CLLocationManager *)manager
    didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {

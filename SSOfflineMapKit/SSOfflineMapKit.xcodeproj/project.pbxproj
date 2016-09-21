@@ -21,12 +21,8 @@
 		BB55104A1D707D8500556516 /* SSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5510481D707D8500556516 /* SSMapViewController.xib */; };
 		BB55104C1D707FB700556516 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55104B1D707FB700556516 /* MapKit.framework */; };
 		BBBA06561D86A5E0005432BA /* nsw-bmnp-sft.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */; };
-		BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */; };
-		BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF87971D786B0B003AD892 /* SSPhotoAnnoVIew.m */; };
-		BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCF879B1D787556003AD892 /* SSTrackNotesView.m */; };
 		BBD0168A1D76CD9B006D1156 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD016891D76CD9B006D1156 /* CoreLocation.framework */; };
 		BBD016901D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip in Resources */ = {isa = PBXBuildFile; fileRef = BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */; };
-		BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */; };
 		BBE0C9AD1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */; };
 		BBE0C9B21D81900100A0DEB0 /* WWAnnotationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9B11D81900100A0DEB0 /* WWAnnotationPoint.m */; };
 		BBE0C9C11D81954600A0DEB0 /* WWTrackAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE0C9C01D81954600A0DEB0 /* WWTrackAnnotation.m */; };
@@ -62,16 +58,8 @@
 		BB5510481D707D8500556516 /* SSMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMapViewController.xib; sourceTree = "<group>"; };
 		BB55104B1D707FB700556516 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BBBA06551D86A5E0005432BA /* nsw-bmnp-sft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nsw-bmnp-sft.json"; sourceTree = "<group>"; };
-		BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTrackNotesAnno.h; sourceTree = "<group>"; };
-		BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTrackNotesAnno.m; sourceTree = "<group>"; };
-		BBCF87961D786B0B003AD892 /* SSPhotoAnnoVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPhotoAnnoVIew.h; sourceTree = "<group>"; };
-		BBCF87971D786B0B003AD892 /* SSPhotoAnnoVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPhotoAnnoVIew.m; sourceTree = "<group>"; };
-		BBCF879A1D787556003AD892 /* SSTrackNotesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTrackNotesView.h; sourceTree = "<group>"; };
-		BBCF879B1D787556003AD892 /* SSTrackNotesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTrackNotesView.m; sourceTree = "<group>"; };
 		BBD016891D76CD9B006D1156 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BBD0168F1D76F96F006D1156 /* ww_nsw-bmnp-sft_maps.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ww_nsw-bmnp-sft_maps.zip"; sourceTree = "<group>"; };
-		BBD016921D771B0A006D1156 /* SSAnnotationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAnnotationPoint.h; sourceTree = "<group>"; };
-		BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAnnotationPoint.m; sourceTree = "<group>"; };
 		BBE0C9AB1D8149E300A0DEB0 /* WWWeakyStrongyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWWeakyStrongyMacros.h; sourceTree = "<group>"; };
 		BBE0C9AC1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWWeakyStrongyMacros.m; sourceTree = "<group>"; };
 		BBE0C9B01D81900100A0DEB0 /* WWAnnotationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWAnnotationPoint.h; sourceTree = "<group>"; };
@@ -176,7 +164,6 @@
 				BB1620AB1D8032580069CEB7 /* WWBlockTypeDef.h */,
 				BB16209F1D7FFD410069CEB7 /* SSMapLayersView */,
 				BB0BDE2E1D7F090B00DF205D /* Extensions */,
-				BBCF87861D78107D003AD892 /* SSAnnotations */,
 				BBE3A4E61D7418B80026AD6B /* SSTileOverlay */,
 				BB5510451D707D3900556516 /* SSMapVC */,
 				BB5510311D706F8D00556516 /* AppDelegate.h */,
@@ -208,61 +195,6 @@
 				BB5510481D707D8500556516 /* SSMapViewController.xib */,
 			);
 			name = SSMapVC;
-			sourceTree = "<group>";
-		};
-		BBCF87861D78107D003AD892 /* SSAnnotations */ = {
-			isa = PBXGroup;
-			children = (
-				BBCF87871D781090003AD892 /* SSAnnotationContainer */,
-				BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */,
-				BBD016911D771AA7006D1156 /* SSAnnotationPoint_00 */,
-			);
-			name = SSAnnotations;
-			sourceTree = "<group>";
-		};
-		BBCF87871D781090003AD892 /* SSAnnotationContainer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SSAnnotationContainer;
-			sourceTree = "<group>";
-		};
-		BBCF878B1D781B35003AD892 /* SSTRackNotesAnno */ = {
-			isa = PBXGroup;
-			children = (
-				BBCF87991D787540003AD892 /* SSTrackNotesView */,
-				BBCF878F1D781CE6003AD892 /* SSTrackNotesAnno.h */,
-				BBCF87901D781CE6003AD892 /* SSTrackNotesAnno.m */,
-			);
-			name = SSTRackNotesAnno;
-			sourceTree = "<group>";
-		};
-		BBCF87921D786173003AD892 /* SSAnnotationPointView */ = {
-			isa = PBXGroup;
-			children = (
-				BBCF87961D786B0B003AD892 /* SSPhotoAnnoVIew.h */,
-				BBCF87971D786B0B003AD892 /* SSPhotoAnnoVIew.m */,
-			);
-			name = SSAnnotationPointView;
-			sourceTree = "<group>";
-		};
-		BBCF87991D787540003AD892 /* SSTrackNotesView */ = {
-			isa = PBXGroup;
-			children = (
-				BBCF879A1D787556003AD892 /* SSTrackNotesView.h */,
-				BBCF879B1D787556003AD892 /* SSTrackNotesView.m */,
-			);
-			name = SSTrackNotesView;
-			sourceTree = "<group>";
-		};
-		BBD016911D771AA7006D1156 /* SSAnnotationPoint_00 */ = {
-			isa = PBXGroup;
-			children = (
-				BBCF87921D786173003AD892 /* SSAnnotationPointView */,
-				BBD016921D771B0A006D1156 /* SSAnnotationPoint.h */,
-				BBD016931D771B0A006D1156 /* SSAnnotationPoint.m */,
-			);
-			name = SSAnnotationPoint_00;
 			sourceTree = "<group>";
 		};
 		BBE0C9AA1D8149E300A0DEB0 /* WWWeakyStrongyMacros */ = {
@@ -463,20 +395,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE0C9C51D81956300A0DEB0 /* WWImageAnnotation.m in Sources */,
-				BBCF879C1D787556003AD892 /* SSTrackNotesView.m in Sources */,
 				BBE3A4E51D7418B30026AD6B /* SSTileOverlay.m in Sources */,
 				BB0BDE251D7EA8E400DF205D /* MKMapView+SSZoomLevel.m in Sources */,
 				BB1620A31D7FFD870069CEB7 /* HYIBDesignableView.m in Sources */,
-				BBD016941D771B0A006D1156 /* SSAnnotationPoint.m in Sources */,
 				BBE0C9B21D81900100A0DEB0 /* WWAnnotationPoint.m in Sources */,
 				BB5510331D706F8D00556516 /* AppDelegate.m in Sources */,
-				BBCF87911D781CE6003AD892 /* SSTrackNotesAnno.m in Sources */,
 				BBE0C9AD1D8149E300A0DEB0 /* WWWeakyStrongyMacros.m in Sources */,
 				BB1620A61D7FFDB30069CEB7 /* SSMapLayersView.m in Sources */,
 				BB5510301D706F8D00556516 /* main.m in Sources */,
 				BBEBDED31D82E0450067C695 /* WWAnnotationsContainer.m in Sources */,
 				BB0BDE311D7F092300DF205D /* MKMapView+SSZoomLevel.m in Sources */,
-				BBCF87981D786B0B003AD892 /* SSPhotoAnnoVIew.m in Sources */,
 				BBE0C9C11D81954600A0DEB0 /* WWTrackAnnotation.m in Sources */,
 				BB5510491D707D8500556516 /* SSMapViewController.m in Sources */,
 			);
